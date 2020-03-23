@@ -35,13 +35,11 @@ x$Province.State[!is.na(x$State)] <- x$State[!is.na(x$State)]
 
 x <- x %>% select(colnames(covid_ets))
 
-covid_ets_tidy <- x %>% group_by(Province.State, Country.Region, Lat, Long, date) %>% summarise(deaths = sum(deaths), confirmed = sum(confirmed), recovered= sum(recovered))
+covid_ets_tidy <- x %>% group_by( Country.Region, Province.State, date) %>% summarise(confirmed = sum(confirmed), deaths = sum(deaths), recovered= sum(recovered))
 
 
-write.csv(covid_ets, "covid_ets.csv")
+write.csv(covid_ets_tidy, "covid_ets.csv")
 
-write.csv(test, "state_covid.csv")
 
-write.csv(x, "state_covid_2.csv")
 
 

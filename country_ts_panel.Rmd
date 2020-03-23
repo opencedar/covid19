@@ -1,0 +1,169 @@
+---
+title: "COVID19 Time Series"
+author: "Andy Hasselwander"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: pdf_document
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(zoo)
+#Get data
+require(tidyverse)
+####HOPKINS DATABASE####
+
+# Get deaths, confirmed, recovered by country, region by date. These are three separate databases 
+
+#------------------------------------------------------------------------------------------------
+
+deaths <- read.csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv", stringsAsFactors = FALSE)
+deaths_thin <- deaths %>% gather("date", "deaths", 5:ncol(deaths))
+deaths_thin$date <- substring(deaths_thin$date, 2)
+deaths_thin$date <- lubridate::mdy(deaths_thin$date)
+
+confirmed <- read.csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", stringsAsFactors = FALSE)
+confirmed_thin <- confirmed %>% gather("date", "confirmed", 5:ncol(confirmed))
+confirmed_thin$date <- substring(confirmed_thin$date, 2)
+confirmed_thin$date <- lubridate::mdy(confirmed_thin$date)
+
+recovered <- read.csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv", stringsAsFactors = FALSE)
+recovered_thin <- recovered %>% gather("date", "recovered", 5:ncol(recovered))
+recovered_thin$date <- substring(recovered_thin$date, 2)
+recovered_thin$date <- lubridate::mdy(recovered_thin$date)
+
+covid_ets <- merge(deaths_thin, confirmed_thin, on= colnames(confirmed_thin)[1:5])
+covid_ets <- merge(covid_ets, recovered_thin, on = colnames(covid)[1:5])
+
+state_key <- read.csv("https://raw.githubusercontent.com/jasonong/List-of-US-States/master/states.csv", stringsAsFactors = FALSE)
+state <- data.frame(State = state_key$State, Abbreviation = state_key$State)
+state_key <- rbind(state_key, state)
+
+x <- covid_ets
+x$state_from_county <- str_extract(x$Province.State, '(A[LKSZR])|(C[AOT])|(D[EC])|(F[ML])|(G[AU])|(HI)|(I[DLNA])|(K[SY])|(LA)|(M[EHDAINSOT])|(N[EVHJMYCD])|(MP)|(O[HKR])|(P[WAR])|(RI)|(S[CD])|(T[NX])|(UT)|(V[TIA])|(W[AVIY])')
+x <- merge(x, state_key, all.x=TRUE, all.y = FALSE, by.x = 'state_from_county', by.y = "Abbreviation")
+x$Province.State[!is.na(x$State)] <- x$State[!is.na(x$State)] 
+
+x <- x %>% select(colnames(covid_ets))
+
+covid_ets <- x %>% group_by( Country.Region, Province.State, date) %>% summarise(confirmed = sum(confirmed), deaths = sum(deaths), recovered= sum(recovered))
+
+covid_country_ets <- covid_ets  %>% 
+  group_by(Country.Region, date) %>% 
+  summarise(confirmed = sum(confirmed), deaths = sum(deaths), recovered= sum(recovered)) %>% 
+  mutate(
+    #create daily percent growth variables
+    confirmed_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1),
+    death_growth_rate = c(NA,diff(deaths))/lag(deaths, 1),
+    recovered_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1)
+   
+  )
+
+#replace NaNs w 0s
+covid_country_ets$confirmed_growth_rate[is.nan(covid_country_ets$confirmed_growth_rate)] <- 0
+covid_country_ets$death_growth_rate[is.nan(covid_country_ets$death_growth_rate)] <- 0
+covid_country_ets$recovered_growth_rate[is.nan(covid_country_ets$recovered_growth_rate)] <- 0
+
+covid_country_ets <- covid_country_ets %>% mutate(
+    conf_growth_rate_ma=rollapply(confirmed_growth_rate,5,mean,align='right',fill=NA),
+    death_growth_rate_ma=rollapply(death_growth_rate,5,mean,align='right',fill=NA),
+    recovered_growth_rate_ma=rollapply(recovered_growth_rate,5,mean,align='right',fill=NA)) %>%
+ungroup()
+
+#Filter out growth w < 100 base
+covid_country_ets$conf_growth_rate_ma[covid_country_ets$confirmed <100] <- NA
+covid_country_ets$death_growth_rate_ma[covid_country_ets$deaths <100] <- NA
+covid_country_ets$recovered_growth_rate_ma[covid_country_ets$recovered <100] <- NA
+
+
+    
+
+#Only get countries with >1000 cases today
+current_cases <- covid_country_ets %>% group_by(Country.Region) %>% summarise(current_cases = max(confirmed))
+five_hundred <- current_cases$Country.Region[current_cases$current_cases >= 1000]
+
+covid_country_ets <- covid_country_ets %>% filter(Country.Region %in% five_hundred)
+
+#Create a panel data set
+library(plm)
+covid_plm <- pdata.frame(covid_country_ets, index=c("Country.Region", "date"))
+#create diff variables
+covid_plm$diff_confirmed <- diff(covid_plm$confirmed, 1)
+covid_plm$diff_deaths <- diff(covid_plm$deaths, 1)
+covid_plm$diff_recovered <- diff(covid_plm$recovered, 1)
+
+#######
+```
+# Time Series by Country
+
+## Confirmed Cases
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm, aes(x=date, y=confirmed, group = Country.Region)) +
+  geom_line() +
+  facet_wrap(~ Country.Region) +
+  ggtitle("Confirmed COVID19 Cases Through 3-23-20") +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+## Deaths
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm, aes(x=date, y=deaths, group = Country.Region)) +
+  geom_line() +
+  facet_wrap(~ Country.Region) +
+  ggtitle("Cumulative COVID19 Deaths Through 3-23-20") +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+## Recovered
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm, aes(x=date, y=recovered, group = Country.Region)) +
+  geom_line() +
+  facet_wrap(~ Country.Region) +
+  ggtitle("Cumulative COVID19 Recoveries Through 3-23-20") +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+## Confirmed Growth Rate 5-Day Moving Average
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm, aes(x=date, y=conf_growth_rate_ma, group = Country.Region)) +
+  geom_line() +
+  facet_wrap(~ Country.Region) +
+  ggtitle("5-Day MA Confirmed Growth Rate Through 3-23-20") +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+## Death Growth Rate 5-Day Moving Average
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm, aes(x=date, y=death_growth_rate_ma, group = Country.Region)) +
+  geom_line() +
+  facet_wrap(~ Country.Region) +
+  ggtitle("5-Day MA Death Growth Rate Through 3-23-20") +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+## Recoveries Growth Rate 5-Day Moving Average
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm, aes(x=date, y=recovered_growth_rate_ma, group = Country.Region)) +
+  geom_line() +
+  facet_wrap(~ Country.Region) +
+  ggtitle("5-Day MA Recoveries Growth Rate Through 3-23-20") +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+
+
+
