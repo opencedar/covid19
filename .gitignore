@@ -1,5 +1,8 @@
-#Rproj
+hubei_death.csv
+state_covid.csv
+#Rproj 
 *.Rproj
+state_covid_2.csv
 # History files
 .Rhistory .Rapp.history
 # Session Data files
