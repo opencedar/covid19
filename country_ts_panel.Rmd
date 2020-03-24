@@ -5,6 +5,12 @@ date: "`r format(Sys.time(), '%d %B %Y')`"
 output: pdf_document
 ---
 
+Source data: 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE; https://github.com/CSSEGISandData/COVID-19
+
+Source code: https://github.com/opencedar/covid19
+
+This visualization is heavily indebted to Edward Tufte and his use of sparklines—small, clutter-free time series lines—to show how many different panels or categories of data are changing through time; check out https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR. 
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(zoo)
@@ -54,7 +60,9 @@ covid_country_ets <- covid_ets  %>%
     #create daily percent growth variables
     confirmed_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1),
     death_growth_rate = c(NA,diff(deaths))/lag(deaths, 1),
-    recovered_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1)
+    recovered_growth_rate = c(NA,diff(recovered))/lag(recovered, 1),
+    death_rate = deaths / confirmed,
+    recovered_rate = recovered / confirmed
    
   )
 
@@ -73,7 +81,8 @@ ungroup()
 covid_country_ets$conf_growth_rate_ma[covid_country_ets$confirmed <100] <- NA
 covid_country_ets$death_growth_rate_ma[covid_country_ets$deaths <100] <- NA
 covid_country_ets$recovered_growth_rate_ma[covid_country_ets$recovered <100] <- NA
-
+covid_country_ets$death_rate[covid_country_ets$deaths <100] <- NA
+covid_country_ets$recovered_rate[covid_country_ets$recovered <100] <- NA
 
     
 
@@ -100,7 +109,7 @@ covid_plm$diff_recovered <- diff(covid_plm$recovered, 1)
 ggplot(covid_plm, aes(x=date, y=confirmed, group = Country.Region)) +
   geom_line() +
   facet_wrap(~ Country.Region) +
-  ggtitle("Confirmed COVID19 Cases Through 3-23-20") +
+  ggtitle(paste0("Confirmed COVID19 Cases Through ", format(Sys.time(), '%d %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank())
@@ -111,7 +120,7 @@ ggplot(covid_plm, aes(x=date, y=confirmed, group = Country.Region)) +
 ggplot(covid_plm, aes(x=date, y=deaths, group = Country.Region)) +
   geom_line() +
   facet_wrap(~ Country.Region) +
-  ggtitle("Cumulative COVID19 Deaths Through 3-23-20") +
+  ggtitle(paste0("Cumulative COVID19 Deaths Through ", format(Sys.time(), '%d %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank())
@@ -122,7 +131,7 @@ ggplot(covid_plm, aes(x=date, y=deaths, group = Country.Region)) +
 ggplot(covid_plm, aes(x=date, y=recovered, group = Country.Region)) +
   geom_line() +
   facet_wrap(~ Country.Region) +
-  ggtitle("Cumulative COVID19 Recoveries Through 3-23-20") +
+  ggtitle(paste0("Cumulative COVID19 Recoveries Through ", format(Sys.time(), '%d %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank())
@@ -133,19 +142,151 @@ ggplot(covid_plm, aes(x=date, y=recovered, group = Country.Region)) +
 ggplot(covid_plm, aes(x=date, y=conf_growth_rate_ma, group = Country.Region)) +
   geom_line() +
   facet_wrap(~ Country.Region) +
-  ggtitle("5-Day MA Confirmed Growth Rate Through 3-23-20") +
+  ggtitle(paste0("5-Day MA Confirmed Growth Rate Through ", format(Sys.time(), '%d %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank()) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1))
 ```
 
-## Death Growth Rate 5-Day Moving Average
+## Death Rate 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(covid_plm, aes(x=date, y=death_growth_rate_ma, group = Country.Region)) +
+ggplot(covid_plm, aes(x=date, y=death_rate, group = Country.Region)) +
   geom_line() +
   facet_wrap(~ Country.Region) +
-  ggtitle("5-Day MA Death Growth Rate Through 3-23-20") +
+  ggtitle(paste0("Death Rate Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+## Recovery Rate
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm, aes(x=date, y=recovered_rate, group = Country.Region)) +
+  geom_line() +
+  facet_wrap(~ Country.Region) +
+  ggtitle(paste0("Recovery Rate Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+covid_ets_start <- data.frame(covid_ets)
+covid_ets_state <- covid_ets_start %>% filter(Country.Region == "US") 
+
+covid_ets_state <- covid_ets_state  %>% 
+  group_by(Province.State, date) %>% 
+  summarise(confirmed = sum(confirmed), deaths = sum(deaths), recovered= sum(recovered)) %>% 
+  mutate(
+    #create daily percent growth variables
+    confirmed_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1),
+    death_growth_rate = c(NA,diff(deaths))/lag(deaths, 1),
+    recovered_growth_rate = c(NA,diff(recovered))/lag(recovered, 1),
+    death_rate = deaths / confirmed,
+    recovered_rate = recovered / confirmed
+   
+  )
+
+#replace NaNs w 0s
+covid_ets_state$confirmed_growth_rate[is.nan(covid_ets_state$confirmed_growth_rate)] <- 0
+covid_ets_state$death_growth_rate[is.nan(covid_ets_state$death_growth_rate)] <- 0
+covid_ets_state$recovered_growth_rate[is.nan(covid_ets_state$recovered_growth_rate)] <- 0
+
+covid_ets_state <- covid_ets_state %>% mutate(
+    conf_growth_rate_ma=rollapply(confirmed_growth_rate,5,mean,align='right',fill=NA),
+    death_growth_rate_ma=rollapply(death_growth_rate,5,mean,align='right',fill=NA),
+    recovered_growth_rate_ma=rollapply(recovered_growth_rate,5,mean,align='right',fill=NA)) %>%
+ungroup()
+
+
+#Filter out growth w < 25 base
+covid_ets_state$conf_growth_rate_ma[covid_ets_state$confirmed <100] <- NA
+covid_ets_state$death_growth_rate_ma[covid_ets_state$deaths <25] <- NA
+covid_ets_state$recovered_growth_rate_ma[covid_ets_state$recovered <25] <- NA
+covid_ets_state$death_rate[covid_ets_state$deaths <25] <- NA
+covid_ets_state$recovered_rate[covid_ets_state$recovered <25] <- NA
+
+
+#Only get states with >50 cases today
+current_cases <- covid_ets_state %>% group_by(Province.State) %>% summarise(current_cases = max(confirmed, na.rm=TRUE))
+hundred <- current_cases$Province.State[current_cases$current_cases >= 100]
+
+covid_ets_state <- covid_ets_state %>% filter(Province.State %in% hundred)
+
+#Create a panel data set
+library(plm)
+covid_plm_state <- pdata.frame(covid_ets_state, index=c("Province.State", "date"))
+#create diff variables
+covid_plm_state$diff_confirmed <- diff(covid_plm_state$confirmed, 1)
+covid_plm_state$diff_deaths <- diff(covid_plm_state$deaths, 1)
+covid_plm_state$diff_recovered <- diff(covid_plm_state$recovered, 1)
+
+```
+
+
+
+# Time Series by State
+
+We only look at states with more than one hundred cases today. For moving average growth rates, we only look at states with deaths and recoveries over 25.
+
+## Confirmed Cases
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=confirmed, group = Province.State)) +
+  geom_line() +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("Confirmed COVID19 Cases Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+## Deaths
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=deaths, group = Province.State)) +
+  geom_line() +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("Cumulative COVID19 Deaths Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+## Recovered
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=recovered, group = Province.State)) +
+  geom_line() +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("Cumulative COVID19 Recoveries Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+## Confirmed Growth Rate 5-Day Moving Average
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=conf_growth_rate_ma, group = Province.State)) +
+  geom_line() +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("5-Day MA Confirmed Growth Rate Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+## Death Rate 5-Day Moving Average
+
+Only states with >25 deaths are shown
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=death_rate, group = Province.State)) +
+  geom_line() +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("Death Rate Through " , format(Sys.time(), '%d %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank()) +
@@ -153,11 +294,14 @@ ggplot(covid_plm, aes(x=date, y=death_growth_rate_ma, group = Country.Region)) +
 ```
 
 ## Recoveries Growth Rate 5-Day Moving Average
+
+Only states with 25+ recoveries are shown
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(covid_plm, aes(x=date, y=recovered_growth_rate_ma, group = Country.Region)) +
+ggplot(covid_plm_state, aes(x=date, y=recovered_rate, group = Province.State)) +
   geom_line() +
-  facet_wrap(~ Country.Region) +
-  ggtitle("5-Day MA Recoveries Growth Rate Through 3-23-20") +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("Recovery Rate Through ", format(Sys.time(), '%d %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank()) +
