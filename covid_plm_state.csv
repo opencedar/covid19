@@ -1,0 +1,1985 @@
+"","Province.State","date","confirmed","deaths","recovered","confirmed_growth_rate","death_growth_rate","recovered_growth_rate","death_rate","recovered_rate","conf_growth_rate_ma","death_growth_rate_ma","recovered_growth_rate_ma","diff_confirmed","diff_deaths","diff_recovered"
+"Alabama-2020-01-22","Alabama","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Alabama-2020-01-23","Alabama","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-24","Alabama","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-25","Alabama","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-26","Alabama","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-27","Alabama","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-28","Alabama","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-29","Alabama","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-30","Alabama","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-01-31","Alabama","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-01","Alabama","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-02","Alabama","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-03","Alabama","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-04","Alabama","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-05","Alabama","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-06","Alabama","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-07","Alabama","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-08","Alabama","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-09","Alabama","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-10","Alabama","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-11","Alabama","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-12","Alabama","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-13","Alabama","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-14","Alabama","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-15","Alabama","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-16","Alabama","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-17","Alabama","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-18","Alabama","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-19","Alabama","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-20","Alabama","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-21","Alabama","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-22","Alabama","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-23","Alabama","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-24","Alabama","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-25","Alabama","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-26","Alabama","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-27","Alabama","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-28","Alabama","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-02-29","Alabama","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-01","Alabama","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-02","Alabama","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-03","Alabama","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-04","Alabama","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-05","Alabama","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-06","Alabama","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-07","Alabama","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-08","Alabama","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-09","Alabama","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-10","Alabama","2020-03-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-11","Alabama","2020-03-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-12","Alabama","2020-03-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Alabama-2020-03-13","Alabama","2020-03-13",5,0,0,1,0,0,NA,NA,NA,NA,NA,5,0,0
+"Alabama-2020-03-14","Alabama","2020-03-14",6,0,0,0.166666666666667,0,0,NA,NA,NA,NA,NA,1,0,0
+"Alabama-2020-03-15","Alabama","2020-03-15",12,0,0,0.5,0,0,NA,NA,NA,NA,NA,6,0,0
+"Alabama-2020-03-16","Alabama","2020-03-16",29,0,0,0.586206896551724,0,0,NA,NA,NA,NA,NA,17,0,0
+"Alabama-2020-03-17","Alabama","2020-03-17",39,0,0,0.256410256410256,0,0,NA,NA,NA,NA,NA,10,0,0
+"Alabama-2020-03-18","Alabama","2020-03-18",46,0,0,0.152173913043478,0,0,NA,NA,NA,NA,NA,7,0,0
+"Alabama-2020-03-19","Alabama","2020-03-19",78,0,0,0.41025641025641,0,0,NA,NA,NA,NA,NA,32,0,0
+"Alabama-2020-03-20","Alabama","2020-03-20",83,0,0,0.0602409638554217,0,0,NA,NA,NA,NA,NA,5,0,0
+"Alabama-2020-03-21","Alabama","2020-03-21",131,0,0,0.366412213740458,0,0,NA,NA,0.249098751461205,NA,NA,48,0,0
+"Alabama-2020-03-22","Alabama","2020-03-22",138,0,0,0.0507246376811594,0,0,NA,NA,0.207961627715386,NA,NA,7,0,0
+"Alabama-2020-03-23","Alabama","2020-03-23",138,0,0,0,0,0,NA,NA,0.17752684510669,NA,NA,0,0,0
+"Arizona-2020-01-22","Arizona","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Arizona-2020-01-23","Arizona","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-01-24","Arizona","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-01-25","Arizona","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-01-26","Arizona","2020-01-26",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Arizona-2020-01-27","Arizona","2020-01-27",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-01-28","Arizona","2020-01-28",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-01-29","Arizona","2020-01-29",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-01-30","Arizona","2020-01-30",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-01-31","Arizona","2020-01-31",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-01","Arizona","2020-02-01",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-02","Arizona","2020-02-02",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-03","Arizona","2020-02-03",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-04","Arizona","2020-02-04",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-05","Arizona","2020-02-05",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-06","Arizona","2020-02-06",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-07","Arizona","2020-02-07",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-08","Arizona","2020-02-08",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-09","Arizona","2020-02-09",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-10","Arizona","2020-02-10",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-11","Arizona","2020-02-11",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-12","Arizona","2020-02-12",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-13","Arizona","2020-02-13",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-14","Arizona","2020-02-14",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-15","Arizona","2020-02-15",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-16","Arizona","2020-02-16",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-17","Arizona","2020-02-17",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-18","Arizona","2020-02-18",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-19","Arizona","2020-02-19",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-20","Arizona","2020-02-20",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-21","Arizona","2020-02-21",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-22","Arizona","2020-02-22",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-23","Arizona","2020-02-23",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-24","Arizona","2020-02-24",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-25","Arizona","2020-02-25",1,0,1,0,0,1,NA,NA,NA,NA,NA,0,0,1
+"Arizona-2020-02-26","Arizona","2020-02-26",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-27","Arizona","2020-02-27",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-28","Arizona","2020-02-28",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-02-29","Arizona","2020-02-29",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-01","Arizona","2020-03-01",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-02","Arizona","2020-03-02",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-03","Arizona","2020-03-03",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-04","Arizona","2020-03-04",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-05","Arizona","2020-03-05",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-06","Arizona","2020-03-06",2,0,1,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Arizona-2020-03-07","Arizona","2020-03-07",4,0,1,0.5,0,0,NA,NA,NA,NA,NA,2,0,0
+"Arizona-2020-03-08","Arizona","2020-03-08",4,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-09","Arizona","2020-03-09",4,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-10","Arizona","2020-03-10",6,0,1,0.333333333333333,0,0,NA,NA,NA,NA,NA,2,0,0
+"Arizona-2020-03-11","Arizona","2020-03-11",9,0,1,0.333333333333333,0,0,NA,NA,NA,NA,NA,3,0,0
+"Arizona-2020-03-12","Arizona","2020-03-12",9,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-13","Arizona","2020-03-13",9,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arizona-2020-03-14","Arizona","2020-03-14",12,0,1,0.25,0,0,NA,NA,NA,NA,NA,3,0,0
+"Arizona-2020-03-15","Arizona","2020-03-15",13,0,1,0.0769230769230769,0,0,NA,NA,NA,NA,NA,1,0,0
+"Arizona-2020-03-16","Arizona","2020-03-16",18,0,1,0.277777777777778,0,0,NA,NA,NA,NA,NA,5,0,0
+"Arizona-2020-03-17","Arizona","2020-03-17",20,0,1,0.1,0,0,NA,NA,NA,NA,NA,2,0,0
+"Arizona-2020-03-18","Arizona","2020-03-18",27,0,0,0.259259259259259,0,-Inf,NA,NA,NA,NA,NA,7,0,-1
+"Arizona-2020-03-19","Arizona","2020-03-19",45,0,0,0.4,0,0,NA,NA,NA,NA,NA,18,0,0
+"Arizona-2020-03-20","Arizona","2020-03-20",78,0,0,0.423076923076923,0,0,NA,NA,NA,NA,NA,33,0,0
+"Arizona-2020-03-21","Arizona","2020-03-21",118,1,0,0.338983050847458,1,0,NA,NA,0.304263846636728,NA,NA,40,1,0
+"Arizona-2020-03-22","Arizona","2020-03-22",152,2,0,0.223684210526316,0.5,0,NA,NA,0.329000688741991,NA,NA,34,1,0
+"Arizona-2020-03-23","Arizona","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Arkansas-2020-01-22","Arkansas","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Arkansas-2020-01-23","Arkansas","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-24","Arkansas","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-25","Arkansas","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-26","Arkansas","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-27","Arkansas","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-28","Arkansas","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-29","Arkansas","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-30","Arkansas","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-01-31","Arkansas","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-01","Arkansas","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-02","Arkansas","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-03","Arkansas","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-04","Arkansas","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-05","Arkansas","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-06","Arkansas","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-07","Arkansas","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-08","Arkansas","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-09","Arkansas","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-10","Arkansas","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-11","Arkansas","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-12","Arkansas","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-13","Arkansas","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-14","Arkansas","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-15","Arkansas","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-16","Arkansas","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-17","Arkansas","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-18","Arkansas","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-19","Arkansas","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-20","Arkansas","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-21","Arkansas","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-22","Arkansas","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-23","Arkansas","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-24","Arkansas","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-25","Arkansas","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-26","Arkansas","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-27","Arkansas","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-28","Arkansas","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-02-29","Arkansas","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-01","Arkansas","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-02","Arkansas","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-03","Arkansas","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-04","Arkansas","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-05","Arkansas","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-06","Arkansas","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-07","Arkansas","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-08","Arkansas","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-09","Arkansas","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-10","Arkansas","2020-03-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-11","Arkansas","2020-03-11",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Arkansas-2020-03-12","Arkansas","2020-03-12",6,0,0,0.833333333333333,0,0,NA,NA,NA,NA,NA,5,0,0
+"Arkansas-2020-03-13","Arkansas","2020-03-13",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-14","Arkansas","2020-03-14",12,0,0,0.5,0,0,NA,NA,NA,NA,NA,6,0,0
+"Arkansas-2020-03-15","Arkansas","2020-03-15",16,0,0,0.25,0,0,NA,NA,NA,NA,NA,4,0,0
+"Arkansas-2020-03-16","Arkansas","2020-03-16",22,0,0,0.272727272727273,0,0,NA,NA,NA,NA,NA,6,0,0
+"Arkansas-2020-03-17","Arkansas","2020-03-17",22,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Arkansas-2020-03-18","Arkansas","2020-03-18",33,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,11,0,0
+"Arkansas-2020-03-19","Arkansas","2020-03-19",62,0,0,0.467741935483871,0,0,NA,NA,NA,NA,NA,29,0,0
+"Arkansas-2020-03-20","Arkansas","2020-03-20",96,0,0,0.354166666666667,0,0,NA,NA,NA,NA,NA,34,0,0
+"Arkansas-2020-03-21","Arkansas","2020-03-21",122,0,0,0.213114754098361,0,0,NA,NA,0.273671337916446,NA,NA,26,0,0
+"Arkansas-2020-03-22","Arkansas","2020-03-22",165,0,0,0.260606060606061,0,0,NA,NA,0.325792550037658,NA,NA,43,0,0
+"Arkansas-2020-03-23","Arkansas","2020-03-23",165,0,0,0,0,0,NA,NA,0.259125883370992,NA,NA,0,0,0
+"California-2020-01-22","California","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"California-2020-01-23","California","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-01-24","California","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-01-25","California","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-01-26","California","2020-01-26",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"California-2020-01-27","California","2020-01-27",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-01-28","California","2020-01-28",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-01-29","California","2020-01-29",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-01-30","California","2020-01-30",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-01-31","California","2020-01-31",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"California-2020-02-01","California","2020-02-01",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-02","California","2020-02-02",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-03","California","2020-02-03",6,0,0,0.5,0,0,NA,NA,NA,NA,NA,3,0,0
+"California-2020-02-04","California","2020-02-04",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-05","California","2020-02-05",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-06","California","2020-02-06",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-07","California","2020-02-07",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-08","California","2020-02-08",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-09","California","2020-02-09",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-10","California","2020-02-10",6,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-11","California","2020-02-11",7,0,0,0.142857142857143,0,0,NA,NA,NA,NA,NA,1,0,0
+"California-2020-02-12","California","2020-02-12",7,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-13","California","2020-02-13",8,0,0,0.125,0,0,NA,NA,NA,NA,NA,1,0,0
+"California-2020-02-14","California","2020-02-14",8,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-15","California","2020-02-15",8,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-16","California","2020-02-16",8,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-17","California","2020-02-17",8,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-18","California","2020-02-18",8,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-19","California","2020-02-19",8,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-20","California","2020-02-20",8,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-21","California","2020-02-21",10,0,2,0.2,0,1,NA,NA,NA,NA,NA,2,0,2
+"California-2020-02-22","California","2020-02-22",10,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-23","California","2020-02-23",10,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-24","California","2020-02-24",10,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-25","California","2020-02-25",10,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-26","California","2020-02-26",10,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-27","California","2020-02-27",11,0,2,0.0909090909090909,0,0,NA,NA,NA,NA,NA,1,0,0
+"California-2020-02-28","California","2020-02-28",11,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-02-29","California","2020-02-29",12,0,2,0.0833333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"California-2020-03-01","California","2020-03-01",12,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"California-2020-03-02","California","2020-03-02",21,0,2,0.428571428571429,0,0,NA,NA,NA,NA,NA,9,0,0
+"California-2020-03-03","California","2020-03-03",25,0,2,0.16,0,0,NA,NA,NA,NA,NA,4,0,0
+"California-2020-03-04","California","2020-03-04",35,1,2,0.285714285714286,1,0,NA,NA,NA,NA,NA,10,1,0
+"California-2020-03-05","California","2020-03-05",51,1,2,0.313725490196078,0,0,NA,NA,NA,NA,NA,16,0,0
+"California-2020-03-06","California","2020-03-06",59,1,2,0.135593220338983,0,0,NA,NA,NA,NA,NA,8,0,0
+"California-2020-03-07","California","2020-03-07",81,1,2,0.271604938271605,0,0,NA,NA,NA,NA,NA,22,0,0
+"California-2020-03-08","California","2020-03-08",95,1,2,0.147368421052632,0,0,NA,NA,NA,NA,NA,14,0,0
+"California-2020-03-09","California","2020-03-09",101,1,2,0.0594059405940594,0,0,NA,NA,0.185539602090671,NA,NA,6,0,0
+"California-2020-03-10","California","2020-03-10",144,2,2,0.298611111111111,0.5,0,NA,NA,0.182516726273678,NA,NA,43,1,0
+"California-2020-03-11","California","2020-03-11",177,3,2,0.186440677966102,0.333333333333333,0,NA,NA,0.192686217799102,NA,NA,33,1,0
+"California-2020-03-12","California","2020-03-12",221,4,6,0.199095022624434,0.25,0.666666666666667,NA,NA,0.178184234669668,NA,NA,44,1,4
+"California-2020-03-13","California","2020-03-13",282,4,6,0.216312056737589,0,0,NA,NA,0.191972961806659,NA,NA,61,0,0
+"California-2020-03-14","California","2020-03-14",340,5,6,0.170588235294118,0.2,0,NA,NA,0.214209420746671,NA,NA,58,1,0
+"California-2020-03-15","California","2020-03-15",426,6,6,0.2018779342723,0.166666666666667,0,NA,NA,0.194862785378909,NA,NA,86,1,0
+"California-2020-03-16","California","2020-03-16",557,7,6,0.235188509874327,0.142857142857143,0,NA,NA,0.204612351760554,NA,NA,131,1,0
+"California-2020-03-17","California","2020-03-17",698,12,6,0.202005730659026,0.416666666666667,0,NA,NA,0.205194493367472,NA,NA,141,5,0
+"California-2020-03-18","California","2020-03-18",751,13,0,0.0705725699067909,0.0769230769230769,-Inf,NA,NA,0.176046596001312,NA,NA,53,1,-6
+"California-2020-03-19","California","2020-03-19",952,18,0,0.211134453781513,0.277777777777778,0,NA,NA,0.184155839698791,NA,NA,201,5,0
+"California-2020-03-20","California","2020-03-20",1177,23,0,0.191163976210705,0.217391304347826,0,NA,NA,0.182013048086472,NA,NA,225,5,0
+"California-2020-03-21","California","2020-03-21",1364,24,0,0.137096774193548,0.0416666666666667,0,NA,NA,0.162394700950317,NA,NA,187,1,0
+"California-2020-03-22","California","2020-03-22",1642,30,0,0.169305724725944,0.2,0,0.0182704019488429,NA,0.1558546997637,0.162751765143069,NA,278,6,0
+"California-2020-03-23","California","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Colorado-2020-01-22","Colorado","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Colorado-2020-01-23","Colorado","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-24","Colorado","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-25","Colorado","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-26","Colorado","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-27","Colorado","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-28","Colorado","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-29","Colorado","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-30","Colorado","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-01-31","Colorado","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-01","Colorado","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-02","Colorado","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-03","Colorado","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-04","Colorado","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-05","Colorado","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-06","Colorado","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-07","Colorado","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-08","Colorado","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-09","Colorado","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-10","Colorado","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-11","Colorado","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-12","Colorado","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-13","Colorado","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-14","Colorado","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-15","Colorado","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-16","Colorado","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-17","Colorado","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-18","Colorado","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-19","Colorado","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-20","Colorado","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-21","Colorado","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-22","Colorado","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-23","Colorado","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-24","Colorado","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-25","Colorado","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-26","Colorado","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-27","Colorado","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-28","Colorado","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-02-29","Colorado","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-01","Colorado","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-02","Colorado","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-03","Colorado","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-04","Colorado","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-05","Colorado","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-06","Colorado","2020-03-06",3,0,0,1,0,0,NA,NA,NA,NA,NA,3,0,0
+"Colorado-2020-03-07","Colorado","2020-03-07",7,0,0,0.571428571428571,0,0,NA,NA,NA,NA,NA,4,0,0
+"Colorado-2020-03-08","Colorado","2020-03-08",7,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-09","Colorado","2020-03-09",7,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Colorado-2020-03-10","Colorado","2020-03-10",15,0,0,0.533333333333333,0,0,NA,NA,NA,NA,NA,8,0,0
+"Colorado-2020-03-11","Colorado","2020-03-11",34,0,0,0.558823529411765,0,0,NA,NA,NA,NA,NA,19,0,0
+"Colorado-2020-03-12","Colorado","2020-03-12",45,0,0,0.244444444444444,0,0,NA,NA,NA,NA,NA,11,0,0
+"Colorado-2020-03-13","Colorado","2020-03-13",49,0,0,0.0816326530612245,0,0,NA,NA,NA,NA,NA,4,0,0
+"Colorado-2020-03-14","Colorado","2020-03-14",101,1,0,0.514851485148515,1,0,NA,NA,0.386617089079856,NA,NA,52,1,0
+"Colorado-2020-03-15","Colorado","2020-03-15",131,1,0,0.229007633587786,0,0,NA,NA,0.325751949130747,NA,NA,30,0,0
+"Colorado-2020-03-16","Colorado","2020-03-16",160,1,0,0.18125,0,0,NA,NA,0.250237243248394,NA,NA,29,0,0
+"Colorado-2020-03-17","Colorado","2020-03-17",160,2,0,0,0.5,0,NA,NA,0.201348354359505,NA,NA,0,1,0
+"Colorado-2020-03-18","Colorado","2020-03-18",184,2,0,0.130434782608696,0,0,NA,NA,0.211108780268999,NA,NA,24,0,0
+"Colorado-2020-03-19","Colorado","2020-03-19",277,4,0,0.335740072202166,0.5,0,NA,NA,0.17528649767973,NA,NA,93,2,0
+"Colorado-2020-03-20","Colorado","2020-03-20",363,4,0,0.236914600550964,0,0,NA,NA,0.176867891072365,NA,NA,86,0,0
+"Colorado-2020-03-21","Colorado","2020-03-21",390,4,0,0.0692307692307692,0,0,NA,NA,0.154464044918519,NA,NA,27,0,0
+"Colorado-2020-03-22","Colorado","2020-03-22",476,6,0,0.180672268907563,0.333333333333333,0,NA,NA,0.190598498700032,NA,NA,86,2,0
+"Colorado-2020-03-23","Colorado","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Connecticut-2020-01-22","Connecticut","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Connecticut-2020-01-23","Connecticut","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-24","Connecticut","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-25","Connecticut","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-26","Connecticut","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-27","Connecticut","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-28","Connecticut","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-29","Connecticut","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-30","Connecticut","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-01-31","Connecticut","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-01","Connecticut","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-02","Connecticut","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-03","Connecticut","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-04","Connecticut","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-05","Connecticut","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-06","Connecticut","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-07","Connecticut","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-08","Connecticut","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-09","Connecticut","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-10","Connecticut","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-11","Connecticut","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-12","Connecticut","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-13","Connecticut","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-14","Connecticut","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-15","Connecticut","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-16","Connecticut","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-17","Connecticut","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-18","Connecticut","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-19","Connecticut","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-20","Connecticut","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-21","Connecticut","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-22","Connecticut","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-23","Connecticut","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-24","Connecticut","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-25","Connecticut","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-26","Connecticut","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-27","Connecticut","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-28","Connecticut","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-02-29","Connecticut","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-01","Connecticut","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-02","Connecticut","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-03","Connecticut","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-04","Connecticut","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-05","Connecticut","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-06","Connecticut","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-07","Connecticut","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-08","Connecticut","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-09","Connecticut","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-10","Connecticut","2020-03-10",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"Connecticut-2020-03-11","Connecticut","2020-03-11",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"Connecticut-2020-03-12","Connecticut","2020-03-12",5,0,0,0.4,0,0,NA,NA,NA,NA,NA,2,0,0
+"Connecticut-2020-03-13","Connecticut","2020-03-13",11,0,0,0.545454545454545,0,0,NA,NA,NA,NA,NA,6,0,0
+"Connecticut-2020-03-14","Connecticut","2020-03-14",22,0,0,0.5,0,0,NA,NA,NA,NA,NA,11,0,0
+"Connecticut-2020-03-15","Connecticut","2020-03-15",24,0,0,0.0833333333333333,0,0,NA,NA,NA,NA,NA,2,0,0
+"Connecticut-2020-03-16","Connecticut","2020-03-16",30,0,0,0.2,0,0,NA,NA,NA,NA,NA,6,0,0
+"Connecticut-2020-03-17","Connecticut","2020-03-17",68,0,0,0.558823529411765,0,0,NA,NA,NA,NA,NA,38,0,0
+"Connecticut-2020-03-18","Connecticut","2020-03-18",68,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Connecticut-2020-03-19","Connecticut","2020-03-19",159,2,0,0.572327044025157,1,0,NA,NA,0.282896781354051,NA,NA,91,2,0
+"Connecticut-2020-03-20","Connecticut","2020-03-20",194,3,0,0.180412371134021,0.333333333333333,0,NA,NA,0.302312588914188,NA,NA,35,1,0
+"Connecticut-2020-03-21","Connecticut","2020-03-21",194,4,0,0,0.25,0,NA,NA,0.262312588914189,NA,NA,0,1,0
+"Connecticut-2020-03-22","Connecticut","2020-03-22",223,5,0,0.130044843049327,0.2,0,NA,NA,0.176556851641701,NA,NA,29,1,0
+"Connecticut-2020-03-23","Connecticut","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"District of Columbia-2020-01-22","District of Columbia","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"District of Columbia-2020-01-23","District of Columbia","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-24","District of Columbia","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-25","District of Columbia","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-26","District of Columbia","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-27","District of Columbia","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-28","District of Columbia","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-29","District of Columbia","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-30","District of Columbia","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-01-31","District of Columbia","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-01","District of Columbia","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-02","District of Columbia","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-03","District of Columbia","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-04","District of Columbia","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-05","District of Columbia","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-06","District of Columbia","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-07","District of Columbia","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-08","District of Columbia","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-09","District of Columbia","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-10","District of Columbia","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-11","District of Columbia","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-12","District of Columbia","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-13","District of Columbia","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-14","District of Columbia","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-15","District of Columbia","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-16","District of Columbia","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-17","District of Columbia","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-18","District of Columbia","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-19","District of Columbia","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-20","District of Columbia","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-21","District of Columbia","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-22","District of Columbia","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-23","District of Columbia","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-24","District of Columbia","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-25","District of Columbia","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-26","District of Columbia","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-27","District of Columbia","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-28","District of Columbia","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-02-29","District of Columbia","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-01","District of Columbia","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-02","District of Columbia","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-03","District of Columbia","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-04","District of Columbia","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-05","District of Columbia","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-06","District of Columbia","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-07","District of Columbia","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-08","District of Columbia","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-09","District of Columbia","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-10","District of Columbia","2020-03-10",5,0,0,1,0,0,NA,NA,NA,NA,NA,5,0,0
+"District of Columbia-2020-03-11","District of Columbia","2020-03-11",10,0,0,0.5,0,0,NA,NA,NA,NA,NA,5,0,0
+"District of Columbia-2020-03-12","District of Columbia","2020-03-12",10,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-13","District of Columbia","2020-03-13",10,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-14","District of Columbia","2020-03-14",10,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-15","District of Columbia","2020-03-15",16,0,0,0.375,0,0,NA,NA,NA,NA,NA,6,0,0
+"District of Columbia-2020-03-16","District of Columbia","2020-03-16",22,0,0,0.272727272727273,0,0,NA,NA,NA,NA,NA,6,0,0
+"District of Columbia-2020-03-17","District of Columbia","2020-03-17",22,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"District of Columbia-2020-03-18","District of Columbia","2020-03-18",31,0,0,0.290322580645161,0,0,NA,NA,NA,NA,NA,9,0,0
+"District of Columbia-2020-03-19","District of Columbia","2020-03-19",40,0,0,0.225,0,0,NA,NA,NA,NA,NA,9,0,0
+"District of Columbia-2020-03-20","District of Columbia","2020-03-20",71,1,0,0.436619718309859,1,0,NA,NA,NA,NA,NA,31,1,0
+"District of Columbia-2020-03-21","District of Columbia","2020-03-21",77,1,0,0.0779220779220779,0,0,NA,NA,NA,NA,NA,6,0,0
+"District of Columbia-2020-03-22","District of Columbia","2020-03-22",102,2,0,0.245098039215686,0.5,0,NA,NA,0.254992483218557,NA,NA,25,1,0
+"District of Columbia-2020-03-23","District of Columbia","2020-03-23",102,2,0,0,0,0,NA,NA,0.196927967089525,NA,NA,0,0,0
+"Florida-2020-01-22","Florida","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Florida-2020-01-23","Florida","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-24","Florida","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-25","Florida","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-26","Florida","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-27","Florida","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-28","Florida","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-29","Florida","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-30","Florida","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-01-31","Florida","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-01","Florida","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-02","Florida","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-03","Florida","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-04","Florida","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-05","Florida","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-06","Florida","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-07","Florida","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-08","Florida","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-09","Florida","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-10","Florida","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-11","Florida","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-12","Florida","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-13","Florida","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-14","Florida","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-15","Florida","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-16","Florida","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-17","Florida","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-18","Florida","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-19","Florida","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-20","Florida","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-21","Florida","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-22","Florida","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-23","Florida","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-24","Florida","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-25","Florida","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-26","Florida","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-27","Florida","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-28","Florida","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-02-29","Florida","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-03-01","Florida","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-03-02","Florida","2020-03-02",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Florida-2020-03-03","Florida","2020-03-03",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Florida-2020-03-04","Florida","2020-03-04",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-03-05","Florida","2020-03-05",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"Florida-2020-03-06","Florida","2020-03-06",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Florida-2020-03-07","Florida","2020-03-07",7,0,0,0.571428571428571,0,0,NA,NA,NA,NA,NA,4,0,0
+"Florida-2020-03-08","Florida","2020-03-08",10,2,0,0.3,1,0,NA,NA,NA,NA,NA,3,2,0
+"Florida-2020-03-09","Florida","2020-03-09",13,2,0,0.230769230769231,0,0,NA,NA,NA,NA,NA,3,0,0
+"Florida-2020-03-10","Florida","2020-03-10",15,2,0,0.133333333333333,0,0,NA,NA,NA,NA,NA,2,0,0
+"Florida-2020-03-11","Florida","2020-03-11",28,2,0,0.464285714285714,0,0,NA,NA,NA,NA,NA,13,0,0
+"Florida-2020-03-12","Florida","2020-03-12",35,2,0,0.2,0,0,NA,NA,NA,NA,NA,7,0,0
+"Florida-2020-03-13","Florida","2020-03-13",50,2,0,0.3,0,0,NA,NA,NA,NA,NA,15,0,0
+"Florida-2020-03-14","Florida","2020-03-14",76,3,0,0.342105263157895,0.333333333333333,0,NA,NA,NA,NA,NA,26,1,0
+"Florida-2020-03-15","Florida","2020-03-15",115,4,0,0.339130434782609,0.25,0,NA,NA,0.329104282445244,NA,NA,39,1,0
+"Florida-2020-03-16","Florida","2020-03-16",155,5,0,0.258064516129032,0.2,0,NA,NA,0.287860042813907,NA,NA,40,1,0
+"Florida-2020-03-17","Florida","2020-03-17",216,6,0,0.282407407407407,0.166666666666667,0,NA,NA,0.304341524295389,NA,NA,61,1,0
+"Florida-2020-03-18","Florida","2020-03-18",314,7,0,0.312101910828025,0.142857142857143,0,NA,NA,0.306761906460994,NA,NA,98,1,0
+"Florida-2020-03-19","Florida","2020-03-19",417,9,0,0.247002398081535,0.222222222222222,0,NA,NA,0.287741333445722,NA,NA,103,2,0
+"Florida-2020-03-20","Florida","2020-03-20",563,10,0,0.259325044404973,0.1,0,NA,NA,0.271780255370195,NA,NA,146,1,0
+"Florida-2020-03-21","Florida","2020-03-21",659,13,0,0.14567526555387,0.230769230769231,0,NA,NA,0.249302405255162,NA,NA,96,3,0
+"Florida-2020-03-22","Florida","2020-03-22",830,13,0,0.206024096385542,0,0,NA,NA,0.234025743050789,NA,NA,171,0,0
+"Florida-2020-03-23","Florida","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Georgia-2020-01-22","Georgia","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Georgia-2020-01-23","Georgia","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-24","Georgia","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-25","Georgia","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-26","Georgia","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-27","Georgia","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-28","Georgia","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-29","Georgia","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-30","Georgia","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-01-31","Georgia","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-01","Georgia","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-02","Georgia","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-03","Georgia","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-04","Georgia","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-05","Georgia","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-06","Georgia","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-07","Georgia","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-08","Georgia","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-09","Georgia","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-10","Georgia","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-11","Georgia","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-12","Georgia","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-13","Georgia","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-14","Georgia","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-15","Georgia","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-16","Georgia","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-17","Georgia","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-18","Georgia","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-19","Georgia","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-20","Georgia","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-21","Georgia","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-22","Georgia","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-23","Georgia","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-24","Georgia","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-25","Georgia","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-26","Georgia","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-27","Georgia","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-28","Georgia","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-02-29","Georgia","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-03-01","Georgia","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-03-02","Georgia","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-03-03","Georgia","2020-03-03",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"Georgia-2020-03-04","Georgia","2020-03-04",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-03-05","Georgia","2020-03-05",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-03-06","Georgia","2020-03-06",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"Georgia-2020-03-07","Georgia","2020-03-07",5,0,0,0.4,0,0,NA,NA,NA,NA,NA,2,0,0
+"Georgia-2020-03-08","Georgia","2020-03-08",5,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Georgia-2020-03-09","Georgia","2020-03-09",10,0,0,0.5,0,0,NA,NA,NA,NA,NA,5,0,0
+"Georgia-2020-03-10","Georgia","2020-03-10",17,0,0,0.411764705882353,0,0,NA,NA,NA,NA,NA,7,0,0
+"Georgia-2020-03-11","Georgia","2020-03-11",23,0,0,0.260869565217391,0,0,NA,NA,NA,NA,NA,6,0,0
+"Georgia-2020-03-12","Georgia","2020-03-12",31,1,0,0.258064516129032,1,0,NA,NA,NA,NA,NA,8,1,0
+"Georgia-2020-03-13","Georgia","2020-03-13",42,1,0,0.261904761904762,0,0,NA,NA,NA,NA,NA,11,0,0
+"Georgia-2020-03-14","Georgia","2020-03-14",66,1,0,0.363636363636364,0,0,NA,NA,NA,NA,NA,24,0,0
+"Georgia-2020-03-15","Georgia","2020-03-15",99,1,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,33,0,0
+"Georgia-2020-03-16","Georgia","2020-03-16",121,1,0,0.181818181818182,0,0,NA,NA,0.279751431364335,NA,NA,22,0,0
+"Georgia-2020-03-17","Georgia","2020-03-17",146,1,0,0.171232876712329,0,0,NA,NA,0.262385103480994,NA,NA,25,0,0
+"Georgia-2020-03-18","Georgia","2020-03-18",199,3,0,0.266331658291457,0.666666666666667,0,NA,NA,0.263270482758333,NA,NA,53,2,0
+"Georgia-2020-03-19","Georgia","2020-03-19",287,10,0,0.306620209059233,0.7,0,NA,NA,0.251867251842907,NA,NA,88,7,0
+"Georgia-2020-03-20","Georgia","2020-03-20",420,13,0,0.316666666666667,0.230769230769231,0,NA,NA,0.248533918509574,NA,NA,133,3,0
+"Georgia-2020-03-21","Georgia","2020-03-21",507,14,0,0.171597633136095,0.0714285714285714,0,NA,NA,0.246489808773156,NA,NA,87,1,0
+"Georgia-2020-03-22","Georgia","2020-03-22",600,23,0,0.155,0.391304347826087,0,NA,NA,0.24324323343069,NA,NA,93,9,0
+"Georgia-2020-03-23","Georgia","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Illinois-2020-01-22","Illinois","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Illinois-2020-01-23","Illinois","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-01-24","Illinois","2020-01-24",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Illinois-2020-01-25","Illinois","2020-01-25",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-01-26","Illinois","2020-01-26",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-01-27","Illinois","2020-01-27",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-01-28","Illinois","2020-01-28",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-01-29","Illinois","2020-01-29",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-01-30","Illinois","2020-01-30",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-01-31","Illinois","2020-01-31",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Illinois-2020-02-01","Illinois","2020-02-01",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-02","Illinois","2020-02-02",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-03","Illinois","2020-02-03",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-04","Illinois","2020-02-04",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-05","Illinois","2020-02-05",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-06","Illinois","2020-02-06",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-07","Illinois","2020-02-07",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-08","Illinois","2020-02-08",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-09","Illinois","2020-02-09",2,0,2,0,0,1,NA,NA,NA,NA,NA,0,0,2
+"Illinois-2020-02-10","Illinois","2020-02-10",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-11","Illinois","2020-02-11",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-12","Illinois","2020-02-12",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-13","Illinois","2020-02-13",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-14","Illinois","2020-02-14",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-15","Illinois","2020-02-15",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-16","Illinois","2020-02-16",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-17","Illinois","2020-02-17",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-18","Illinois","2020-02-18",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-19","Illinois","2020-02-19",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-20","Illinois","2020-02-20",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-21","Illinois","2020-02-21",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-22","Illinois","2020-02-22",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-23","Illinois","2020-02-23",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-24","Illinois","2020-02-24",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-25","Illinois","2020-02-25",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-26","Illinois","2020-02-26",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-27","Illinois","2020-02-27",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-28","Illinois","2020-02-28",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-02-29","Illinois","2020-02-29",2,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-03-01","Illinois","2020-03-01",3,0,2,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"Illinois-2020-03-02","Illinois","2020-03-02",4,0,2,0.25,0,0,NA,NA,NA,NA,NA,1,0,0
+"Illinois-2020-03-03","Illinois","2020-03-03",4,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-03-04","Illinois","2020-03-04",4,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-03-05","Illinois","2020-03-05",5,0,2,0.2,0,0,NA,NA,NA,NA,NA,1,0,0
+"Illinois-2020-03-06","Illinois","2020-03-06",5,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-03-07","Illinois","2020-03-07",6,0,2,0.166666666666667,0,0,NA,NA,NA,NA,NA,1,0,0
+"Illinois-2020-03-08","Illinois","2020-03-08",7,0,2,0.142857142857143,0,0,NA,NA,NA,NA,NA,1,0,0
+"Illinois-2020-03-09","Illinois","2020-03-09",7,0,2,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Illinois-2020-03-10","Illinois","2020-03-10",12,0,2,0.416666666666667,0,0,NA,NA,NA,NA,NA,5,0,0
+"Illinois-2020-03-11","Illinois","2020-03-11",25,0,2,0.52,0,0,NA,NA,NA,NA,NA,13,0,0
+"Illinois-2020-03-12","Illinois","2020-03-12",32,0,2,0.21875,0,0,NA,NA,NA,NA,NA,7,0,0
+"Illinois-2020-03-13","Illinois","2020-03-13",46,0,2,0.304347826086957,0,0,NA,NA,NA,NA,NA,14,0,0
+"Illinois-2020-03-14","Illinois","2020-03-14",64,0,2,0.28125,0,0,NA,NA,NA,NA,NA,18,0,0
+"Illinois-2020-03-15","Illinois","2020-03-15",93,0,2,0.311827956989247,0,0,NA,NA,NA,NA,NA,29,0,0
+"Illinois-2020-03-16","Illinois","2020-03-16",105,0,2,0.114285714285714,0,0,NA,NA,0.246092299472384,NA,NA,12,0,0
+"Illinois-2020-03-17","Illinois","2020-03-17",161,1,2,0.347826086956522,1,0,NA,NA,0.271907516863688,NA,NA,56,1,0
+"Illinois-2020-03-18","Illinois","2020-03-18",162,1,0,0.00617283950617284,0,-Inf,NA,NA,0.212272519547531,NA,NA,1,0,-2
+"Illinois-2020-03-19","Illinois","2020-03-19",422,4,0,0.616113744075829,0.75,0,NA,NA,0.279245268362697,NA,NA,260,3,0
+"Illinois-2020-03-20","Illinois","2020-03-20",585,5,0,0.278632478632479,0.2,0,NA,NA,0.272606172691343,NA,NA,163,1,0
+"Illinois-2020-03-21","Illinois","2020-03-21",753,6,0,0.223107569721116,0.166666666666667,0,NA,NA,0.294370543778424,NA,NA,168,1,0
+"Illinois-2020-03-22","Illinois","2020-03-22",1049,9,0,0.282173498570067,0.333333333333333,0,NA,NA,0.281240026101133,NA,NA,296,3,0
+"Illinois-2020-03-23","Illinois","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Indiana-2020-01-22","Indiana","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Indiana-2020-01-23","Indiana","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-24","Indiana","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-25","Indiana","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-26","Indiana","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-27","Indiana","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-28","Indiana","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-29","Indiana","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-30","Indiana","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-01-31","Indiana","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-01","Indiana","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-02","Indiana","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-03","Indiana","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-04","Indiana","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-05","Indiana","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-06","Indiana","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-07","Indiana","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-08","Indiana","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-09","Indiana","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-10","Indiana","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-11","Indiana","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-12","Indiana","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-13","Indiana","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-14","Indiana","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-15","Indiana","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-16","Indiana","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-17","Indiana","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-18","Indiana","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-19","Indiana","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-20","Indiana","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-21","Indiana","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-22","Indiana","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-23","Indiana","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-24","Indiana","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-25","Indiana","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-26","Indiana","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-27","Indiana","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-28","Indiana","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-02-29","Indiana","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-01","Indiana","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-02","Indiana","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-03","Indiana","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-04","Indiana","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-05","Indiana","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-06","Indiana","2020-03-06",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Indiana-2020-03-07","Indiana","2020-03-07",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-08","Indiana","2020-03-08",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Indiana-2020-03-09","Indiana","2020-03-09",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"Indiana-2020-03-10","Indiana","2020-03-10",6,0,0,0.5,0,0,NA,NA,NA,NA,NA,3,0,0
+"Indiana-2020-03-11","Indiana","2020-03-11",11,0,0,0.454545454545455,0,0,NA,NA,NA,NA,NA,5,0,0
+"Indiana-2020-03-12","Indiana","2020-03-12",13,0,0,0.153846153846154,0,0,NA,NA,NA,NA,NA,2,0,0
+"Indiana-2020-03-13","Indiana","2020-03-13",13,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Indiana-2020-03-14","Indiana","2020-03-14",16,0,0,0.1875,0,0,NA,NA,NA,NA,NA,3,0,0
+"Indiana-2020-03-15","Indiana","2020-03-15",20,0,0,0.2,0,0,NA,NA,NA,NA,NA,4,0,0
+"Indiana-2020-03-16","Indiana","2020-03-16",25,1,0,0.2,1,0,NA,NA,NA,NA,NA,5,1,0
+"Indiana-2020-03-17","Indiana","2020-03-17",30,2,0,0.166666666666667,0.5,0,NA,NA,NA,NA,NA,5,1,0
+"Indiana-2020-03-18","Indiana","2020-03-18",39,2,0,0.230769230769231,0,0,NA,NA,NA,NA,NA,9,0,0
+"Indiana-2020-03-19","Indiana","2020-03-19",60,2,0,0.35,0,0,NA,NA,NA,NA,NA,21,0,0
+"Indiana-2020-03-20","Indiana","2020-03-20",86,2,0,0.302325581395349,0,0,NA,NA,NA,NA,NA,26,0,0
+"Indiana-2020-03-21","Indiana","2020-03-21",128,4,0,0.328125,0.5,0,NA,NA,0.275577295766249,NA,NA,42,2,0
+"Indiana-2020-03-22","Indiana","2020-03-22",201,6,0,0.36318407960199,0.333333333333333,0,NA,NA,0.314880778353314,NA,NA,73,2,0
+"Indiana-2020-03-23","Indiana","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Louisiana-2020-01-22","Louisiana","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Louisiana-2020-01-23","Louisiana","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-24","Louisiana","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-25","Louisiana","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-26","Louisiana","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-27","Louisiana","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-28","Louisiana","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-29","Louisiana","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-30","Louisiana","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-01-31","Louisiana","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-01","Louisiana","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-02","Louisiana","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-03","Louisiana","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-04","Louisiana","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-05","Louisiana","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-06","Louisiana","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-07","Louisiana","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-08","Louisiana","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-09","Louisiana","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-10","Louisiana","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-11","Louisiana","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-12","Louisiana","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-13","Louisiana","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-14","Louisiana","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-15","Louisiana","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-16","Louisiana","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-17","Louisiana","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-18","Louisiana","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-19","Louisiana","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-20","Louisiana","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-21","Louisiana","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-22","Louisiana","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-23","Louisiana","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-24","Louisiana","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-25","Louisiana","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-26","Louisiana","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-27","Louisiana","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-28","Louisiana","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-02-29","Louisiana","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-01","Louisiana","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-02","Louisiana","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-03","Louisiana","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-04","Louisiana","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-05","Louisiana","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-06","Louisiana","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-07","Louisiana","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-08","Louisiana","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-09","Louisiana","2020-03-09",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Louisiana-2020-03-10","Louisiana","2020-03-10",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Louisiana-2020-03-11","Louisiana","2020-03-11",6,0,0,0.833333333333333,0,0,NA,NA,NA,NA,NA,5,0,0
+"Louisiana-2020-03-12","Louisiana","2020-03-12",19,0,0,0.684210526315789,0,0,NA,NA,NA,NA,NA,13,0,0
+"Louisiana-2020-03-13","Louisiana","2020-03-13",36,0,0,0.472222222222222,0,0,NA,NA,NA,NA,NA,17,0,0
+"Louisiana-2020-03-14","Louisiana","2020-03-14",77,1,0,0.532467532467532,1,0,NA,NA,NA,NA,NA,41,1,0
+"Louisiana-2020-03-15","Louisiana","2020-03-15",91,2,0,0.153846153846154,0.5,0,NA,NA,NA,NA,NA,14,1,0
+"Louisiana-2020-03-16","Louisiana","2020-03-16",136,3,0,0.330882352941176,0.333333333333333,0,NA,NA,0.434725757558575,NA,NA,45,1,0
+"Louisiana-2020-03-17","Louisiana","2020-03-17",196,4,0,0.306122448979592,0.25,0,NA,NA,0.359108142091335,NA,NA,60,1,0
+"Louisiana-2020-03-18","Louisiana","2020-03-18",257,4,0,0.237354085603113,0,0,NA,NA,0.312134514767513,NA,NA,61,0,0
+"Louisiana-2020-03-19","Louisiana","2020-03-19",392,10,0,0.344387755102041,0.6,0,NA,NA,0.274518559294415,NA,NA,135,6,0
+"Louisiana-2020-03-20","Louisiana","2020-03-20",538,14,0,0.271375464684015,0.285714285714286,0,NA,NA,0.298024421461987,NA,NA,146,4,0
+"Louisiana-2020-03-21","Louisiana","2020-03-21",585,16,0,0.0803418803418803,0.125,0,NA,NA,0.247916326942128,NA,NA,47,2,0
+"Louisiana-2020-03-22","Louisiana","2020-03-22",837,20,0,0.301075268817204,0.2,0,NA,NA,0.246906890909651,NA,NA,252,4,0
+"Louisiana-2020-03-23","Louisiana","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Maryland-2020-01-22","Maryland","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Maryland-2020-01-23","Maryland","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-24","Maryland","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-25","Maryland","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-26","Maryland","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-27","Maryland","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-28","Maryland","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-29","Maryland","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-30","Maryland","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-01-31","Maryland","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-01","Maryland","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-02","Maryland","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-03","Maryland","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-04","Maryland","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-05","Maryland","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-06","Maryland","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-07","Maryland","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-08","Maryland","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-09","Maryland","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-10","Maryland","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-11","Maryland","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-12","Maryland","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-13","Maryland","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-14","Maryland","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-15","Maryland","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-16","Maryland","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-17","Maryland","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-18","Maryland","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-19","Maryland","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-20","Maryland","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-21","Maryland","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-22","Maryland","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-23","Maryland","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-24","Maryland","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-25","Maryland","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-26","Maryland","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-27","Maryland","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-28","Maryland","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-02-29","Maryland","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-01","Maryland","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-02","Maryland","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-03","Maryland","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-04","Maryland","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-05","Maryland","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-06","Maryland","2020-03-06",3,0,0,1,0,0,NA,NA,NA,NA,NA,3,0,0
+"Maryland-2020-03-07","Maryland","2020-03-07",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-08","Maryland","2020-03-08",5,0,0,0.4,0,0,NA,NA,NA,NA,NA,2,0,0
+"Maryland-2020-03-09","Maryland","2020-03-09",5,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Maryland-2020-03-10","Maryland","2020-03-10",8,0,0,0.375,0,0,NA,NA,NA,NA,NA,3,0,0
+"Maryland-2020-03-11","Maryland","2020-03-11",9,0,0,0.111111111111111,0,0,NA,NA,NA,NA,NA,1,0,0
+"Maryland-2020-03-12","Maryland","2020-03-12",12,0,0,0.25,0,0,NA,NA,NA,NA,NA,3,0,0
+"Maryland-2020-03-13","Maryland","2020-03-13",18,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,6,0,0
+"Maryland-2020-03-14","Maryland","2020-03-14",26,0,0,0.307692307692308,0,0,NA,NA,NA,NA,NA,8,0,0
+"Maryland-2020-03-15","Maryland","2020-03-15",32,0,0,0.1875,0,0,NA,NA,NA,NA,NA,6,0,0
+"Maryland-2020-03-16","Maryland","2020-03-16",41,0,3,0.219512195121951,0,1,NA,NA,NA,NA,NA,9,0,3
+"Maryland-2020-03-17","Maryland","2020-03-17",60,0,3,0.316666666666667,0,0,NA,NA,NA,NA,NA,19,0,0
+"Maryland-2020-03-18","Maryland","2020-03-18",85,0,0,0.294117647058824,0,-Inf,NA,NA,NA,NA,NA,25,0,-3
+"Maryland-2020-03-19","Maryland","2020-03-19",107,1,0,0.205607476635514,1,0,NA,NA,0.244680797096591,NA,NA,22,1,0
+"Maryland-2020-03-20","Maryland","2020-03-20",149,1,0,0.281879194630872,0,0,NA,NA,0.263556636022766,NA,NA,42,0,0
+"Maryland-2020-03-21","Maryland","2020-03-21",193,2,0,0.227979274611399,0.5,0,NA,NA,0.265250051920655,NA,NA,44,1,0
+"Maryland-2020-03-22","Maryland","2020-03-22",244,3,0,0.209016393442623,0.333333333333333,0,NA,NA,0.243719997275846,NA,NA,51,1,0
+"Maryland-2020-03-23","Maryland","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Massachusetts-2020-01-22","Massachusetts","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Massachusetts-2020-01-23","Massachusetts","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-24","Massachusetts","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-25","Massachusetts","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-26","Massachusetts","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-27","Massachusetts","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-28","Massachusetts","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-29","Massachusetts","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-30","Massachusetts","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-01-31","Massachusetts","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-01","Massachusetts","2020-02-01",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Massachusetts-2020-02-02","Massachusetts","2020-02-02",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-03","Massachusetts","2020-02-03",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-04","Massachusetts","2020-02-04",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-05","Massachusetts","2020-02-05",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-06","Massachusetts","2020-02-06",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-07","Massachusetts","2020-02-07",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-08","Massachusetts","2020-02-08",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-09","Massachusetts","2020-02-09",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-10","Massachusetts","2020-02-10",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-11","Massachusetts","2020-02-11",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-12","Massachusetts","2020-02-12",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-13","Massachusetts","2020-02-13",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-14","Massachusetts","2020-02-14",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-15","Massachusetts","2020-02-15",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-16","Massachusetts","2020-02-16",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-17","Massachusetts","2020-02-17",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-18","Massachusetts","2020-02-18",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-19","Massachusetts","2020-02-19",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-20","Massachusetts","2020-02-20",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-21","Massachusetts","2020-02-21",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-22","Massachusetts","2020-02-22",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-23","Massachusetts","2020-02-23",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-24","Massachusetts","2020-02-24",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-25","Massachusetts","2020-02-25",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-26","Massachusetts","2020-02-26",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-27","Massachusetts","2020-02-27",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-02-28","Massachusetts","2020-02-28",1,0,1,0,0,1,NA,NA,NA,NA,NA,0,0,1
+"Massachusetts-2020-02-29","Massachusetts","2020-02-29",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-03-01","Massachusetts","2020-03-01",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-03-02","Massachusetts","2020-03-02",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-03-03","Massachusetts","2020-03-03",2,0,1,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Massachusetts-2020-03-04","Massachusetts","2020-03-04",2,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-03-05","Massachusetts","2020-03-05",2,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-03-06","Massachusetts","2020-03-06",6,0,1,0.666666666666667,0,0,NA,NA,NA,NA,NA,4,0,0
+"Massachusetts-2020-03-07","Massachusetts","2020-03-07",6,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-03-08","Massachusetts","2020-03-08",22,0,1,0.727272727272727,0,0,NA,NA,NA,NA,NA,16,0,0
+"Massachusetts-2020-03-09","Massachusetts","2020-03-09",22,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Massachusetts-2020-03-10","Massachusetts","2020-03-10",92,0,1,0.760869565217391,0,0,NA,NA,NA,NA,NA,70,0,0
+"Massachusetts-2020-03-11","Massachusetts","2020-03-11",95,0,1,0.0315789473684211,0,0,NA,NA,NA,NA,NA,3,0,0
+"Massachusetts-2020-03-12","Massachusetts","2020-03-12",108,0,1,0.12037037037037,0,0,NA,NA,0.328018322045782,NA,NA,13,0,0
+"Massachusetts-2020-03-13","Massachusetts","2020-03-13",123,0,1,0.121951219512195,0,0,NA,NA,0.206954020493676,NA,NA,15,0,0
+"Massachusetts-2020-03-14","Massachusetts","2020-03-14",138,0,1,0.108695652173913,0,0,NA,NA,0.228693150928458,NA,NA,15,0,0
+"Massachusetts-2020-03-15","Massachusetts","2020-03-15",164,0,1,0.158536585365854,0,0,NA,NA,0.108226554958151,NA,NA,26,0,0
+"Massachusetts-2020-03-16","Massachusetts","2020-03-16",197,0,1,0.16751269035533,0,0,NA,NA,0.135413303555532,NA,NA,33,0,0
+"Massachusetts-2020-03-17","Massachusetts","2020-03-17",218,0,1,0.0963302752293578,0,0,NA,NA,0.13060528452733,NA,NA,21,0,0
+"Massachusetts-2020-03-18","Massachusetts","2020-03-18",218,0,0,0,0,-Inf,NA,NA,0.106215040624891,NA,NA,0,0,-1
+"Massachusetts-2020-03-19","Massachusetts","2020-03-19",328,0,0,0.335365853658537,0,0,NA,NA,0.151549080921816,NA,NA,110,0,0
+"Massachusetts-2020-03-20","Massachusetts","2020-03-20",413,1,0,0.205811138014528,1,0,NA,NA,0.16100399145155,NA,NA,85,1,0
+"Massachusetts-2020-03-21","Massachusetts","2020-03-21",525,1,0,0.213333333333333,0,0,NA,NA,0.170168120047151,NA,NA,112,0,0
+"Massachusetts-2020-03-22","Massachusetts","2020-03-22",646,5,0,0.187306501547988,0.8,0,NA,NA,0.188363365310877,NA,NA,121,4,0
+"Massachusetts-2020-03-23","Massachusetts","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Michigan-2020-01-22","Michigan","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Michigan-2020-01-23","Michigan","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-24","Michigan","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-25","Michigan","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-26","Michigan","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-27","Michigan","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-28","Michigan","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-29","Michigan","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-30","Michigan","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-01-31","Michigan","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-01","Michigan","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-02","Michigan","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-03","Michigan","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-04","Michigan","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-05","Michigan","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-06","Michigan","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-07","Michigan","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-08","Michigan","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-09","Michigan","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-10","Michigan","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-11","Michigan","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-12","Michigan","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-13","Michigan","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-14","Michigan","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-15","Michigan","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-16","Michigan","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-17","Michigan","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-18","Michigan","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-19","Michigan","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-20","Michigan","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-21","Michigan","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-22","Michigan","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-23","Michigan","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-24","Michigan","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-25","Michigan","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-26","Michigan","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-27","Michigan","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-28","Michigan","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-02-29","Michigan","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-01","Michigan","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-02","Michigan","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-03","Michigan","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-04","Michigan","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-05","Michigan","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-06","Michigan","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-07","Michigan","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-08","Michigan","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-09","Michigan","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-10","Michigan","2020-03-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-11","Michigan","2020-03-11",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"Michigan-2020-03-12","Michigan","2020-03-12",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Michigan-2020-03-13","Michigan","2020-03-13",16,0,0,0.875,0,0,NA,NA,NA,NA,NA,14,0,0
+"Michigan-2020-03-14","Michigan","2020-03-14",25,0,0,0.36,0,0,NA,NA,NA,NA,NA,9,0,0
+"Michigan-2020-03-15","Michigan","2020-03-15",33,0,0,0.242424242424242,0,0,NA,NA,NA,NA,NA,8,0,0
+"Michigan-2020-03-16","Michigan","2020-03-16",53,0,0,0.377358490566038,0,0,NA,NA,NA,NA,NA,20,0,0
+"Michigan-2020-03-17","Michigan","2020-03-17",65,0,0,0.184615384615385,0,0,NA,NA,NA,NA,NA,12,0,0
+"Michigan-2020-03-18","Michigan","2020-03-18",83,0,0,0.216867469879518,0,0,NA,NA,NA,NA,NA,18,0,0
+"Michigan-2020-03-19","Michigan","2020-03-19",334,3,0,0.751497005988024,1,0,NA,NA,0.354552518694641,NA,NA,251,3,0
+"Michigan-2020-03-20","Michigan","2020-03-20",552,3,0,0.394927536231884,0,0,NA,NA,0.38505317745617,NA,NA,218,0,0
+"Michigan-2020-03-21","Michigan","2020-03-21",788,5,0,0.299492385786802,0.4,0,NA,NA,0.369479956500323,NA,NA,236,2,0
+"Michigan-2020-03-22","Michigan","2020-03-22",1037,9,0,0.240115718418515,0.444444444444444,0,NA,NA,0.380580023260949,NA,NA,249,4,0
+"Michigan-2020-03-23","Michigan","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Minnesota-2020-01-22","Minnesota","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Minnesota-2020-01-23","Minnesota","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-24","Minnesota","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-25","Minnesota","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-26","Minnesota","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-27","Minnesota","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-28","Minnesota","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-29","Minnesota","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-30","Minnesota","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-01-31","Minnesota","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-01","Minnesota","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-02","Minnesota","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-03","Minnesota","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-04","Minnesota","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-05","Minnesota","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-06","Minnesota","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-07","Minnesota","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-08","Minnesota","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-09","Minnesota","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-10","Minnesota","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-11","Minnesota","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-12","Minnesota","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-13","Minnesota","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-14","Minnesota","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-15","Minnesota","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-16","Minnesota","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-17","Minnesota","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-18","Minnesota","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-19","Minnesota","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-20","Minnesota","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-21","Minnesota","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-22","Minnesota","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-23","Minnesota","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-24","Minnesota","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-25","Minnesota","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-26","Minnesota","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-27","Minnesota","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-28","Minnesota","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-02-29","Minnesota","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-01","Minnesota","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-02","Minnesota","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-03","Minnesota","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-04","Minnesota","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-05","Minnesota","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-06","Minnesota","2020-03-06",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Minnesota-2020-03-07","Minnesota","2020-03-07",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-08","Minnesota","2020-03-08",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Minnesota-2020-03-09","Minnesota","2020-03-09",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Minnesota-2020-03-10","Minnesota","2020-03-10",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"Minnesota-2020-03-11","Minnesota","2020-03-11",5,0,0,0.4,0,0,NA,NA,NA,NA,NA,2,0,0
+"Minnesota-2020-03-12","Minnesota","2020-03-12",9,0,0,0.444444444444444,0,0,NA,NA,NA,NA,NA,4,0,0
+"Minnesota-2020-03-13","Minnesota","2020-03-13",14,0,0,0.357142857142857,0,0,NA,NA,NA,NA,NA,5,0,0
+"Minnesota-2020-03-14","Minnesota","2020-03-14",21,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,7,0,0
+"Minnesota-2020-03-15","Minnesota","2020-03-15",35,0,0,0.4,0,0,NA,NA,NA,NA,NA,14,0,0
+"Minnesota-2020-03-16","Minnesota","2020-03-16",54,0,0,0.351851851851852,0,0,NA,NA,NA,NA,NA,19,0,0
+"Minnesota-2020-03-17","Minnesota","2020-03-17",60,0,0,0.1,0,0,NA,NA,NA,NA,NA,6,0,0
+"Minnesota-2020-03-18","Minnesota","2020-03-18",77,0,0,0.220779220779221,0,0,NA,NA,NA,NA,NA,17,0,0
+"Minnesota-2020-03-19","Minnesota","2020-03-19",89,0,0,0.134831460674157,0,0,NA,NA,NA,NA,NA,12,0,0
+"Minnesota-2020-03-20","Minnesota","2020-03-20",115,0,0,0.226086956521739,0,0,NA,NA,0.206709897965394,NA,NA,26,0,0
+"Minnesota-2020-03-21","Minnesota","2020-03-21",138,1,0,0.166666666666667,1,0,NA,NA,0.169672860928357,NA,NA,23,1,0
+"Minnesota-2020-03-22","Minnesota","2020-03-22",169,1,0,0.183431952662722,0,0,NA,NA,0.186359251460901,NA,NA,31,0,0
+"Minnesota-2020-03-23","Minnesota","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Mississippi-2020-01-22","Mississippi","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Mississippi-2020-01-23","Mississippi","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-24","Mississippi","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-25","Mississippi","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-26","Mississippi","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-27","Mississippi","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-28","Mississippi","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-29","Mississippi","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-30","Mississippi","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-01-31","Mississippi","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-01","Mississippi","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-02","Mississippi","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-03","Mississippi","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-04","Mississippi","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-05","Mississippi","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-06","Mississippi","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-07","Mississippi","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-08","Mississippi","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-09","Mississippi","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-10","Mississippi","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-11","Mississippi","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-12","Mississippi","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-13","Mississippi","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-14","Mississippi","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-15","Mississippi","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-16","Mississippi","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-17","Mississippi","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-18","Mississippi","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-19","Mississippi","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-20","Mississippi","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-21","Mississippi","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-22","Mississippi","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-23","Mississippi","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-24","Mississippi","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-25","Mississippi","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-26","Mississippi","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-27","Mississippi","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-28","Mississippi","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-02-29","Mississippi","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-01","Mississippi","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-02","Mississippi","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-03","Mississippi","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-04","Mississippi","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-05","Mississippi","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-06","Mississippi","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-07","Mississippi","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-08","Mississippi","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-09","Mississippi","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-10","Mississippi","2020-03-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-11","Mississippi","2020-03-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-12","Mississippi","2020-03-12",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Mississippi-2020-03-13","Mississippi","2020-03-13",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Mississippi-2020-03-14","Mississippi","2020-03-14",6,0,0,0.833333333333333,0,0,NA,NA,NA,NA,NA,5,0,0
+"Mississippi-2020-03-15","Mississippi","2020-03-15",10,0,0,0.4,0,0,NA,NA,NA,NA,NA,4,0,0
+"Mississippi-2020-03-16","Mississippi","2020-03-16",13,0,0,0.230769230769231,0,0,NA,NA,NA,NA,NA,3,0,0
+"Mississippi-2020-03-17","Mississippi","2020-03-17",21,0,0,0.380952380952381,0,0,NA,NA,NA,NA,NA,8,0,0
+"Mississippi-2020-03-18","Mississippi","2020-03-18",34,0,0,0.382352941176471,0,0,NA,NA,NA,NA,NA,13,0,0
+"Mississippi-2020-03-19","Mississippi","2020-03-19",50,1,0,0.32,1,0,NA,NA,NA,NA,NA,16,1,0
+"Mississippi-2020-03-20","Mississippi","2020-03-20",80,1,0,0.375,0,0,NA,NA,NA,NA,NA,30,0,0
+"Mississippi-2020-03-21","Mississippi","2020-03-21",140,1,0,0.428571428571429,0,0,NA,NA,0.377375350140056,NA,NA,60,0,0
+"Mississippi-2020-03-22","Mississippi","2020-03-22",207,1,0,0.323671497584541,0,0,NA,NA,0.365919173466488,NA,NA,67,0,0
+"Mississippi-2020-03-23","Mississippi","2020-03-23",207,1,0,0,0,0,NA,NA,0.289448585231194,NA,NA,0,0,0
+"Missouri-2020-01-22","Missouri","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Missouri-2020-01-23","Missouri","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-24","Missouri","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-25","Missouri","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-26","Missouri","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-27","Missouri","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-28","Missouri","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-29","Missouri","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-30","Missouri","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-01-31","Missouri","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-01","Missouri","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-02","Missouri","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-03","Missouri","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-04","Missouri","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-05","Missouri","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-06","Missouri","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-07","Missouri","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-08","Missouri","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-09","Missouri","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-10","Missouri","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-11","Missouri","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-12","Missouri","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-13","Missouri","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-14","Missouri","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-15","Missouri","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-16","Missouri","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-17","Missouri","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-18","Missouri","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-19","Missouri","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-20","Missouri","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-21","Missouri","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-22","Missouri","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-23","Missouri","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-24","Missouri","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-25","Missouri","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-26","Missouri","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-27","Missouri","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-28","Missouri","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-02-29","Missouri","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-01","Missouri","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-02","Missouri","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-03","Missouri","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-04","Missouri","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-05","Missouri","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-06","Missouri","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-07","Missouri","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-08","Missouri","2020-03-08",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Missouri-2020-03-09","Missouri","2020-03-09",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-10","Missouri","2020-03-10",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-11","Missouri","2020-03-11",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-12","Missouri","2020-03-12",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Missouri-2020-03-13","Missouri","2020-03-13",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Missouri-2020-03-14","Missouri","2020-03-14",4,0,0,0.5,0,0,NA,NA,NA,NA,NA,2,0,0
+"Missouri-2020-03-15","Missouri","2020-03-15",5,0,0,0.2,0,0,NA,NA,NA,NA,NA,1,0,0
+"Missouri-2020-03-16","Missouri","2020-03-16",6,0,0,0.166666666666667,0,0,NA,NA,NA,NA,NA,1,0,0
+"Missouri-2020-03-17","Missouri","2020-03-17",11,0,0,0.454545454545455,0,0,NA,NA,NA,NA,NA,5,0,0
+"Missouri-2020-03-18","Missouri","2020-03-18",18,0,0,0.388888888888889,0,0,NA,NA,NA,NA,NA,7,0,0
+"Missouri-2020-03-19","Missouri","2020-03-19",31,1,0,0.419354838709677,1,0,NA,NA,NA,NA,NA,13,1,0
+"Missouri-2020-03-20","Missouri","2020-03-20",53,2,0,0.415094339622642,0.5,0,NA,NA,NA,NA,NA,22,1,0
+"Missouri-2020-03-21","Missouri","2020-03-21",74,3,0,0.283783783783784,0.333333333333333,0,NA,NA,NA,NA,NA,21,1,0
+"Missouri-2020-03-22","Missouri","2020-03-22",100,3,0,0.26,0,0,NA,NA,0.353424370200998,NA,NA,26,0,0
+"Missouri-2020-03-23","Missouri","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Nevada-2020-01-22","Nevada","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Nevada-2020-01-23","Nevada","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-24","Nevada","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-25","Nevada","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-26","Nevada","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-27","Nevada","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-28","Nevada","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-29","Nevada","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-30","Nevada","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-01-31","Nevada","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-01","Nevada","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-02","Nevada","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-03","Nevada","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-04","Nevada","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-05","Nevada","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-06","Nevada","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-07","Nevada","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-08","Nevada","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-09","Nevada","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-10","Nevada","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-11","Nevada","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-12","Nevada","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-13","Nevada","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-14","Nevada","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-15","Nevada","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-16","Nevada","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-17","Nevada","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-18","Nevada","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-19","Nevada","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-20","Nevada","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-21","Nevada","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-22","Nevada","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-23","Nevada","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-24","Nevada","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-25","Nevada","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-26","Nevada","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-27","Nevada","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-28","Nevada","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-02-29","Nevada","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-01","Nevada","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-02","Nevada","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-03","Nevada","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-04","Nevada","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-05","Nevada","2020-03-05",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Nevada-2020-03-06","Nevada","2020-03-06",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Nevada-2020-03-07","Nevada","2020-03-07",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-08","Nevada","2020-03-08",4,0,0,0.5,0,0,NA,NA,NA,NA,NA,2,0,0
+"Nevada-2020-03-09","Nevada","2020-03-09",4,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-10","Nevada","2020-03-10",4,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Nevada-2020-03-11","Nevada","2020-03-11",7,0,0,0.428571428571429,0,0,NA,NA,NA,NA,NA,3,0,0
+"Nevada-2020-03-12","Nevada","2020-03-12",14,0,0,0.5,0,0,NA,NA,NA,NA,NA,7,0,0
+"Nevada-2020-03-13","Nevada","2020-03-13",17,0,0,0.176470588235294,0,0,NA,NA,NA,NA,NA,3,0,0
+"Nevada-2020-03-14","Nevada","2020-03-14",21,0,0,0.19047619047619,0,0,NA,NA,NA,NA,NA,4,0,0
+"Nevada-2020-03-15","Nevada","2020-03-15",24,0,0,0.125,0,0,NA,NA,NA,NA,NA,3,0,0
+"Nevada-2020-03-16","Nevada","2020-03-16",45,1,0,0.466666666666667,1,0,NA,NA,NA,NA,NA,21,1,0
+"Nevada-2020-03-17","Nevada","2020-03-17",56,1,0,0.196428571428571,0,0,NA,NA,NA,NA,NA,11,0,0
+"Nevada-2020-03-18","Nevada","2020-03-18",55,1,0,-0.0181818181818182,0,0,NA,NA,NA,NA,NA,-1,0,0
+"Nevada-2020-03-19","Nevada","2020-03-19",95,1,0,0.421052631578947,0,0,NA,NA,NA,NA,NA,40,0,0
+"Nevada-2020-03-20","Nevada","2020-03-20",114,1,0,0.166666666666667,0,0,NA,NA,0.246526543631807,NA,NA,19,0,0
+"Nevada-2020-03-21","Nevada","2020-03-21",161,2,0,0.291925465838509,0.5,0,NA,NA,0.211578303466175,NA,NA,47,1,0
+"Nevada-2020-03-22","Nevada","2020-03-22",190,2,0,0.152631578947368,0,0,NA,NA,0.202818904969935,NA,NA,29,0,0
+"Nevada-2020-03-23","Nevada","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"New Jersey-2020-01-22","New Jersey","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"New Jersey-2020-01-23","New Jersey","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-24","New Jersey","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-25","New Jersey","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-26","New Jersey","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-27","New Jersey","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-28","New Jersey","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-29","New Jersey","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-30","New Jersey","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-01-31","New Jersey","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-01","New Jersey","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-02","New Jersey","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-03","New Jersey","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-04","New Jersey","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-05","New Jersey","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-06","New Jersey","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-07","New Jersey","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-08","New Jersey","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-09","New Jersey","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-10","New Jersey","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-11","New Jersey","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-12","New Jersey","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-13","New Jersey","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-14","New Jersey","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-15","New Jersey","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-16","New Jersey","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-17","New Jersey","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-18","New Jersey","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-19","New Jersey","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-20","New Jersey","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-21","New Jersey","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-22","New Jersey","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-23","New Jersey","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-24","New Jersey","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-25","New Jersey","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-26","New Jersey","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-27","New Jersey","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-28","New Jersey","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-02-29","New Jersey","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-01","New Jersey","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-02","New Jersey","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-03","New Jersey","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-04","New Jersey","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-05","New Jersey","2020-03-05",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"New Jersey-2020-03-06","New Jersey","2020-03-06",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-07","New Jersey","2020-03-07",4,0,0,0.5,0,0,NA,NA,NA,NA,NA,2,0,0
+"New Jersey-2020-03-08","New Jersey","2020-03-08",5,0,0,0.2,0,0,NA,NA,NA,NA,NA,1,0,0
+"New Jersey-2020-03-09","New Jersey","2020-03-09",5,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-10","New Jersey","2020-03-10",15,1,0,0.666666666666667,1,0,NA,NA,NA,NA,NA,10,1,0
+"New Jersey-2020-03-11","New Jersey","2020-03-11",23,1,0,0.347826086956522,0,0,NA,NA,NA,NA,NA,8,0,0
+"New Jersey-2020-03-12","New Jersey","2020-03-12",29,1,0,0.206896551724138,0,0,NA,NA,NA,NA,NA,6,0,0
+"New Jersey-2020-03-13","New Jersey","2020-03-13",29,1,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New Jersey-2020-03-14","New Jersey","2020-03-14",69,1,0,0.579710144927536,0,0,NA,NA,NA,NA,NA,40,0,0
+"New Jersey-2020-03-15","New Jersey","2020-03-15",98,2,0,0.295918367346939,0.5,0,NA,NA,NA,NA,NA,29,1,0
+"New Jersey-2020-03-16","New Jersey","2020-03-16",178,2,1,0.449438202247191,0,1,NA,NA,0.306392653249161,NA,NA,80,0,1
+"New Jersey-2020-03-17","New Jersey","2020-03-17",267,3,1,0.333333333333333,0.333333333333333,0,NA,NA,0.331680009571,NA,NA,89,1,0
+"New Jersey-2020-03-18","New Jersey","2020-03-18",267,3,0,0,0,-Inf,NA,NA,0.331680009571,NA,NA,0,0,-1
+"New Jersey-2020-03-19","New Jersey","2020-03-19",742,9,0,0.640161725067385,0.666666666666667,0,NA,NA,0.34377032559897,NA,NA,475,6,0
+"New Jersey-2020-03-20","New Jersey","2020-03-20",890,11,0,0.166292134831461,0.181818181818182,0,NA,NA,0.317845079095874,NA,NA,148,2,0
+"New Jersey-2020-03-21","New Jersey","2020-03-21",1327,16,0,0.3293142426526,0.3125,0,NA,NA,0.293820287176956,NA,NA,437,5,0
+"New Jersey-2020-03-22","New Jersey","2020-03-22",1914,20,0,0.306687565308255,0.2,0,NA,NA,0.28849113357194,NA,NA,587,4,0
+"New Jersey-2020-03-23","New Jersey","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"New York-2020-01-22","New York","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"New York-2020-01-23","New York","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-24","New York","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-25","New York","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-26","New York","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-27","New York","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-28","New York","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-29","New York","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-30","New York","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-01-31","New York","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-01","New York","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-02","New York","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-03","New York","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-04","New York","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-05","New York","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-06","New York","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-07","New York","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-08","New York","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-09","New York","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-10","New York","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-11","New York","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-12","New York","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-13","New York","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-14","New York","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-15","New York","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-16","New York","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-17","New York","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-18","New York","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-19","New York","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-20","New York","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-21","New York","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-22","New York","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-23","New York","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-24","New York","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-25","New York","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-26","New York","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-27","New York","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-28","New York","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-02-29","New York","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-03-01","New York","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"New York-2020-03-02","New York","2020-03-02",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"New York-2020-03-03","New York","2020-03-03",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"New York-2020-03-04","New York","2020-03-04",11,0,0,0.818181818181818,0,0,NA,NA,NA,NA,NA,9,0,0
+"New York-2020-03-05","New York","2020-03-05",23,0,0,0.521739130434783,0,0,NA,NA,NA,NA,NA,12,0,0
+"New York-2020-03-06","New York","2020-03-06",31,0,0,0.258064516129032,0,0,NA,NA,NA,NA,NA,8,0,0
+"New York-2020-03-07","New York","2020-03-07",76,0,0,0.592105263157895,0,0,NA,NA,NA,NA,NA,45,0,0
+"New York-2020-03-08","New York","2020-03-08",106,0,0,0.283018867924528,0,0,NA,NA,0.494621919165611,NA,NA,30,0,0
+"New York-2020-03-09","New York","2020-03-09",142,0,0,0.253521126760563,0,0,NA,NA,0.38168978088136,NA,NA,36,0,0
+"New York-2020-03-10","New York","2020-03-10",173,0,0,0.179190751445087,0,0,NA,NA,0.313180105083421,NA,NA,31,0,0
+"New York-2020-03-11","New York","2020-03-11",220,0,0,0.213636363636364,0,0,NA,NA,0.304294474584887,NA,NA,47,0,0
+"New York-2020-03-12","New York","2020-03-12",328,0,0,0.329268292682927,0,0,NA,NA,0.251727080489894,NA,NA,108,0,0
+"New York-2020-03-13","New York","2020-03-13",421,0,0,0.220902612826603,0,0,NA,NA,0.239303829470309,NA,NA,93,0,0
+"New York-2020-03-14","New York","2020-03-14",525,2,0,0.198095238095238,1,0,NA,NA,0.228218651737244,NA,NA,104,2,0
+"New York-2020-03-15","New York","2020-03-15",732,3,0,0.282786885245902,0.333333333333333,0,NA,NA,0.248937878497407,NA,NA,207,1,0
+"New York-2020-03-16","New York","2020-03-16",967,10,0,0.243019648397104,0.7,0,NA,NA,0.254814535449555,NA,NA,235,7,0
+"New York-2020-03-17","New York","2020-03-17",1706,13,0,0.433177022274326,0.230769230769231,0,NA,NA,0.275596281367835,NA,NA,739,3,0
+"New York-2020-03-18","New York","2020-03-18",2495,16,0,0.31623246492986,0.1875,0,NA,NA,0.294662251788486,NA,NA,789,3,0
+"New York-2020-03-19","New York","2020-03-19",5365,34,0,0.534948741845294,0.529411764705882,0,0.00633737185461323,NA,0.362032952538497,0.396202865761689,NA,2870,18,0
+"New York-2020-03-20","New York","2020-03-20",8310,42,0,0.35439229843562,0.19047619047619,0,0.00505415162454874,NA,0.376354035176441,0.367631437190261,NA,2945,8,0
+"New York-2020-03-21","New York","2020-03-21",11710,60,0,0.290350128095645,0.3,0,0.00512382578992314,NA,0.385820131116149,0.287631437190261,NA,3400,18,0
+"New York-2020-03-22","New York","2020-03-22",15793,117,0,0.258532261128348,0.487179487179487,0,0.00740834546951181,NA,0.350891178886953,0.338913488472312,NA,4083,57,0
+"New York-2020-03-23","New York","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"North Carolina-2020-01-22","North Carolina","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"North Carolina-2020-01-23","North Carolina","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-24","North Carolina","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-25","North Carolina","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-26","North Carolina","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-27","North Carolina","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-28","North Carolina","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-29","North Carolina","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-30","North Carolina","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-01-31","North Carolina","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-01","North Carolina","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-02","North Carolina","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-03","North Carolina","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-04","North Carolina","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-05","North Carolina","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-06","North Carolina","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-07","North Carolina","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-08","North Carolina","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-09","North Carolina","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-10","North Carolina","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-11","North Carolina","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-12","North Carolina","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-13","North Carolina","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-14","North Carolina","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-15","North Carolina","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-16","North Carolina","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-17","North Carolina","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-18","North Carolina","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-19","North Carolina","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-20","North Carolina","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-21","North Carolina","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-22","North Carolina","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-23","North Carolina","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-24","North Carolina","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-25","North Carolina","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-26","North Carolina","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-27","North Carolina","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-28","North Carolina","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-02-29","North Carolina","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-01","North Carolina","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-02","North Carolina","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-03","North Carolina","2020-03-03",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"North Carolina-2020-03-04","North Carolina","2020-03-04",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-05","North Carolina","2020-03-05",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-06","North Carolina","2020-03-06",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"North Carolina-2020-03-07","North Carolina","2020-03-07",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-08","North Carolina","2020-03-08",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-09","North Carolina","2020-03-09",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-10","North Carolina","2020-03-10",7,0,0,0.714285714285714,0,0,NA,NA,NA,NA,NA,5,0,0
+"North Carolina-2020-03-11","North Carolina","2020-03-11",7,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"North Carolina-2020-03-12","North Carolina","2020-03-12",15,0,0,0.533333333333333,0,0,NA,NA,NA,NA,NA,8,0,0
+"North Carolina-2020-03-13","North Carolina","2020-03-13",17,0,0,0.117647058823529,0,0,NA,NA,NA,NA,NA,2,0,0
+"North Carolina-2020-03-14","North Carolina","2020-03-14",24,0,0,0.291666666666667,0,0,NA,NA,NA,NA,NA,7,0,0
+"North Carolina-2020-03-15","North Carolina","2020-03-15",33,0,0,0.272727272727273,0,0,NA,NA,NA,NA,NA,9,0,0
+"North Carolina-2020-03-16","North Carolina","2020-03-16",38,0,0,0.131578947368421,0,0,NA,NA,NA,NA,NA,5,0,0
+"North Carolina-2020-03-17","North Carolina","2020-03-17",64,0,0,0.40625,0,0,NA,NA,NA,NA,NA,26,0,0
+"North Carolina-2020-03-18","North Carolina","2020-03-18",70,0,0,0.0857142857142857,0,0,NA,NA,NA,NA,NA,6,0,0
+"North Carolina-2020-03-19","North Carolina","2020-03-19",123,0,0,0.430894308943089,0,0,NA,NA,0.265432962950614,NA,NA,53,0,0
+"North Carolina-2020-03-20","North Carolina","2020-03-20",172,0,0,0.284883720930233,0,0,NA,NA,0.267864252591206,NA,NA,49,0,0
+"North Carolina-2020-03-21","North Carolina","2020-03-21",253,0,0,0.320158102766798,0,0,NA,NA,0.305580083670881,NA,NA,81,0,0
+"North Carolina-2020-03-22","North Carolina","2020-03-22",302,0,0,0.162251655629139,0,0,NA,NA,0.256780414796709,NA,NA,49,0,0
+"North Carolina-2020-03-23","North Carolina","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Ohio-2020-01-22","Ohio","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Ohio-2020-01-23","Ohio","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-24","Ohio","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-25","Ohio","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-26","Ohio","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-27","Ohio","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-28","Ohio","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-29","Ohio","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-30","Ohio","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-01-31","Ohio","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-01","Ohio","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-02","Ohio","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-03","Ohio","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-04","Ohio","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-05","Ohio","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-06","Ohio","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-07","Ohio","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-08","Ohio","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-09","Ohio","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-10","Ohio","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-11","Ohio","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-12","Ohio","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-13","Ohio","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-14","Ohio","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-15","Ohio","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-16","Ohio","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-17","Ohio","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-18","Ohio","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-19","Ohio","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-20","Ohio","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-21","Ohio","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-22","Ohio","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-23","Ohio","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-24","Ohio","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-25","Ohio","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-26","Ohio","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-27","Ohio","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-28","Ohio","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-02-29","Ohio","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-01","Ohio","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-02","Ohio","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-03","Ohio","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-04","Ohio","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-05","Ohio","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-06","Ohio","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-07","Ohio","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-08","Ohio","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-09","Ohio","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Ohio-2020-03-10","Ohio","2020-03-10",3,0,0,1,0,0,NA,NA,NA,NA,NA,3,0,0
+"Ohio-2020-03-11","Ohio","2020-03-11",4,0,0,0.25,0,0,NA,NA,NA,NA,NA,1,0,0
+"Ohio-2020-03-12","Ohio","2020-03-12",5,0,0,0.2,0,0,NA,NA,NA,NA,NA,1,0,0
+"Ohio-2020-03-13","Ohio","2020-03-13",13,0,0,0.615384615384615,0,0,NA,NA,NA,NA,NA,8,0,0
+"Ohio-2020-03-14","Ohio","2020-03-14",26,0,0,0.5,0,0,NA,NA,NA,NA,NA,13,0,0
+"Ohio-2020-03-15","Ohio","2020-03-15",37,0,0,0.297297297297297,0,0,NA,NA,NA,NA,NA,11,0,0
+"Ohio-2020-03-16","Ohio","2020-03-16",50,0,0,0.26,0,0,NA,NA,NA,NA,NA,13,0,0
+"Ohio-2020-03-17","Ohio","2020-03-17",67,0,0,0.253731343283582,0,0,NA,NA,NA,NA,NA,17,0,0
+"Ohio-2020-03-18","Ohio","2020-03-18",86,0,0,0.22093023255814,0,0,NA,NA,NA,NA,NA,19,0,0
+"Ohio-2020-03-19","Ohio","2020-03-19",119,0,0,0.277310924369748,0,0,NA,NA,0.261853959501753,NA,NA,33,0,0
+"Ohio-2020-03-20","Ohio","2020-03-20",173,2,0,0.312138728323699,1,0,NA,NA,0.264822245707034,NA,NA,54,2,0
+"Ohio-2020-03-21","Ohio","2020-03-21",248,3,0,0.30241935483871,0.333333333333333,0,NA,NA,0.273306116674776,NA,NA,75,1,0
+"Ohio-2020-03-22","Ohio","2020-03-22",355,3,0,0.301408450704225,0,0,NA,NA,0.282841538158904,NA,NA,107,0,0
+"Ohio-2020-03-23","Ohio","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Oregon-2020-01-22","Oregon","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Oregon-2020-01-23","Oregon","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-24","Oregon","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-25","Oregon","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-26","Oregon","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-27","Oregon","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-28","Oregon","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-29","Oregon","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-30","Oregon","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-01-31","Oregon","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-01","Oregon","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-02","Oregon","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-03","Oregon","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-04","Oregon","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-05","Oregon","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-06","Oregon","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-07","Oregon","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-08","Oregon","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-09","Oregon","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-10","Oregon","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-11","Oregon","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-12","Oregon","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-13","Oregon","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-14","Oregon","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-15","Oregon","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-16","Oregon","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-17","Oregon","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-18","Oregon","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-19","Oregon","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-20","Oregon","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-21","Oregon","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-22","Oregon","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-23","Oregon","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-24","Oregon","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-25","Oregon","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-26","Oregon","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-27","Oregon","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-28","Oregon","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-02-29","Oregon","2020-02-29",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Oregon-2020-03-01","Oregon","2020-03-01",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-03-02","Oregon","2020-03-02",3,0,0,0.666666666666667,0,0,NA,NA,NA,NA,NA,2,0,0
+"Oregon-2020-03-03","Oregon","2020-03-03",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-03-04","Oregon","2020-03-04",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-03-05","Oregon","2020-03-05",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-03-06","Oregon","2020-03-06",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-03-07","Oregon","2020-03-07",6,0,0,0.5,0,0,NA,NA,NA,NA,NA,3,0,0
+"Oregon-2020-03-08","Oregon","2020-03-08",14,0,0,0.571428571428571,0,0,NA,NA,NA,NA,NA,8,0,0
+"Oregon-2020-03-09","Oregon","2020-03-09",14,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Oregon-2020-03-10","Oregon","2020-03-10",15,0,0,0.0666666666666667,0,0,NA,NA,NA,NA,NA,1,0,0
+"Oregon-2020-03-11","Oregon","2020-03-11",19,0,0,0.210526315789474,0,0,NA,NA,NA,NA,NA,4,0,0
+"Oregon-2020-03-12","Oregon","2020-03-12",24,0,0,0.208333333333333,0,0,NA,NA,NA,NA,NA,5,0,0
+"Oregon-2020-03-13","Oregon","2020-03-13",30,0,0,0.2,0,0,NA,NA,NA,NA,NA,6,0,0
+"Oregon-2020-03-14","Oregon","2020-03-14",32,0,0,0.0625,0,0,NA,NA,NA,NA,NA,2,0,0
+"Oregon-2020-03-15","Oregon","2020-03-15",36,1,0,0.111111111111111,1,0,NA,NA,NA,NA,NA,4,1,0
+"Oregon-2020-03-16","Oregon","2020-03-16",39,1,0,0.0769230769230769,0,0,NA,NA,NA,NA,NA,3,0,0
+"Oregon-2020-03-17","Oregon","2020-03-17",66,1,0,0.409090909090909,0,0,NA,NA,NA,NA,NA,27,0,0
+"Oregon-2020-03-18","Oregon","2020-03-18",68,2,0,0.0294117647058824,0.5,0,NA,NA,NA,NA,NA,2,1,0
+"Oregon-2020-03-19","Oregon","2020-03-19",88,3,0,0.227272727272727,0.333333333333333,0,NA,NA,NA,NA,NA,20,1,0
+"Oregon-2020-03-20","Oregon","2020-03-20",114,3,0,0.228070175438596,0,0,NA,NA,0.194153730686238,NA,NA,26,0,0
+"Oregon-2020-03-21","Oregon","2020-03-21",114,5,0,0,0.4,0,NA,NA,0.178769115301623,NA,NA,0,2,0
+"Oregon-2020-03-22","Oregon","2020-03-22",161,4,0,0.291925465838509,-0.25,0,NA,NA,0.155336026651143,NA,NA,47,-1,0
+"Oregon-2020-03-23","Oregon","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pennsylvania-2020-01-22","Pennsylvania","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pennsylvania-2020-01-23","Pennsylvania","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-24","Pennsylvania","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-25","Pennsylvania","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-26","Pennsylvania","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-27","Pennsylvania","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-28","Pennsylvania","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-29","Pennsylvania","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-30","Pennsylvania","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-01-31","Pennsylvania","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-01","Pennsylvania","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-02","Pennsylvania","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-03","Pennsylvania","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-04","Pennsylvania","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-05","Pennsylvania","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-06","Pennsylvania","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-07","Pennsylvania","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-08","Pennsylvania","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-09","Pennsylvania","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-10","Pennsylvania","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-11","Pennsylvania","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-12","Pennsylvania","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-13","Pennsylvania","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-14","Pennsylvania","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-15","Pennsylvania","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-16","Pennsylvania","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-17","Pennsylvania","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-18","Pennsylvania","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-19","Pennsylvania","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-20","Pennsylvania","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-21","Pennsylvania","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-22","Pennsylvania","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-23","Pennsylvania","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-24","Pennsylvania","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-25","Pennsylvania","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-26","Pennsylvania","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-27","Pennsylvania","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-28","Pennsylvania","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-02-29","Pennsylvania","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-03-01","Pennsylvania","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-03-02","Pennsylvania","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-03-03","Pennsylvania","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-03-04","Pennsylvania","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-03-05","Pennsylvania","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-03-06","Pennsylvania","2020-03-06",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"Pennsylvania-2020-03-07","Pennsylvania","2020-03-07",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Pennsylvania-2020-03-08","Pennsylvania","2020-03-08",6,0,0,0.666666666666667,0,0,NA,NA,NA,NA,NA,4,0,0
+"Pennsylvania-2020-03-09","Pennsylvania","2020-03-09",7,0,0,0.142857142857143,0,0,NA,NA,NA,NA,NA,1,0,0
+"Pennsylvania-2020-03-10","Pennsylvania","2020-03-10",12,0,0,0.416666666666667,0,0,NA,NA,NA,NA,NA,5,0,0
+"Pennsylvania-2020-03-11","Pennsylvania","2020-03-11",16,0,0,0.25,0,0,NA,NA,NA,NA,NA,4,0,0
+"Pennsylvania-2020-03-12","Pennsylvania","2020-03-12",22,0,0,0.272727272727273,0,0,NA,NA,NA,NA,NA,6,0,0
+"Pennsylvania-2020-03-13","Pennsylvania","2020-03-13",41,0,0,0.463414634146341,0,0,NA,NA,NA,NA,NA,19,0,0
+"Pennsylvania-2020-03-14","Pennsylvania","2020-03-14",47,0,0,0.127659574468085,0,0,NA,NA,NA,NA,NA,6,0,0
+"Pennsylvania-2020-03-15","Pennsylvania","2020-03-15",66,0,0,0.287878787878788,0,0,NA,NA,NA,NA,NA,19,0,0
+"Pennsylvania-2020-03-16","Pennsylvania","2020-03-16",77,0,0,0.142857142857143,0,0,NA,NA,NA,NA,NA,11,0,0
+"Pennsylvania-2020-03-17","Pennsylvania","2020-03-17",112,0,0,0.3125,0,0,NA,NA,0.266862027870071,NA,NA,35,0,0
+"Pennsylvania-2020-03-18","Pennsylvania","2020-03-18",152,0,0,0.263157894736842,0,0,NA,NA,0.226810679988172,NA,NA,40,0,0
+"Pennsylvania-2020-03-19","Pennsylvania","2020-03-19",206,1,0,0.262135922330097,1,0,NA,NA,0.253705949560574,NA,NA,54,1,0
+"Pennsylvania-2020-03-20","Pennsylvania","2020-03-20",303,1,0,0.32013201320132,0,0,NA,NA,0.26015659462508,NA,NA,97,0,0
+"Pennsylvania-2020-03-21","Pennsylvania","2020-03-21",396,2,0,0.234848484848485,0.5,0,NA,NA,0.278554863023349,NA,NA,93,1,0
+"Pennsylvania-2020-03-22","Pennsylvania","2020-03-22",509,3,0,0.222003929273084,0.333333333333333,0,NA,NA,0.260455648877966,NA,NA,113,1,0
+"Pennsylvania-2020-03-23","Pennsylvania","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"South Carolina-2020-01-22","South Carolina","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"South Carolina-2020-01-23","South Carolina","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-24","South Carolina","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-25","South Carolina","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-26","South Carolina","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-27","South Carolina","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-28","South Carolina","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-29","South Carolina","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-30","South Carolina","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-01-31","South Carolina","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-01","South Carolina","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-02","South Carolina","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-03","South Carolina","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-04","South Carolina","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-05","South Carolina","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-06","South Carolina","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-07","South Carolina","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-08","South Carolina","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-09","South Carolina","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-10","South Carolina","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-11","South Carolina","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-12","South Carolina","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-13","South Carolina","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-14","South Carolina","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-15","South Carolina","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-16","South Carolina","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-17","South Carolina","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-18","South Carolina","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-19","South Carolina","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-20","South Carolina","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-21","South Carolina","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-22","South Carolina","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-23","South Carolina","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-24","South Carolina","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-25","South Carolina","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-26","South Carolina","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-27","South Carolina","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-28","South Carolina","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-02-29","South Carolina","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-01","South Carolina","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-02","South Carolina","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-03","South Carolina","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-04","South Carolina","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-05","South Carolina","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-06","South Carolina","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-07","South Carolina","2020-03-07",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"South Carolina-2020-03-08","South Carolina","2020-03-08",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-09","South Carolina","2020-03-09",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"South Carolina-2020-03-10","South Carolina","2020-03-10",7,0,0,0.571428571428571,0,0,NA,NA,NA,NA,NA,4,0,0
+"South Carolina-2020-03-11","South Carolina","2020-03-11",10,0,0,0.3,0,0,NA,NA,NA,NA,NA,3,0,0
+"South Carolina-2020-03-12","South Carolina","2020-03-12",12,0,0,0.166666666666667,0,0,NA,NA,NA,NA,NA,2,0,0
+"South Carolina-2020-03-13","South Carolina","2020-03-13",13,0,0,0.0769230769230769,0,0,NA,NA,NA,NA,NA,1,0,0
+"South Carolina-2020-03-14","South Carolina","2020-03-14",19,0,0,0.315789473684211,0,0,NA,NA,NA,NA,NA,6,0,0
+"South Carolina-2020-03-15","South Carolina","2020-03-15",28,0,0,0.321428571428571,0,0,NA,NA,NA,NA,NA,9,0,0
+"South Carolina-2020-03-16","South Carolina","2020-03-16",33,1,0,0.151515151515152,1,0,NA,NA,NA,NA,NA,5,1,0
+"South Carolina-2020-03-17","South Carolina","2020-03-17",47,1,0,0.297872340425532,0,0,NA,NA,NA,NA,NA,14,0,0
+"South Carolina-2020-03-18","South Carolina","2020-03-18",47,1,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"South Carolina-2020-03-19","South Carolina","2020-03-19",81,1,0,0.419753086419753,0,0,NA,NA,NA,NA,NA,34,0,0
+"South Carolina-2020-03-20","South Carolina","2020-03-20",126,1,0,0.357142857142857,0,0,NA,NA,0.245256687100659,NA,NA,45,0,0
+"South Carolina-2020-03-21","South Carolina","2020-03-21",171,3,0,0.263157894736842,0.666666666666667,0,NA,NA,0.267585235744997,NA,NA,45,2,0
+"South Carolina-2020-03-22","South Carolina","2020-03-22",196,3,0,0.127551020408163,0,0,NA,NA,0.233520971741523,NA,NA,25,0,0
+"South Carolina-2020-03-23","South Carolina","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Tennessee-2020-01-22","Tennessee","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Tennessee-2020-01-23","Tennessee","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-24","Tennessee","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-25","Tennessee","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-26","Tennessee","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-27","Tennessee","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-28","Tennessee","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-29","Tennessee","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-30","Tennessee","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-01-31","Tennessee","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-01","Tennessee","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-02","Tennessee","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-03","Tennessee","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-04","Tennessee","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-05","Tennessee","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-06","Tennessee","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-07","Tennessee","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-08","Tennessee","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-09","Tennessee","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-10","Tennessee","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-11","Tennessee","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-12","Tennessee","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-13","Tennessee","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-14","Tennessee","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-15","Tennessee","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-16","Tennessee","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-17","Tennessee","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-18","Tennessee","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-19","Tennessee","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-20","Tennessee","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-21","Tennessee","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-22","Tennessee","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-23","Tennessee","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-24","Tennessee","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-25","Tennessee","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-26","Tennessee","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-27","Tennessee","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-28","Tennessee","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-02-29","Tennessee","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-01","Tennessee","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-02","Tennessee","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-03","Tennessee","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-04","Tennessee","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-05","Tennessee","2020-03-05",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Tennessee-2020-03-06","Tennessee","2020-03-06",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-07","Tennessee","2020-03-07",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-08","Tennessee","2020-03-08",3,0,0,0.666666666666667,0,0,NA,NA,NA,NA,NA,2,0,0
+"Tennessee-2020-03-09","Tennessee","2020-03-09",3,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Tennessee-2020-03-10","Tennessee","2020-03-10",7,0,0,0.571428571428571,0,0,NA,NA,NA,NA,NA,4,0,0
+"Tennessee-2020-03-11","Tennessee","2020-03-11",9,0,0,0.222222222222222,0,0,NA,NA,NA,NA,NA,2,0,0
+"Tennessee-2020-03-12","Tennessee","2020-03-12",18,0,0,0.5,0,0,NA,NA,NA,NA,NA,9,0,0
+"Tennessee-2020-03-13","Tennessee","2020-03-13",26,0,0,0.307692307692308,0,0,NA,NA,NA,NA,NA,8,0,0
+"Tennessee-2020-03-14","Tennessee","2020-03-14",32,0,0,0.1875,0,0,NA,NA,NA,NA,NA,6,0,0
+"Tennessee-2020-03-15","Tennessee","2020-03-15",39,0,0,0.179487179487179,0,0,NA,NA,NA,NA,NA,7,0,0
+"Tennessee-2020-03-16","Tennessee","2020-03-16",52,0,0,0.25,0,0,NA,NA,NA,NA,NA,13,0,0
+"Tennessee-2020-03-17","Tennessee","2020-03-17",74,0,0,0.297297297297297,0,0,NA,NA,NA,NA,NA,22,0,0
+"Tennessee-2020-03-18","Tennessee","2020-03-18",79,0,0,0.0632911392405063,0,0,NA,NA,NA,NA,NA,5,0,0
+"Tennessee-2020-03-19","Tennessee","2020-03-19",154,0,0,0.487012987012987,0,0,NA,NA,0.255417720607594,NA,NA,75,0,0
+"Tennessee-2020-03-20","Tennessee","2020-03-20",233,0,0,0.339055793991416,0,0,NA,NA,0.287331443508441,NA,NA,79,0,0
+"Tennessee-2020-03-21","Tennessee","2020-03-21",371,1,0,0.371967654986523,1,0,NA,NA,0.311724974505746,NA,NA,138,1,0
+"Tennessee-2020-03-22","Tennessee","2020-03-22",505,2,0,0.265346534653465,0.5,0,NA,NA,0.30533482197698,NA,NA,134,1,0
+"Tennessee-2020-03-23","Tennessee","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Texas-2020-01-22","Texas","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Texas-2020-01-23","Texas","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-24","Texas","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-25","Texas","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-26","Texas","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-27","Texas","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-28","Texas","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-29","Texas","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-30","Texas","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-01-31","Texas","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-01","Texas","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-02","Texas","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-03","Texas","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-04","Texas","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-05","Texas","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-06","Texas","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-07","Texas","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-08","Texas","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-09","Texas","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-10","Texas","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-11","Texas","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-12","Texas","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-13","Texas","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-14","Texas","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-15","Texas","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-16","Texas","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-17","Texas","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-18","Texas","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-19","Texas","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-20","Texas","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-21","Texas","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-22","Texas","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-23","Texas","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-24","Texas","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-25","Texas","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-26","Texas","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-27","Texas","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-28","Texas","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-02-29","Texas","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-03-01","Texas","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-03-02","Texas","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-03-03","Texas","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-03-04","Texas","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-03-05","Texas","2020-03-05",3,0,0,1,0,0,NA,NA,NA,NA,NA,3,0,0
+"Texas-2020-03-06","Texas","2020-03-06",4,0,0,0.25,0,0,NA,NA,NA,NA,NA,1,0,0
+"Texas-2020-03-07","Texas","2020-03-07",8,0,0,0.5,0,0,NA,NA,NA,NA,NA,4,0,0
+"Texas-2020-03-08","Texas","2020-03-08",11,0,0,0.272727272727273,0,0,NA,NA,NA,NA,NA,3,0,0
+"Texas-2020-03-09","Texas","2020-03-09",13,0,0,0.153846153846154,0,0,NA,NA,NA,NA,NA,2,0,0
+"Texas-2020-03-10","Texas","2020-03-10",13,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Texas-2020-03-11","Texas","2020-03-11",21,0,0,0.380952380952381,0,0,NA,NA,NA,NA,NA,8,0,0
+"Texas-2020-03-12","Texas","2020-03-12",27,0,0,0.222222222222222,0,0,NA,NA,NA,NA,NA,6,0,0
+"Texas-2020-03-13","Texas","2020-03-13",43,0,0,0.372093023255814,0,0,NA,NA,NA,NA,NA,16,0,0
+"Texas-2020-03-14","Texas","2020-03-14",57,0,0,0.245614035087719,0,0,NA,NA,NA,NA,NA,14,0,0
+"Texas-2020-03-15","Texas","2020-03-15",72,0,0,0.208333333333333,0,0,NA,NA,NA,NA,NA,15,0,0
+"Texas-2020-03-16","Texas","2020-03-16",85,0,0,0.152941176470588,0,0,NA,NA,NA,NA,NA,13,0,0
+"Texas-2020-03-17","Texas","2020-03-17",110,1,0,0.227272727272727,1,0,NA,NA,0.241250859084036,NA,NA,25,1,0
+"Texas-2020-03-18","Texas","2020-03-18",173,3,0,0.364161849710983,0.666666666666667,0,NA,NA,0.23966462437507,NA,NA,63,2,0
+"Texas-2020-03-19","Texas","2020-03-19",260,5,0,0.334615384615385,0.4,0,NA,NA,0.257464894280603,NA,NA,87,2,0
+"Texas-2020-03-20","Texas","2020-03-20",394,5,0,0.34010152284264,0,0,NA,NA,0.283818532182464,NA,NA,134,0,0
+"Texas-2020-03-21","Texas","2020-03-21",581,5,0,0.321858864027539,0,0,NA,NA,0.317602069693855,NA,NA,187,0,0
+"Texas-2020-03-22","Texas","2020-03-22",627,6,0,0.0733652312599681,0.166666666666667,0,NA,NA,0.286820570491303,NA,NA,46,1,0
+"Texas-2020-03-23","Texas","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Utah-2020-01-22","Utah","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Utah-2020-01-23","Utah","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-24","Utah","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-25","Utah","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-26","Utah","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-27","Utah","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-28","Utah","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-29","Utah","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-30","Utah","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-01-31","Utah","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-01","Utah","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-02","Utah","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-03","Utah","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-04","Utah","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-05","Utah","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-06","Utah","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-07","Utah","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-08","Utah","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-09","Utah","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-10","Utah","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-11","Utah","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-12","Utah","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-13","Utah","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-14","Utah","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-15","Utah","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-16","Utah","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-17","Utah","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-18","Utah","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-19","Utah","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-20","Utah","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-21","Utah","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-22","Utah","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-23","Utah","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-24","Utah","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-25","Utah","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-26","Utah","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-27","Utah","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-28","Utah","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-02-29","Utah","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-01","Utah","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-02","Utah","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-03","Utah","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-04","Utah","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-05","Utah","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-06","Utah","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-07","Utah","2020-03-07",1,0,0,1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Utah-2020-03-08","Utah","2020-03-08",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-09","Utah","2020-03-09",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-10","Utah","2020-03-10",2,0,0,0.5,0,0,NA,NA,NA,NA,NA,1,0,0
+"Utah-2020-03-11","Utah","2020-03-11",3,0,0,0.333333333333333,0,0,NA,NA,NA,NA,NA,1,0,0
+"Utah-2020-03-12","Utah","2020-03-12",5,0,0,0.4,0,0,NA,NA,NA,NA,NA,2,0,0
+"Utah-2020-03-13","Utah","2020-03-13",9,0,0,0.444444444444444,0,0,NA,NA,NA,NA,NA,4,0,0
+"Utah-2020-03-14","Utah","2020-03-14",10,0,0,0.1,0,0,NA,NA,NA,NA,NA,1,0,0
+"Utah-2020-03-15","Utah","2020-03-15",28,0,0,0.642857142857143,0,0,NA,NA,NA,NA,NA,18,0,0
+"Utah-2020-03-16","Utah","2020-03-16",39,0,0,0.282051282051282,0,0,NA,NA,NA,NA,NA,11,0,0
+"Utah-2020-03-17","Utah","2020-03-17",51,0,0,0.235294117647059,0,0,NA,NA,NA,NA,NA,12,0,0
+"Utah-2020-03-18","Utah","2020-03-18",51,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Utah-2020-03-19","Utah","2020-03-19",80,0,0,0.3625,0,0,NA,NA,NA,NA,NA,29,0,0
+"Utah-2020-03-20","Utah","2020-03-20",78,0,0,-0.0256410256410256,0,0,NA,NA,NA,NA,NA,-2,0,0
+"Utah-2020-03-21","Utah","2020-03-21",136,0,0,0.426470588235294,0,0,NA,NA,0.199724736048265,NA,NA,58,0,0
+"Utah-2020-03-22","Utah","2020-03-22",181,1,0,0.248618784530387,1,0,NA,NA,0.202389669424931,NA,NA,45,1,0
+"Utah-2020-03-23","Utah","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Virginia-2020-01-22","Virginia","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Virginia-2020-01-23","Virginia","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-24","Virginia","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-25","Virginia","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-26","Virginia","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-27","Virginia","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-28","Virginia","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-29","Virginia","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-30","Virginia","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-01-31","Virginia","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-01","Virginia","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-02","Virginia","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-03","Virginia","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-04","Virginia","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-05","Virginia","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-06","Virginia","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-07","Virginia","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-08","Virginia","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-09","Virginia","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-10","Virginia","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-11","Virginia","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-12","Virginia","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-13","Virginia","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-14","Virginia","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-15","Virginia","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-16","Virginia","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-17","Virginia","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-18","Virginia","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-19","Virginia","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-20","Virginia","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-21","Virginia","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-22","Virginia","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-23","Virginia","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-24","Virginia","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-25","Virginia","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-26","Virginia","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-27","Virginia","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-28","Virginia","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-02-29","Virginia","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-01","Virginia","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-02","Virginia","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-03","Virginia","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-04","Virginia","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-05","Virginia","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-06","Virginia","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-07","Virginia","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-08","Virginia","2020-03-08",2,0,0,1,0,0,NA,NA,NA,NA,NA,2,0,0
+"Virginia-2020-03-09","Virginia","2020-03-09",2,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Virginia-2020-03-10","Virginia","2020-03-10",7,0,0,0.714285714285714,0,0,NA,NA,NA,NA,NA,5,0,0
+"Virginia-2020-03-11","Virginia","2020-03-11",9,0,0,0.222222222222222,0,0,NA,NA,NA,NA,NA,2,0,0
+"Virginia-2020-03-12","Virginia","2020-03-12",17,0,0,0.470588235294118,0,0,NA,NA,NA,NA,NA,8,0,0
+"Virginia-2020-03-13","Virginia","2020-03-13",30,0,0,0.433333333333333,0,0,NA,NA,NA,NA,NA,13,0,0
+"Virginia-2020-03-14","Virginia","2020-03-14",41,1,0,0.268292682926829,1,0,NA,NA,NA,NA,NA,11,1,0
+"Virginia-2020-03-15","Virginia","2020-03-15",45,1,0,0.0888888888888889,0,0,NA,NA,NA,NA,NA,4,0,0
+"Virginia-2020-03-16","Virginia","2020-03-16",49,1,0,0.0816326530612245,0,0,NA,NA,NA,NA,NA,4,0,0
+"Virginia-2020-03-17","Virginia","2020-03-17",67,2,0,0.26865671641791,0.5,0,NA,NA,NA,NA,NA,18,1,0
+"Virginia-2020-03-18","Virginia","2020-03-18",77,2,0,0.12987012987013,0,0,NA,NA,NA,NA,NA,10,0,0
+"Virginia-2020-03-19","Virginia","2020-03-19",99,2,0,0.222222222222222,0,0,NA,NA,NA,NA,NA,22,0,0
+"Virginia-2020-03-20","Virginia","2020-03-20",122,2,0,0.188524590163934,0,0,NA,NA,0.178181262347084,NA,NA,23,0,0
+"Virginia-2020-03-21","Virginia","2020-03-21",156,2,0,0.217948717948718,0,0,NA,NA,0.205444475324583,NA,NA,34,0,0
+"Virginia-2020-03-22","Virginia","2020-03-22",221,6,0,0.294117647058824,0.666666666666667,0,NA,NA,0.210536661452766,NA,NA,65,4,0
+"Virginia-2020-03-23","Virginia","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Washington-2020-01-22","Washington","2020-01-22",1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Washington-2020-01-23","Washington","2020-01-23",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-24","Washington","2020-01-24",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-25","Washington","2020-01-25",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-26","Washington","2020-01-26",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-27","Washington","2020-01-27",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-28","Washington","2020-01-28",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-29","Washington","2020-01-29",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-30","Washington","2020-01-30",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-01-31","Washington","2020-01-31",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-01","Washington","2020-02-01",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-02","Washington","2020-02-02",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-03","Washington","2020-02-03",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-04","Washington","2020-02-04",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-05","Washington","2020-02-05",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-06","Washington","2020-02-06",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-07","Washington","2020-02-07",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-08","Washington","2020-02-08",1,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-09","Washington","2020-02-09",1,0,1,0,0,1,NA,NA,NA,NA,NA,0,0,1
+"Washington-2020-02-10","Washington","2020-02-10",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-11","Washington","2020-02-11",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-12","Washington","2020-02-12",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-13","Washington","2020-02-13",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-14","Washington","2020-02-14",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-15","Washington","2020-02-15",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-16","Washington","2020-02-16",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-17","Washington","2020-02-17",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-18","Washington","2020-02-18",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-19","Washington","2020-02-19",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-20","Washington","2020-02-20",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-21","Washington","2020-02-21",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-22","Washington","2020-02-22",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-23","Washington","2020-02-23",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-24","Washington","2020-02-24",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-25","Washington","2020-02-25",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-26","Washington","2020-02-26",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-27","Washington","2020-02-27",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-28","Washington","2020-02-28",1,0,1,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Washington-2020-02-29","Washington","2020-02-29",7,1,1,0.857142857142857,1,0,NA,NA,NA,NA,NA,6,1,0
+"Washington-2020-03-01","Washington","2020-03-01",11,1,1,0.363636363636364,0,0,NA,NA,NA,NA,NA,4,0,0
+"Washington-2020-03-02","Washington","2020-03-02",18,6,1,0.388888888888889,0.833333333333333,0,NA,NA,NA,NA,NA,7,5,0
+"Washington-2020-03-03","Washington","2020-03-03",27,7,1,0.333333333333333,0.142857142857143,0,NA,NA,NA,NA,NA,9,1,0
+"Washington-2020-03-04","Washington","2020-03-04",39,10,1,0.307692307692308,0.3,0,NA,NA,NA,NA,NA,12,3,0
+"Washington-2020-03-05","Washington","2020-03-05",70,11,1,0.442857142857143,0.0909090909090909,0,NA,NA,NA,NA,NA,31,1,0
+"Washington-2020-03-06","Washington","2020-03-06",78,13,1,0.102564102564103,0.153846153846154,0,NA,NA,NA,NA,NA,8,2,0
+"Washington-2020-03-07","Washington","2020-03-07",102,16,1,0.235294117647059,0.1875,0,NA,NA,0.284348200818789,NA,NA,24,3,0
+"Washington-2020-03-08","Washington","2020-03-08",122,18,1,0.163934426229508,0.111111111111111,0,NA,NA,0.250468419398024,NA,NA,20,2,0
+"Washington-2020-03-09","Washington","2020-03-09",122,19,1,0,0.0526315789473684,0,NA,NA,0.188929957859562,NA,NA,0,1,0
+"Washington-2020-03-10","Washington","2020-03-10",267,23,1,0.543071161048689,0.173913043478261,0,NA,NA,0.208972761497872,NA,NA,145,4,0
+"Washington-2020-03-11","Washington","2020-03-11",366,29,1,0.270491803278689,0.206896551724138,0,0.0792349726775956,NA,0.242558301640789,0.146410457052176,NA,99,6,0
+"Washington-2020-03-12","Washington","2020-03-12",442,31,1,0.171945701357466,0.0645161290322581,0,0.0701357466063348,NA,0.22988861838287,0.121813682858627,NA,76,2,0
+"Washington-2020-03-13","Washington","2020-03-13",568,37,1,0.221830985915493,0.162162162162162,0,0.0651408450704225,NA,0.241467930320067,0.132023893068837,NA,126,6,0
+"Washington-2020-03-14","Washington","2020-03-14",572,37,1,0.00699300699300699,0,0,0.0646853146853147,NA,0.242866531718669,0.121497577279364,NA,4,0,0
+"Washington-2020-03-15","Washington","2020-03-15",643,40,1,0.110419906687403,0.075,0,0.0622083981337481,NA,0.156336280846411,0.101714968583712,NA,71,3,0
+"Washington-2020-03-16","Washington","2020-03-16",904,48,1,0.288716814159292,0.166666666666667,0,0.0530973451327434,NA,0.159981283022532,0.0936689915722174,NA,261,8,0
+"Washington-2020-03-17","Washington","2020-03-17",1076,55,1,0.159851301115242,0.127272727272727,0,0.0511152416356877,NA,0.157562402974087,0.106220311220311,NA,172,7,0
+"Washington-2020-03-18","Washington","2020-03-18",1014,55,0,-0.0611439842209073,0,-Inf,0.0542406311637081,NA,0.100967408946807,0.0737878787878788,NA,-62,0,-1
+"Washington-2020-03-19","Washington","2020-03-19",1376,74,0,0.263081395348837,0.256756756756757,0,0.0537790697674419,NA,0.152185086617973,0.12513923013923,NA,362,19,0
+"Washington-2020-03-20","Washington","2020-03-20",1524,83,0,0.0971128608923885,0.108433734939759,0,0.0544619422572179,NA,0.14952367745897,0.131825977127182,NA,148,9,0
+"Washington-2020-03-21","Washington","2020-03-21",1793,94,0,0.150027886224205,0.117021276595745,0,0.0524261015058561,NA,0.121785891871953,0.121896899112998,NA,269,11,0
+"Washington-2020-03-22","Washington","2020-03-22",1996,95,0,0.101703406813627,0.0105263157894737,0,0.0475951903807615,NA,0.11015631301163,0.0985476168163468,NA,203,1,0
+"Washington-2020-03-23","Washington","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Wisconsin-2020-01-22","Wisconsin","2020-01-22",0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Wisconsin-2020-01-23","Wisconsin","2020-01-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-24","Wisconsin","2020-01-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-25","Wisconsin","2020-01-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-26","Wisconsin","2020-01-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-27","Wisconsin","2020-01-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-28","Wisconsin","2020-01-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-29","Wisconsin","2020-01-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-30","Wisconsin","2020-01-30",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-01-31","Wisconsin","2020-01-31",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-01","Wisconsin","2020-02-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-02","Wisconsin","2020-02-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-03","Wisconsin","2020-02-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-04","Wisconsin","2020-02-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-05","Wisconsin","2020-02-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-06","Wisconsin","2020-02-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-07","Wisconsin","2020-02-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-08","Wisconsin","2020-02-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-09","Wisconsin","2020-02-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-10","Wisconsin","2020-02-10",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-11","Wisconsin","2020-02-11",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-12","Wisconsin","2020-02-12",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-13","Wisconsin","2020-02-13",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-14","Wisconsin","2020-02-14",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-15","Wisconsin","2020-02-15",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-16","Wisconsin","2020-02-16",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-17","Wisconsin","2020-02-17",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-18","Wisconsin","2020-02-18",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-19","Wisconsin","2020-02-19",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-20","Wisconsin","2020-02-20",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-21","Wisconsin","2020-02-21",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-22","Wisconsin","2020-02-22",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-23","Wisconsin","2020-02-23",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-24","Wisconsin","2020-02-24",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-25","Wisconsin","2020-02-25",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-26","Wisconsin","2020-02-26",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-27","Wisconsin","2020-02-27",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-28","Wisconsin","2020-02-28",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-02-29","Wisconsin","2020-02-29",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-01","Wisconsin","2020-03-01",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-02","Wisconsin","2020-03-02",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-03","Wisconsin","2020-03-03",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-04","Wisconsin","2020-03-04",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-05","Wisconsin","2020-03-05",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-06","Wisconsin","2020-03-06",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-07","Wisconsin","2020-03-07",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-08","Wisconsin","2020-03-08",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-09","Wisconsin","2020-03-09",0,0,0,0,0,0,NA,NA,NA,NA,NA,0,0,0
+"Wisconsin-2020-03-10","Wisconsin","2020-03-10",3,0,1,1,0,1,NA,NA,NA,NA,NA,3,0,1
+"Wisconsin-2020-03-11","Wisconsin","2020-03-11",6,0,1,0.5,0,0,NA,NA,NA,NA,NA,3,0,0
+"Wisconsin-2020-03-12","Wisconsin","2020-03-12",8,0,1,0.25,0,0,NA,NA,NA,NA,NA,2,0,0
+"Wisconsin-2020-03-13","Wisconsin","2020-03-13",19,0,1,0.578947368421053,0,0,NA,NA,NA,NA,NA,11,0,0
+"Wisconsin-2020-03-14","Wisconsin","2020-03-14",27,0,1,0.296296296296296,0,0,NA,NA,NA,NA,NA,8,0,0
+"Wisconsin-2020-03-15","Wisconsin","2020-03-15",32,0,1,0.15625,0,0,NA,NA,NA,NA,NA,5,0,0
+"Wisconsin-2020-03-16","Wisconsin","2020-03-16",47,0,1,0.319148936170213,0,0,NA,NA,NA,NA,NA,15,0,0
+"Wisconsin-2020-03-17","Wisconsin","2020-03-17",72,0,1,0.347222222222222,0,0,NA,NA,NA,NA,NA,25,0,0
+"Wisconsin-2020-03-18","Wisconsin","2020-03-18",92,0,0,0.217391304347826,0,-Inf,NA,NA,NA,NA,NA,20,0,-1
+"Wisconsin-2020-03-19","Wisconsin","2020-03-19",159,0,0,0.421383647798742,0,0,NA,NA,0.292279222107801,NA,NA,67,0,0
+"Wisconsin-2020-03-20","Wisconsin","2020-03-20",207,3,0,0.231884057971014,1,0,NA,NA,0.307406033702004,NA,NA,48,3,0
+"Wisconsin-2020-03-21","Wisconsin","2020-03-21",282,4,0,0.265957446808511,0.25,0,NA,NA,0.296767735829663,NA,NA,75,1,0
+"Wisconsin-2020-03-22","Wisconsin","2020-03-22",381,4,0,0.259842519685039,0,0,NA,NA,0.279291795322227,NA,NA,99,0,0
+"Wisconsin-2020-03-23","Wisconsin","2020-03-23",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
