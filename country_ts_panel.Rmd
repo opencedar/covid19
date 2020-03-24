@@ -100,6 +100,8 @@ covid_plm$diff_confirmed <- diff(covid_plm$confirmed, 1)
 covid_plm$diff_deaths <- diff(covid_plm$deaths, 1)
 covid_plm$diff_recovered <- diff(covid_plm$recovered, 1)
 
+write.csv(covid_plm, "covid_plm_country.csv")
+
 #######
 ```
 # Time Series by Country
@@ -224,6 +226,8 @@ covid_plm_state <- pdata.frame(covid_ets_state, index=c("Province.State", "date"
 covid_plm_state$diff_confirmed <- diff(covid_plm_state$confirmed, 1)
 covid_plm_state$diff_deaths <- diff(covid_plm_state$deaths, 1)
 covid_plm_state$diff_recovered <- diff(covid_plm_state$recovered, 1)
+
+write.csv(covid_plm_state, "covid_plm_state.csv")
 
 ```
 
