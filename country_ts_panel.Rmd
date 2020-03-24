@@ -51,11 +51,13 @@ x$Province.State[!is.na(x$State)] <- x$State[!is.na(x$State)]
 
 x <- x %>% select(colnames(covid_ets))
 
-covid_ets <- x %>% group_by( Country.Region, Province.State, date) %>% summarise(confirmed = sum(confirmed), deaths = sum(deaths), recovered= sum(recovered))
+covid_ets <- x %>% group_by( Country.Region, Province.State, date) %>% summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE), recovered= sum(recovered, na.rm=TRUE))
+
+write.csv(covid_ets, "covid_ets.csv")
 
 covid_country_ets <- covid_ets  %>% 
   group_by(Country.Region, date) %>% 
-  summarise(confirmed = sum(confirmed), deaths = sum(deaths), recovered= sum(recovered)) %>% 
+  summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE), recovered= sum(recovered, na.rm=TRUE)) %>% 
   mutate(
     #create daily percent growth variables
     confirmed_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1),
@@ -87,7 +89,7 @@ covid_country_ets$recovered_rate[covid_country_ets$recovered <100] <- NA
     
 
 #Only get countries with >1000 cases today
-current_cases <- covid_country_ets %>% group_by(Country.Region) %>% summarise(current_cases = max(confirmed))
+current_cases <- covid_country_ets %>% group_by(Country.Region) %>% summarise(current_cases = max(confirmed, na.rm=TRUE))
 five_hundred <- current_cases$Country.Region[current_cases$current_cases >= 1000]
 
 covid_country_ets <- covid_country_ets %>% filter(Country.Region %in% five_hundred)
@@ -182,7 +184,7 @@ covid_ets_state <- covid_ets_start %>% filter(Country.Region == "US")
 
 covid_ets_state <- covid_ets_state  %>% 
   group_by(Province.State, date) %>% 
-  summarise(confirmed = sum(confirmed), deaths = sum(deaths), recovered= sum(recovered)) %>% 
+  summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE), recovered= sum(recovered, na.rm=TRUE)) %>% 
   mutate(
     #create daily percent growth variables
     confirmed_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1),
@@ -312,6 +314,46 @@ ggplot(covid_plm_state, aes(x=date, y=recovered_rate, group = Province.State)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1))
 ```
 
+# Log / Time for States After 50th Case
 
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+covid_plm_state_log <- covid_plm_state %>%
+  filter(confirmed >=50) %>% 
+  mutate(confirmed_log = log10(confirmed), deaths_log = log10(deaths), recovered_log = log10(recovered)) %>%
+  group_by(Province.State) %>% 
+  mutate(days_since_50 = dplyr::row_number())
 
+```
 
+## Log-10 by States: Confirmed Cases by Day After 50th Confirmed Case
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+require(scales)
+ggplot(covid_plm_state_log, aes(x=days_since_50, y=confirmed_log, group = Province.State, color = Province.State)) +
+  geom_line(show.legend = FALSE) +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("Log-10 of Confirmed Cases Since 50th Case by State as of ", format(Sys.time(), '%d %B %Y'))) +
+  scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
+  labels = trans_format("log10", math_format(10^.x)))
+```
+
+## Log-10 by States: Deaths by Day After 50th Confirmed Case
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+covid_plm_state_log_deaths <- covid_plm_state %>%
+  filter(deaths >=50) %>% 
+  mutate(confirmed_log = log10(confirmed), deaths_log = log10(deaths), recovered_log = log10(recovered)) %>%
+  group_by(Province.State) %>% 
+  mutate(days_since_50 = dplyr::row_number())
+
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+require(scales)
+ggplot(covid_plm_state_log_deaths, aes(x=days_since_50, y=deaths_log, group = Province.State, color = Province.State)) +
+  geom_line(show.legend = FALSE) +
+  facet_wrap(~ Province.State) +
+  ggtitle(paste0("Log-10 of Deaths Since 50th Case by State as of ", format(Sys.time(), '%d %B %Y'))) +
+  scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
+              labels = trans_format("log10", math_format(10^.x)))
+```
