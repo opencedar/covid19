@@ -369,7 +369,11 @@ ggplot(covid_plm_state_log_deaths, aes(x=days_since_50, y=deaths_log, group = Pr
 
 # Country Forecasts
 
-## Active Cases
+## Ln (Seven-Day-Lagged New Cases) Impact on Ln (New Cases)
+
+In other words, elasticity. How does this elasticity change through time, from days since the 50th case?
+
+An elasticity under 1 indicates that over a seven-day period, new cases are decreasing.
 
 ```{r}
 library(broom)
@@ -400,32 +404,43 @@ covid_country_ets$new_confirmed_lag7_na <- covid_country_ets$new_confirmed_lag7
 covid_country_ets$new_confirmed_lag7_na[covid_country_ets$new_confirmed_lag7_na == 0] <- NA
 covid_country_ets$new_confirmed_lag14_na <- covid_country_ets$new_confirmed_lag14
 covid_country_ets$new_confirmed_lag14_na[covid_country_ets$new_confirmed_lag14_na == 0] <- NA
+covid_country_ets$new_confirmed_na <- covid_country_ets$new_confirmed
+covid_country_ets$new_confirmed_na[covid_country_ets$new_confirmed_na == 0] <- NA
 
 days_since_50_by_country <- covid_country_ets %>% group_by(Country.Region) %>% summarize(days_since_50 = max(days_since_50))
 
-confirmed_models <- covid_country_ets %>% group_by(Country.Region) %>% do(model = lm(log(confirmed_na) ~  log(confirmed_lag7_na) -1, data = .))
+confirmed_models <- covid_country_ets %>% group_by(Country.Region) %>% do(model = lm(log(new_confirmed_na) ~  log(new_confirmed_lag7_na) -1, data = .))
 confirmed_tidy_model <- confirmed_models %>% tidy(model)
 
-seven_day_elasticity_by_country <- data.frame(country = confirmed_tidy_model$Country.Region, days_since_50_cases  = days_since_50_by_country$days_since_50, lag_7_elasticity = confirmed_tidy_model$estimate)
+seven_day_elasticity_by_country <- data.frame(country = confirmed_tidy_model$Country.Region, days_since_50_cases  = as.numeric(days_since_50_by_country$days_since_50), lag_7_elasticity = confirmed_tidy_model$estimate)
+
+cases_7_day_model <- lm(lag_7_elasticity ~ days_since_50_cases,data = seven_day_elasticity_by_country_no_outliers)
+
+seven_day_elasticity_by_country$prediction <-  cases_7_day_model$coefficients[[1]] + cases_7_day_model$coefficients[[2]] * seven_day_elasticity_by_country$days_since_50_cases
+  
 
 seven_day_elasticity_by_country_no_outliers <- seven_day_elasticity_by_country %>% filter(lag_7_elasticity <2)
 
 require(ggrepel)
-ggplot(seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50_cases, y=lag_7_elasticity, color = country)) +
-    geom_point(shape=1, show.legend = FALSE) +    # Use hollow circles
-    geom_smooth(method=lm) +
-    geom_label_repel(data=  seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50_cases, y=lag_7_elasticity, label = country), size=2) + 
-    theme(legend.position = "none")
+ggplot(seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50_cases)) +
+    geom_point(shape=1, show.legend = FALSE, (aes(y=lag_7_elasticity, color = country))) +    # Use hollow circles
+      geom_line(aes( y = prediction)) +
+   geom_label_repel(data=  seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50_cases, y=lag_7_elasticity, label = country), size=2) + 
+    theme(legend.position = "none") 
 
-cases_7_day_model <- lm(log(lag_7_elasticity) ~ days_since_50_cases,data = seven_day_elasticity_by_country_no_outliers)
+knitr::kable(seven_day_elasticity_by_country_no_outliers %>% mutate(residual = lag_7_elasticity - prediction) %>% arrange(days_since_50_cases, residual), caption = "Countries by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases")
 
-predict_days <- data.frame(days_since_50_cases = 1:100)
+actuals <- covid_country_ets %>% select(country = Country.Region, date, days_since_50_cases = days_since_50, confirmed, new_confirmed, new_confirmed_lag7)
 
-prediction <- predict.lm(cases_7_day_model, predict_days)
+prediction <- expand.grid(country = unique(seven_day_elasticity_by_country$country), days_since_50_cases = 1:100) %>% 
+  arrange(country, days_since_50_cases)
 
-plot(exp(prediction))
+prediction$prediction <- predict.lm(cases_7_day_model, prediction)
 
-      
+prediction <- merge(prediction, actuals, on.x = c("country", "days_since_50_cases"), all.x = TRUE, all.y = FALSE)
+
+
+
 ```
 
 
