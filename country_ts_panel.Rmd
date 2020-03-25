@@ -64,8 +64,17 @@ covid_country_ets <- covid_ets  %>%
     death_growth_rate = c(NA,diff(deaths))/lag(deaths, 1),
     recovered_growth_rate = c(NA,diff(recovered))/lag(recovered, 1),
     death_rate = deaths / confirmed,
-    recovered_rate = recovered / confirmed
-   
+    recovered_rate = recovered / confirmed,
+    active = confirmed - deaths - recovered,
+    active_lag14 = dplyr::lag(confirmed - deaths - recovered, 14, 0),
+    active_lag7 = dplyr::lag(confirmed - deaths - recovered, 7, 0),
+    confirmed_lag7 = dplyr::lag(confirmed, 7, 0),
+    confirmed_lag14 = dplyr::lag(confirmed, 14, 0),
+    new_confirmed = c(NA, diff(confirmed)),
+    new_deaths = c(NA, diff(deaths)),
+    new_recovered = c(NA, diff(recovered)),
+    new_confirmed_lag7 = dplyr::lag(new_confirmed,7,0),
+    new_confirmed_lag14 = dplyr::lag(new_confirmed,14,0)
   )
 
 #replace NaNs w 0s
@@ -356,4 +365,80 @@ ggplot(covid_plm_state_log_deaths, aes(x=days_since_50, y=deaths_log, group = Pr
   ggtitle(paste0("Log-10 of Deaths Since 50th Case by State as of ", format(Sys.time(), '%d %B %Y'))) +
   scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
               labels = trans_format("log10", math_format(10^.x)))
+```
+
+# Country Forecasts
+
+## Active Cases
+
+```{r}
+library(broom)
+#Remove NAs
+
+#Only get country-days with >= 100 cases
+covid_country_ets <- covid_country_ets %>% filter(confirmed >= 100)
+covid_country_ets <- covid_country_ets %>% group_by(Country.Region) %>% mutate(days_since_50 = dplyr::row_number())
+
+
+covid_country_ets$deaths_na <- covid_country_ets$deaths
+covid_country_ets$deaths_na[covid_country_ets$deaths_na == 0] <- NA
+covid_country_ets$confirmed_na <- covid_country_ets$confirmed
+covid_country_ets$confirmed_na[covid_country_ets$confirmed_na == 0] <- NA
+covid_country_ets$recovered_na <- covid_country_ets$recovered
+covid_country_ets$recovered_na[covid_country_ets$recovered_na == 0] <- NA
+covid_country_ets$days_since_50_na <- covid_country_ets$days_since_50
+covid_country_ets$days_since_50_na[covid_country_ets$days_since_50_na == 0] <- NA
+covid_country_ets$active_lag14_na <- covid_country_ets$active_lag14
+covid_country_ets$active_lag14_na[covid_country_ets$active_lag14_na == 0] <- NA
+covid_country_ets$active_lag7_na <- covid_country_ets$active_lag7
+covid_country_ets$active_lag7_na[covid_country_ets$active_lag7_na == 0] <- NA
+covid_country_ets$confirmed_lag7_na <- covid_country_ets$confirmed_lag7
+covid_country_ets$confirmed_lag7_na[covid_country_ets$confirmed_lag7_na == 0] <- NA
+covid_country_ets$confirmed_lag14_na <- covid_country_ets$confirmed_lag14
+covid_country_ets$confirmed_lag14_na[covid_country_ets$confirmed_lag14_na == 0] <- NA
+covid_country_ets$new_confirmed_lag7_na <- covid_country_ets$new_confirmed_lag7
+covid_country_ets$new_confirmed_lag7_na[covid_country_ets$new_confirmed_lag7_na == 0] <- NA
+covid_country_ets$new_confirmed_lag14_na <- covid_country_ets$new_confirmed_lag14
+covid_country_ets$new_confirmed_lag14_na[covid_country_ets$new_confirmed_lag14_na == 0] <- NA
+
+days_since_50_by_country <- covid_country_ets %>% group_by(Country.Region) %>% summarize(days_since_50 = max(days_since_50))
+
+confirmed_models <- covid_country_ets %>% group_by(Country.Region) %>% do(model = lm(log(confirmed_na) ~  log(confirmed_lag7_na) -1, data = .))
+confirmed_tidy_model <- confirmed_models %>% tidy(model)
+
+seven_day_elasticity_by_country <- data.frame(country = confirmed_tidy_model$Country.Region, days_since_50_cases  = days_since_50_by_country$days_since_50, lag_7_elasticity = confirmed_tidy_model$estimate)
+
+seven_day_elasticity_by_country_no_outliers <- seven_day_elasticity_by_country %>% filter(lag_7_elasticity <2)
+
+require(ggrepel)
+ggplot(seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50_cases, y=lag_7_elasticity, color = country)) +
+    geom_point(shape=1, show.legend = FALSE) +    # Use hollow circles
+    geom_smooth(method=lm) +
+    geom_label_repel(data=  seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50_cases, y=lag_7_elasticity, label = country), size=2) + 
+    theme(legend.position = "none")
+
+cases_7_day_model <- lm(log(lag_7_elasticity) ~ days_since_50_cases,data = seven_day_elasticity_by_country_no_outliers)
+
+predict_days <- data.frame(days_since_50_cases = 1:100)
+
+prediction <- predict.lm(cases_7_day_model, predict_days)
+
+plot(exp(prediction))
+
+      
+```
+
+
+
+### Other Models
+```{r}
+
+death_models <- covid_country_ets %>% group_by(Country.Region) %>% do(model = lm(deaths ~ active_lag14  -1, data = .))
+deaths_tidy_model <- death_models %>% tidy(model)
+
+recovered_models <- covid_country_ets %>% group_by(Country.Region) %>% do(model = lm(recovered ~ active_lag14 -1, data = .))
+recovered_tidy_model <- recovered_models %>% tidy(model)
+
+
+
 ```
