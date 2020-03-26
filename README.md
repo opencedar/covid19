@@ -15,4 +15,8 @@ The Rmarkdown document (`country_ts_panel.Rmd`) knits a tabular and visual summa
 
 * Extending the two models to predict future new cases by country and state
 
+## Limitations
+
 I can't commit to updating the core time-series data set daily (`covid_ets.csv`) but the data frame can be assembled using `getdata.R` or the `country_ts_panel.Rmd` Rmarkdown document, which currently produces "sparkline" type visualizations for States and Countries.
+
+I also can't commit to re-knitting / updating the PDF every day, but the PDF can be recreated with the Rmarkdown file, assuming the user has R and Rstudio, as well as packages included in the `tidyverse` and a few other packages.
