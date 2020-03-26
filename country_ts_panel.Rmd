@@ -57,6 +57,8 @@ x <- hopkins_df
 x$Country_Region[x$Country_Region == "Mainland China"] <- "China"
 x$Country_Region[x$Country_Region == "Iran (Islamic Republic of)"] <- "Iran"
 x$Country_Region[x$Country_Region == "Republic of Korea"] <- "Korea, South"
+x$Country_Region[x$Country_Region == "South Korea"] <- "Korea, South"
+
   
 x$state_from_county <- str_extract(x$Province_State, '(A[LKSZR])|(C[AOT])|(D[EC])|(F[ML])|(G[AU])|(HI)|(I[DLNA])|(K[SY])|(LA)|(M[EHDAINSOT])|(N[EVHJMYCD])|(MP)|(O[HKR])|(P[WAR])|(RI)|(S[CD])|(T[NX])|(UT)|(V[TIA])|(W[AVIY])')
 x <- merge(x, state_key, all.x=TRUE, all.y = FALSE, by.x = 'state_from_county', by.y = "Abbreviation")
