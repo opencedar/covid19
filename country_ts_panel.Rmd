@@ -1,5 +1,5 @@
 ---
-title: "COVID19 Time Series"
+title: "COVID19 Time Series Analysis, Worldwide and U.S."
 author: "Andy Hasselwander"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output: pdf_document
@@ -9,7 +9,7 @@ Source data: 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by John
 
 Source code: https://github.com/opencedar/covid19
 
-This visualization is heavily indebted to Edward Tufte and his use of sparklines—small, clutter-free time series lines—to show how many different panels or categories of data are changing through time; check out https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR. 
+The visualizations in this document are heavily indebted to Edward Tufte and his use of sparklines—small, clutter-free time series lines—to show how many different panels or categories of data are changing through time; check out https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 
@@ -73,7 +73,7 @@ write.csv(covid_ets, "covid_ets.csv")
 
 covid_country_ets <- covid_ets  %>% 
   group_by(Country_Region, date) %>% 
-  summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE)) %>% 
+  summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE), recovered = sum(recovered, na.rm = TRUE)) %>% 
   mutate(
     #create daily percent growth variables
     confirmed_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1),
@@ -121,9 +121,117 @@ covid_plm$diff_deaths <- diff(covid_plm$deaths, 1)
 
 #######
 ```
-# Time Series by Country
+# Worldwide
 
-## Confirmed Cases
+## Worldwide Summary
+
+Sorted by total number of cases. Percent growth in total cases in the past seven days is last column.
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+covid_country_fc <- data.frame(covid_country_ets)
+#Only get country-days with >= 50 cases
+covid_country_fc <- covid_country_fc %>% filter(confirmed >= 50)
+covid_country_fc <- covid_country_fc %>% group_by(Country_Region) %>% mutate(days_since_50 = dplyr::row_number())
+
+
+covid_country_fc$deaths_na <- covid_country_fc$deaths
+covid_country_fc$deaths_na[covid_country_fc$deaths_na <= 0] <- NA
+covid_country_fc$confirmed_na <- covid_country_fc$confirmed
+covid_country_fc$confirmed_na[covid_country_fc$confirmed_na <= 0] <- NA
+covid_country_fc$days_since_50_na <- covid_country_fc$days_since_50
+covid_country_fc$days_since_50_na[covid_country_fc$days_since_50_na <= 0] <- NA
+covid_country_fc$confirmed_lag7_na <- covid_country_fc$confirmed_lag7
+covid_country_fc$confirmed_lag7_na[covid_country_fc$confirmed_lag7_na <= 0] <- NA
+covid_country_fc$confirmed_lag14_na <- covid_country_fc$confirmed_lag14
+covid_country_fc$confirmed_lag14_na[covid_country_fc$confirmed_lag14_na <= 0] <- NA
+covid_country_fc$new_confirmed_lag7_na <- covid_country_fc$new_confirmed_lag7
+covid_country_fc$new_confirmed_lag7_na[covid_country_fc$new_confirmed_lag7_na <= 0] <- NA
+covid_country_fc$new_confirmed_lag14_na <- covid_country_fc$new_confirmed_lag14
+covid_country_fc$new_confirmed_lag14_na[covid_country_fc$new_confirmed_lag14_na <= 0] <- NA
+covid_country_fc$new_confirmed_na <- covid_country_fc$new_confirmed
+covid_country_fc$new_confirmed_na[covid_country_fc$new_confirmed_na <= 0] <- NA
+
+country_summary <- covid_country_fc %>%
+  group_by(Country_Region) %>% 
+  slice(which.max(days_since_50)) %>% 
+  select(Country_Region, days_50 = days_since_50, conf = confirmed, deaths, new_conf=new_confirmed, conf_lag7=confirmed_lag7) %>%
+  arrange(desc(conf))
+
+world <- data.frame(Country_Region = "World", 
+                 days_50 = mean(country_summary$days_50),
+                 conf = sum(country_summary$conf),
+                 deaths = sum(country_summary$deaths),
+                 new_conf = sum(country_summary$new_conf),
+                 conf_lag7 = sum(country_summary$conf_lag7))
+
+country_summary <- bind_rows(country_summary, world)   
+
+country_summary <- country_summary %>% mutate(l7_rate = (conf / conf_lag7)-1)
+
+require(scales)
+country_summary$l7_rate <- scales::percent(country_summary$l7_rate, accuracy = 4, big.mark = ",")
+
+
+knitr::kable(country_summary, caption = "Worldwide Summary", digits  = 0, align = c("l",rep("r", times = 7)))
+
+```
+
+## Ln (Seven-Day-Lagged New Cases) Impact on Ln (New Cases)
+
+In other words, elasticity. How does this elasticity change through time, from days since the 50th case?
+
+An elasticity under 1 indicates that over a seven-day period, new cases are decreasing.
+
+The black line shows the best curve fit for elasticity changing over time. All countries generally are moving to cap the rate of exponential growth. Countries above the line are doing worse than average, and those below the line are doing better than average. A rate below 1 indicates that new cases are declining over an average 7-day period.
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+library(broom)
+#Remove NAs
+
+
+confirmed_models <- covid_country_fc %>% group_by(Country_Region) %>% do(model = lm(log(new_confirmed_na) ~  log(new_confirmed_lag7_na) -1, data = .))
+confirmed_tidy_model <- confirmed_models %>% tidy(model)
+
+days_since_50_by_country <- covid_country_fc %>% group_by(Country_Region) %>% summarize(days_since_50 = max(days_since_50))
+
+seven_day_elasticity_by_country <- data.frame(country = confirmed_tidy_model$Country_Region, days_since_50  = as.numeric(days_since_50_by_country$days_since_50), lag_7_elasticity = confirmed_tidy_model$estimate)
+
+
+cases_7_day_model_ww <- lm(lag_7_elasticity ~ log(days_since_50),data = seven_day_elasticity_by_country)
+
+seven_day_elasticity_by_country$prediction <-  cases_7_day_model_ww$coefficients[[1]] + cases_7_day_model_ww$coefficients[[2]] * log(seven_day_elasticity_by_country$days_since_50)
+
+seven_day_elasticity_by_country_no_outliers <- seven_day_elasticity_by_country %>% filter(lag_7_elasticity <2)
+  
+
+
+require(ggrepel)
+ggplot(seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50)) +
+    geom_point(shape=1, show.legend = FALSE, (aes(y=lag_7_elasticity, color = country))) +    # Use hollow circles
+      geom_line(aes( y = prediction)) +
+   geom_label_repel(data=  seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50, y=lag_7_elasticity, label = country), size=2) + 
+    theme(legend.position = "none") 
+
+knitr::kable(seven_day_elasticity_by_country_no_outliers %>% mutate(residual = lag_7_elasticity - prediction) %>% arrange(days_since_50, residual), caption = "Countries by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases", digits = 2)
+
+actuals <- covid_country_fc %>% select(country = Country_Region, date, days_since_50 = days_since_50, confirmed, new_confirmed, new_confirmed_lag7)
+
+prediction <- expand.grid(country = unique(seven_day_elasticity_by_country$country), days_since_50 = 1:100) %>% 
+  arrange(country, days_since_50)
+
+prediction$prediction <- predict.lm(cases_7_day_model_ww, prediction)
+
+prediction <- merge(prediction, actuals, on.x = c("country", "days_since_50"), all.x = TRUE, all.y = FALSE)
+
+
+
+```
+
+
+## Sparklines
+
+### Confirmed Cases
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 ggplot(covid_plm, aes(x=date, y=confirmed, group = Country_Region)) +
   geom_line() +
@@ -134,7 +242,8 @@ ggplot(covid_plm, aes(x=date, y=confirmed, group = Country_Region)) +
   theme(axis.title.x = element_blank())
 ```
 
-## Deaths
+### Deaths
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 ggplot(covid_plm, aes(x=date, y=deaths, group = Country_Region)) +
   geom_line() +
@@ -146,7 +255,8 @@ ggplot(covid_plm, aes(x=date, y=deaths, group = Country_Region)) +
 ```
 
 
-## Confirmed Growth Rate 5-Day Moving Average
+### Confirmed Growth Rate 5-Day Moving Average
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 ggplot(covid_plm, aes(x=date, y=conf_growth_rate_ma, group = Country_Region)) +
   geom_line() +
@@ -158,7 +268,8 @@ ggplot(covid_plm, aes(x=date, y=conf_growth_rate_ma, group = Country_Region)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1))
 ```
 
-## Death Rate 
+### Death Rate 
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 ggplot(covid_plm, aes(x=date, y=death_rate, group = Country_Region)) +
   geom_line() +
@@ -170,7 +281,7 @@ ggplot(covid_plm, aes(x=date, y=death_rate, group = Country_Region)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1))
 ```
 
-# U.S. State Sparklines
+# U.S. Analysis
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 covid_ets_state <- data.frame(covid_ets)
@@ -178,7 +289,7 @@ covid_ets_state <- covid_ets %>% filter(Country_Region == "US")
 
 covid_ets_state <- covid_ets_state  %>% 
   group_by(Province_State, date) %>% 
-  summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE)) %>% 
+  summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE), recovered=sum(recovered, na.rm=TRUE)) %>% 
   mutate(
     #create daily percent growth variables
     conf_growth_rate = c(NA,diff(confirmed))/lag(confirmed, 1),
@@ -233,173 +344,12 @@ covid_plm_state$diff_deaths <- diff(covid_plm_state$deaths, 1)
 
 
 
-# Time Series by State
+## State Summary
 
-We only look at states with more than one hundred cases today. For moving average growth rates, we only look at states with deaths and recoveries over 25.
-
-## Confirmed Cases
-```{r echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(covid_plm_state, aes(x=date, y=confirmed, group = Province_State)) +
-  geom_line() +
-  facet_wrap(~ Province_State) +
-  ggtitle(paste0("Confirmed COVID19 Cases Through ", format(Sys.time(), '%d %B %Y'))) +
-  theme(axis.text.x = element_blank()) +
-  theme(axis.ticks.x=element_blank()) +
-  theme(axis.title.x = element_blank())
-```
-
-## Deaths
-```{r echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(covid_plm_state, aes(x=date, y=deaths, group = Province_State)) +
-  geom_line() +
-  facet_wrap(~ Province_State) +
-  ggtitle(paste0("Cumulative COVID19 Deaths Through ", format(Sys.time(), '%d %B %Y'))) +
-  theme(axis.text.x = element_blank()) +
-  theme(axis.ticks.x=element_blank()) +
-  theme(axis.title.x = element_blank())
-```
-
-
-## Confirmed Growth Rate 5-Day Moving Average
-```{r echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(covid_plm_state, aes(x=date, y=conf_growth_rate_ma, group = Province_State)) +
-  geom_line() +
-  facet_wrap(~ Province_State) +
-  ggtitle(paste0("Confirmed Growth Rate Through ", format(Sys.time(), '%d %B %Y'))) +
-  theme(axis.text.x = element_blank()) +
-  theme(axis.ticks.x=element_blank()) +
-  theme(axis.title.x = element_blank()) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
-```
-
-## Death Rate 5-Day Moving Average
-
-Only states with >25 deaths are shown
+Sorted by total number of cases. Percent growth in total cases in the past seven days is last column.
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(covid_plm_state, aes(x=date, y=death_rate_ma, group = Province_State)) +
-  geom_line() +
-  facet_wrap(~ Province_State) +
-  ggtitle(paste0("Death Rate Through " , format(Sys.time(), '%d %B %Y'))) +
-  theme(axis.text.x = element_blank()) +
-  theme(axis.ticks.x=element_blank()) +
-  theme(axis.title.x = element_blank()) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
-```
 
-
-# Log / Time for States After 50th Case
-
-```{r echo = FALSE, message=FALSE, warning=FALSE}
-covid_plm_state_log <- covid_plm_state %>%
-  filter(confirmed >=50) %>% 
-  mutate(confirmed_log = log10(confirmed), deaths_log = log10(deaths)) %>%
-  group_by(Province_State) %>% 
-  mutate(days_since_50 = dplyr::row_number())
-
-```
-
-## Log-10 by States: Confirmed Cases by Day After 50th Confirmed Case
-
-```{r echo = FALSE, message=FALSE, warning=FALSE}
-require(scales)
-ggplot(covid_plm_state_log, aes(x=days_since_50, y=confirmed_log, group = Province_State, color = Province_State)) +
-  geom_line(show.legend = FALSE) +
-  facet_wrap(~ Province_State) +
-  ggtitle(paste0("Log-10 of Confirmed Cases Since 50th Case by State as of ", format(Sys.time(), '%d %B %Y'))) +
-  scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
-  labels = trans_format("log10", math_format(10^.x)))
-```
-
-
-# Country Forecasts
-
-## Ln (Seven-Day-Lagged New Cases) Impact on Ln (New Cases)
-
-In other words, elasticity. How does this elasticity change through time, from days since the 50th case?
-
-An elasticity under 1 indicates that over a seven-day period, new cases are decreasing.
-
-```{r echo = FALSE, message=FALSE, warning=FALSE}
-library(broom)
-#Remove NAs
-
-covid_country_fc <- data.frame(covid_country_ets)
-#Only get country-days with >= 50 cases
-covid_country_fc <- covid_country_fc %>% filter(confirmed >= 50)
-covid_country_fc <- covid_country_fc %>% group_by(Country_Region) %>% mutate(days_since_50 = dplyr::row_number())
-
-
-covid_country_fc$deaths_na <- covid_country_fc$deaths
-covid_country_fc$deaths_na[covid_country_fc$deaths_na <= 0] <- NA
-covid_country_fc$confirmed_na <- covid_country_fc$confirmed
-covid_country_fc$confirmed_na[covid_country_fc$confirmed_na <= 0] <- NA
-covid_country_fc$days_since_50_na <- covid_country_fc$days_since_50
-covid_country_fc$days_since_50_na[covid_country_fc$days_since_50_na <= 0] <- NA
-covid_country_fc$confirmed_lag7_na <- covid_country_fc$confirmed_lag7
-covid_country_fc$confirmed_lag7_na[covid_country_fc$confirmed_lag7_na <= 0] <- NA
-covid_country_fc$confirmed_lag14_na <- covid_country_fc$confirmed_lag14
-covid_country_fc$confirmed_lag14_na[covid_country_fc$confirmed_lag14_na <= 0] <- NA
-covid_country_fc$new_confirmed_lag7_na <- covid_country_fc$new_confirmed_lag7
-covid_country_fc$new_confirmed_lag7_na[covid_country_fc$new_confirmed_lag7_na <= 0] <- NA
-covid_country_fc$new_confirmed_lag14_na <- covid_country_fc$new_confirmed_lag14
-covid_country_fc$new_confirmed_lag14_na[covid_country_fc$new_confirmed_lag14_na <= 0] <- NA
-covid_country_fc$new_confirmed_na <- covid_country_fc$new_confirmed
-covid_country_fc$new_confirmed_na[covid_country_fc$new_confirmed_na <= 0] <- NA
-
-confirmed_models <- covid_country_fc %>% group_by(Country_Region) %>% do(model = lm(log(new_confirmed_na) ~  log(new_confirmed_lag7_na) -1, data = .))
-confirmed_tidy_model <- confirmed_models %>% tidy(model)
-
-days_since_50_by_country <- covid_country_fc %>% group_by(Country_Region) %>% summarize(days_since_50 = max(days_since_50))
-
-seven_day_elasticity_by_country <- data.frame(country = confirmed_tidy_model$Country_Region, days_since_50  = as.numeric(days_since_50_by_country$days_since_50), lag_7_elasticity = confirmed_tidy_model$estimate)
-
-
-cases_7_day_model_ww <- lm(lag_7_elasticity ~ days_since_50,data = seven_day_elasticity_by_country)
-
-seven_day_elasticity_by_country$prediction <-  cases_7_day_model_ww$coefficients[[1]] + cases_7_day_model_ww$coefficients[[2]] * seven_day_elasticity_by_country$days_since_50
-
-seven_day_elasticity_by_country_no_outliers <- seven_day_elasticity_by_country %>% filter(lag_7_elasticity <2)
-  
-
-
-require(ggrepel)
-ggplot(seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50)) +
-    geom_point(shape=1, show.legend = FALSE, (aes(y=lag_7_elasticity, color = country))) +    # Use hollow circles
-      geom_line(aes( y = prediction)) +
-   geom_label_repel(data=  seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50, y=lag_7_elasticity, label = country), size=2) + 
-    theme(legend.position = "none") 
-
-knitr::kable(seven_day_elasticity_by_country_no_outliers %>% mutate(residual = lag_7_elasticity - prediction) %>% arrange(days_since_50, residual), caption = "Countries by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases", digits = 2)
-
-actuals <- covid_country_fc %>% select(country = Country_Region, date, days_since_50 = days_since_50, confirmed, new_confirmed, new_confirmed_lag7)
-
-prediction <- expand.grid(country = unique(seven_day_elasticity_by_country$country), days_since_50 = 1:100) %>% 
-  arrange(country, days_since_50)
-
-prediction$prediction <- predict.lm(cases_7_day_model_ww, prediction)
-
-prediction <- merge(prediction, actuals, on.x = c("country", "days_since_50"), all.x = TRUE, all.y = FALSE)
-
-
-
-```
-
-# State Forecasts
-
-## Ln (Seven-Day-Lagged New Cases) Impact on Ln (New Cases)
-
-In other words, elasticity. How does this elasticity change through time, from days since the 50th case?
-
-An elasticity under 1 indicates that over a seven-day period, new cases are decreasing.
-
-The black line is the best fit for elasticity for the states that have had 50 cases as they progress. Above the line: worse than average; below-the-line: better than average.
-
-The blue line is the best fit for elasticity for countries across the world. 
-
-```{r echo = FALSE, message=FALSE, warning=FALSE}
-library(broom)
-#Remove NAs
 
 #Only get state-days with >= 50 cases
 covid_ets_state <- covid_ets_state %>% filter(confirmed >= 50)
@@ -429,23 +379,59 @@ covid_ets_state$new_confirmed_na[covid_ets_state$new_confirmed_na == 0] <- NA
 
 days_since_50_by_state <- covid_ets_state %>% group_by(Province_State) %>% summarize(days_since_50 = max(days_since_50))
 
+state_summary <- covid_ets_state %>%
+  group_by(Province_State) %>% 
+  slice(which.max(days_since_50)) %>% 
+  select(Province_State, days_50 = days_since_50, conf = confirmed, deaths, new_conf=new_confirmed, conf_lag7=confirmed_lag7) %>%
+  arrange(desc(conf))
+
+us <- data.frame(Province_State = "US", 
+                 days_50 = mean(state_summary$days_50),
+                 conf = sum(state_summary$conf),
+                 deaths = sum(state_summary$deaths),
+                 new_conf = sum(state_summary$new_conf),
+                 conf_lag7 = sum(state_summary$conf_lag7))
+
+state_summary <- bind_rows(state_summary, us)   
+
+state_summary <- state_summary %>% mutate(l7_rate = (conf / conf_lag7)-1)
+
+require(scales)
+state_summary$l7_rate <- scales::percent(state_summary$l7_rate, accuracy = 4, big.mark = ",")
+
+
+knitr::kable(state_summary, caption = "State-by-State Summary", digits  = 0, align = c("l",rep("r", times = 7)))
+
+```
+
+## Ln (Seven-Day-Lagged New Cases) Impact on Ln (New Cases)
+
+In other words, elasticity. How does this elasticity change through time, from days since the 50th case?
+
+An elasticity under 1 indicates that over a seven-day period, new cases are decreasing.
+
+The black line is the best fit for elasticity for the states that have had 50 cases as they progress. Above the line: worse than average; below-the-line: better than average.
+
+The blue line is the best fit for elasticity for countries across the world. It's apparent that the U.S. is not doing as well as the rest of the world in containing exponential growth--probably due to initial testing failures.
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+library(broom)
+#Remove NAs
+
 confirmed_models <- covid_ets_state %>% group_by(Province_State) %>% do(model = lm(log(new_confirmed_na) ~  log(new_confirmed_lag7_na) -1, data = .))
 confirmed_tidy_model <- confirmed_models %>% tidy(model)
 
 seven_day_elasticity_by_state <- data.frame(state = confirmed_tidy_model$Province_State, days_since_50  = as.numeric(days_since_50_by_state$days_since_50), lag_7_elasticity = confirmed_tidy_model$estimate)
 
 
-cases_7_day_model_us <- lm(lag_7_elasticity ~ days_since_50,data = seven_day_elasticity_by_state)
+cases_7_day_model_us <- lm(lag_7_elasticity ~ log(days_since_50),data = seven_day_elasticity_by_state)
 
-seven_day_elasticity_by_state$prediction_us <-  cases_7_day_model_us$coefficients[[1]] + cases_7_day_model_us$coefficients[[2]] * seven_day_elasticity_by_state$days_since_50
+seven_day_elasticity_by_state$prediction_us <-  cases_7_day_model_us$coefficients[[1]] + cases_7_day_model_us$coefficients[[2]] * log(seven_day_elasticity_by_state$days_since_50)
 
-seven_day_elasticity_by_state$prediction_ww <-  cases_7_day_model_ww$coefficients[[1]] + cases_7_day_model_ww$coefficients[[2]] * seven_day_elasticity_by_state$days_since_50
-
+seven_day_elasticity_by_state$prediction_ww <-  cases_7_day_model_ww$coefficients[[1]] + cases_7_day_model_ww$coefficients[[2]] * log(seven_day_elasticity_by_state$days_since_50)
 
 seven_day_elasticity_by_state_no_outliers <- seven_day_elasticity_by_state %>% filter(lag_7_elasticity <2)
   
-
-
 require(ggrepel)
 ggplot(seven_day_elasticity_by_state_no_outliers, aes(x=days_since_50)) +
     geom_point(shape=1, show.legend = FALSE, (aes(y=lag_7_elasticity, color = state))) +    # Use hollow circles
@@ -461,8 +447,89 @@ actuals <- covid_ets_state %>% select(state = Province_State, date, days_since_5
 prediction_us <- expand.grid(state = unique(seven_day_elasticity_by_state$state), days_since_50 = 1:100) %>% 
   arrange(state, days_since_50)
 
-prediction_us$prediction_state <- predict.lm(cases_7_day_model_us, prediction_us)
+```
 
-prediction_us <- merge(prediction, actuals, on.x = c("state", "days_since_50"), all.x = TRUE, all.y = FALSE)
+
+## Sparklines
+
+We only look at states with more than one hundred cases today. For moving average growth rates, we only look at states with deaths and recoveries over 25.
+
+### Confirmed Cases
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=confirmed, group = Province_State)) +
+  geom_line() +
+  facet_wrap(~ Province_State) +
+  ggtitle(paste0("Confirmed COVID19 Cases Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+### Deaths
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=deaths, group = Province_State)) +
+  geom_line() +
+  facet_wrap(~ Province_State) +
+  ggtitle(paste0("Cumulative COVID19 Deaths Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank())
+```
+
+
+### Confirmed Growth Rate 5-Day Moving Average
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=conf_growth_rate_ma, group = Province_State)) +
+  geom_line() +
+  facet_wrap(~ Province_State) +
+  ggtitle(paste0("Confirmed Growth Rate Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+### Death Rate 5-Day Moving Average
+
+Only states with >25 deaths are shown
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_plm_state, aes(x=date, y=death_rate_ma, group = Province_State)) +
+  geom_line() +
+  facet_wrap(~ Province_State) +
+  ggtitle(paste0("Death Rate Through " , format(Sys.time(), '%d %B %Y'))) +
+  theme(axis.text.x = element_blank()) +
+  theme(axis.ticks.x=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+```
+
+
+### Log / Time for States After 50th Case
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+covid_plm_state_log <- covid_plm_state %>%
+  filter(confirmed >=50) %>% 
+  mutate(confirmed_log = log10(confirmed), deaths_log = log10(deaths)) %>%
+  group_by(Province_State) %>% 
+  mutate(days_since_50 = dplyr::row_number())
 
 ```
+
+### Log-10 by States: Confirmed Cases by Day After 50th Confirmed Case
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+require(scales)
+ggplot(covid_plm_state_log, aes(x=days_since_50, y=confirmed_log, group = Province_State, color = Province_State)) +
+  geom_line(show.legend = FALSE) +
+  facet_wrap(~ Province_State) +
+  ggtitle(paste0("Log-10 of Confirmed Cases Since 50th Case by State as of ", format(Sys.time(), '%d %B %Y'))) +
+  scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
+  labels = trans_format("log10", math_format(10^.x)))
+```
+
+
+
