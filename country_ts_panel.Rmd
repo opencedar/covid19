@@ -47,9 +47,9 @@ hopkins_df$Last_Update <- lubridate::mdy_hms(hopkins_df$Last_Update)
 
 
 
-state_key <- read.csv("https://raw.githubusercontent.com/jasonong/List-of-US-States/master/states.csv", stringsAsFactors = FALSE)
-state <- data.frame(State = state_key$State, Abbreviation = state_key$State)
-state_key <- rbind(state_key, state)
+state_key_o <- read.csv("https://raw.githubusercontent.com/jasonong/List-of-US-States/master/states.csv", stringsAsFactors = FALSE)
+state <- data.frame(State = state_key_o$State, Abbreviation = state_key_o$State)
+state_key <- rbind(state_key_o, state)
 
 x <- hopkins_df
 
@@ -570,7 +570,20 @@ forecast_summary <- merge(forecast_summary, max_date, on = "state")
 
 forecast_summary <- forecast_summary %>% arrange(date)
 
-knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by State", align = c("l","r","r","r"))
+#Get state populations--only have through 2013 for now, need to update
+state_pop <- read.csv("https://raw.githubusercontent.com/jakevdp/data-USstates/master/state-population.csv", stringsAsFactors = FALSE)
+state_pop <- state_pop %>%  filter(ages == "total", year == 2013)
+state_pop <- dplyr::inner_join(state_pop, state_key_o, by = c("state.region" = "Abbreviation"))
+
+forecast_summary <- inner_join(forecast_summary, state_pop, by = c("state" = "State"))
+forecast_summary <- forecast_summary %>% select(-state.region, -ages, -year) %>% mutate(perc_pop_infected = total_cases / population)
+
+forecast_summary$perc_pop_infected <- scales::percent(forecast_summary$perc_pop_infected, accuracy = .1)
+forecast_summary$total_cases <- scales::comma(forecast_summary$total_cases)
+forecast_summary$peak_new_cases <- scales::comma(forecast_summary$peak_new_cases)
+forecast_summary$population <- scales::comma(forecast_summary$population)
+
+knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by State", align = c("l","r","r","r","r","r"))
 
 
 ```
@@ -611,7 +624,7 @@ ggplot(covid_plm_state, aes(x=date, y=deaths, group = Province_State)) +
 ggplot(covid_plm_state, aes(x=date, y=conf_growth_rate_ma, group = Province_State)) +
   geom_line() +
   facet_wrap(~ Province_State) +
-  ggtitle(paste0("Confirmed Growth Rate Through ", format(Sys.time(), '%d %B %Y'))) +
+  ggtitle(paste0("Confirmed Growth Rate Through ", format(Sys.time(), '%d-1 %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank()) +
@@ -626,7 +639,7 @@ Only states with >25 deaths are shown
 ggplot(covid_plm_state, aes(x=date, y=death_rate_ma, group = Province_State)) +
   geom_line() +
   facet_wrap(~ Province_State) +
-  ggtitle(paste0("Death Rate Through " , format(Sys.time(), '%d %B %Y'))) +
+  ggtitle(paste0("Death Rate Through " , format(Sys.time(), '%d-1 %B %Y'))) +
   theme(axis.text.x = element_blank()) +
   theme(axis.ticks.x=element_blank()) +
   theme(axis.title.x = element_blank()) +
