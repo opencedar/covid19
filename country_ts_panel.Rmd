@@ -21,13 +21,10 @@ The visualizations in this document are heavily indebted to Edward Tufte and his
 rm(list = ls())
 library(tidyverse)
 library(zoo)
-#Get data
-require(tidyverse)
+library(scales)
 
 daily_vector <- seq(from = as.Date("2020-01-22"), (lubridate::today()-1), "day")
 daily_vector <- format(daily_vector, "%m-%d-%Y")
-
-
 
 for(i in 1:length(daily_vector)) {
   day_get <- daily_vector[i]
@@ -35,12 +32,12 @@ for(i in 1:length(daily_vector)) {
     hopkins_df <- read.csv(paste0("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/", daily_vector[i],".csv"))
     hopkins_df <- data.frame(date = rep(day_get, times = nrow(hopkins_df)), hopkins_df) 
     colnames(hopkins_df) <- gsub("\\.", "_", colnames(hopkins_df))
-    } else {
-      df <- read.csv(paste0("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/", daily_vector[i],".csv"))
-      df <- data.frame(date = rep(day_get, times = nrow(df)), df) 
-      colnames(df) <- gsub("\\.", "_", colnames(df))
-      hopkins_df <- bind_rows(hopkins_df, df)
-      }
+  } else {
+    df <- read.csv(paste0("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/", daily_vector[i],".csv"))
+    df <- data.frame(date = rep(day_get, times = nrow(df)), df) 
+    colnames(df) <- gsub("\\.", "_", colnames(df))
+    hopkins_df <- bind_rows(hopkins_df, df)
+  }
 }
 hopkins_df$date <- lubridate::mdy(hopkins_df$date)
 hopkins_df$Last_Update <- lubridate::mdy_hms(hopkins_df$Last_Update)
@@ -59,7 +56,7 @@ x$Country_Region[x$Country_Region == "Iran (Islamic Republic of)"] <- "Iran"
 x$Country_Region[x$Country_Region == "Republic of Korea"] <- "Korea, South"
 x$Country_Region[x$Country_Region == "South Korea"] <- "Korea, South"
 
-  
+
 x$state_from_county <- str_extract(x$Province_State, '(A[LKSZR])|(C[AOT])|(D[EC])|(F[ML])|(G[AU])|(HI)|(I[DLNA])|(K[SY])|(LA)|(M[EHDAINSOT])|(N[EVHJMYCD])|(MP)|(O[HKR])|(P[WAR])|(RI)|(S[CD])|(T[NX])|(UT)|(V[TIA])|(W[AVIY])')
 x <- merge(x, state_key, all.x=TRUE, all.y = FALSE, by.x = 'state_from_county', by.y = "Abbreviation")
 x$Province_State[!is.na(x$State)] <- x$State[!is.na(x$State)] 
@@ -71,6 +68,7 @@ covid_ets <- x %>% group_by( Country_Region, Province_State, date) %>% summarise
 
 write.csv(covid_ets, "covid_ets.csv")
 
+#covid_country_ets data set is the primary country-level time series data set
 covid_country_ets <- covid_ets  %>% 
   group_by(Country_Region, date) %>% 
   summarise(confirmed = sum(confirmed, na.rm=TRUE), deaths = sum(deaths, na.rm=TRUE), recovered = sum(recovered, na.rm = TRUE)) %>% 
@@ -96,19 +94,18 @@ covid_country_ets <- covid_ets  %>%
 covid_country_ets$confirmed_growth_rate[is.nan(covid_country_ets$confirmed_growth_rate)] <- 0
 covid_country_ets$death_growth_rate[is.nan(covid_country_ets$death_growth_rate)] <- 0
 
+#create country 
 covid_country_ets <- covid_country_ets %>% mutate(
-    conf_growth_rate_ma=rollapply(confirmed_growth_rate,5,mean,align='right',fill=NA),
-    death_growth_rate_ma=rollapply(death_growth_rate,5,mean,align='right',fill=NA)) %>%
-ungroup()
-
-
+  conf_growth_rate_ma=rollapply(confirmed_growth_rate,5,mean,align='right',fill=NA),
+  death_growth_rate_ma=rollapply(death_growth_rate,5,mean,align='right',fill=NA)) %>%
+  ungroup()
 
 #Filter out growth w < 100 base
 covid_country_ets$conf_growth_rate_ma[covid_country_ets$confirmed <100] <- NA
 covid_country_ets$death_growth_rate_ma[covid_country_ets$deaths <100] <- NA
 covid_country_ets$death_rate[covid_country_ets$deaths <100] <- NA
 
-  
+
 #Only get countries with >1000 cases today
 current_cases <- covid_country_ets %>% group_by(Country_Region) %>% summarise(current_cases = max(confirmed, na.rm=TRUE))
 five_hundred <- current_cases$Country_Region[current_cases$current_cases >= 1000]
@@ -138,7 +135,6 @@ covid_country_fc <- covid_country_fc %>% filter(confirmed >= 50)
 covid_country_fc <- covid_country_fc %>% group_by(Country_Region) %>% mutate(days_since_50 = dplyr::row_number())
 
 # Create NA versions of variables
-
 covid_country_fc$deaths_na <- covid_country_fc$deaths
 covid_country_fc$deaths_na[covid_country_fc$deaths_na <= 0] <- NA
 covid_country_fc$confirmed_na <- covid_country_fc$confirmed
@@ -160,24 +156,25 @@ covid_country_fc$new_confirmed_ma7_na[covid_country_fc$new_confirmed_ma7_na <= 0
 covid_country_fc$new_confirmed_ma14_na <- covid_country_fc$new_confirmed_ma14
 covid_country_fc$new_confirmed_ma14_na[covid_country_fc$new_confirmed_ma14_na <= 0] <- NA
 
+#create country summary
 country_summary <- covid_country_fc %>%
   group_by(Country_Region) %>% 
   slice(which.max(days_since_50)) %>% 
   select(Country_Region, days_50 = days_since_50, conf = confirmed, deaths, new_conf=new_confirmed, conf_lag7=confirmed_lag7) %>%
   arrange(desc(conf))
 
+#create worldwide totals
 world <- data.frame(Country_Region = "World", 
-                 days_50 = mean(country_summary$days_50),
-                 conf = sum(country_summary$conf),
-                 deaths = sum(country_summary$deaths),
-                 new_conf = sum(country_summary$new_conf),
-                 conf_lag7 = sum(country_summary$conf_lag7))
+                    days_50 = mean(country_summary$days_50),
+                    conf = sum(country_summary$conf),
+                    deaths = sum(country_summary$deaths),
+                    new_conf = sum(country_summary$new_conf),
+                    conf_lag7 = sum(country_summary$conf_lag7))
 
 country_summary <- bind_rows(country_summary, world)   
 
 country_summary <- country_summary %>% mutate(l7_rate = (conf / conf_lag7)-1)
 
-require(scales)
 country_summary$l7_rate <- scales::percent(country_summary$l7_rate, accuracy = 4, big.mark = ",")
 
 
@@ -197,7 +194,6 @@ The black line shows the best curve fit for elasticity changing over time. All c
 library(broom)
 #Remove NAs
 
-
 confirmed_models <- covid_country_fc %>% group_by(Country_Region) %>% do(model = lm(log(new_confirmed_na) ~  log(new_confirmed_ma7_na) -1, data = .))
 confirmed_tidy_model <- confirmed_models %>% tidy(model)
 
@@ -211,15 +207,13 @@ cases_7_day_model_ww <- lm(lag_7_elasticity ~ log(days_since_50),data = seven_da
 seven_day_elasticity_by_country$prediction <-  cases_7_day_model_ww$coefficients[[1]] + cases_7_day_model_ww$coefficients[[2]] * log(seven_day_elasticity_by_country$days_since_50)
 
 seven_day_elasticity_by_country_no_outliers <- seven_day_elasticity_by_country %>% filter(lag_7_elasticity <2)
-  
-
 
 require(ggrepel)
 ggplot(seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50)) +
-    geom_point(shape=1, show.legend = FALSE, (aes(y=lag_7_elasticity, color = country))) +    # Use hollow circles
-      geom_line(aes( y = prediction)) +
-   geom_label_repel(data=  seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50, y=lag_7_elasticity, label = country), size=2) + 
-    theme(legend.position = "none") 
+  geom_point(shape=1, show.legend = FALSE, (aes(y=lag_7_elasticity, color = country))) +    # Use hollow circles
+  geom_line(aes( y = prediction)) +
+  geom_label_repel(data=  seven_day_elasticity_by_country_no_outliers, aes(x=days_since_50, y=lag_7_elasticity, label = country), size=2) + 
+  theme(legend.position = "none") 
 
 knitr::kable(seven_day_elasticity_by_country_no_outliers %>% mutate(residual = lag_7_elasticity - prediction) %>% arrange(days_since_50, residual), caption = "Countries by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases", digits = 2)
 
