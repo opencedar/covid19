@@ -455,9 +455,6 @@ ggplot(seven_day_elasticity_by_state_no_outliers, aes(x=days_since_50)) +
    geom_label_repel(data=  seven_day_elasticity_by_state_no_outliers, aes(x=days_since_50, y=lag_7_elasticity, label = state), size=2) + 
     theme(legend.position = "none") 
 
-
-
-
 ```
 
 ### Comparisons with U.S. and worldwide averages
@@ -466,7 +463,6 @@ Some states are doing better than worldwide averages when taking into account da
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 knitr::kable(seven_day_elasticity_by_state_no_outliers %>% mutate(us_residual = lag_7_elasticity - prediction_us, ww_residual = lag_7_elasticity - prediction_ww) %>% arrange(days_since_50, us_residual), caption = "States by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases", digits  = 2)
-
 
 ```
 
@@ -498,8 +494,6 @@ covid_ets_state_p <- covid_ets_state %>% group_by(Province_State) %>% mutate(lag
 cases_7_day_model_us_2 <- lm(lag7_elasticity ~ log(days_since_50),data = covid_ets_state_p)
 
 prediction_us$new_us_coefficient <- cases_7_day_model_us_2$coefficients[[1]] + cases_7_day_model_us_2$coefficients[[2]] *                    log(prediction_us$days_since_50)
-
-
 
 prediction_us <- dplyr::left_join(prediction_us, actuals, by = c('state', 'days_since_50'))
 
@@ -664,5 +658,16 @@ ggplot(covid_plm_state_log, aes(x=days_since_50, y=confirmed_log, group = Provin
   labels = trans_format("log10", math_format(10^.x)))
 ```
 
+## Zero at Fifty Cases
 
+### Confirmed Cases
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(covid_ets_state, aes(x=days_since_50_na, y=confirmed, group = Province_State, color = Province_State)) +
+  geom_line() +
+  scale_y_continuous(labels = comma) +
+  ggtitle(paste0("Confirmed COVID19 Cases by State Through ", format(Sys.time(), '%d %B %Y'))) +
+  theme(legend.position = "none") +
+  geom_text(data = covid_ets_state %>% group_by(Province_State) %>% filter(days_since_50_na == last(days_since_50_na)), aes(label=Province_State, x = days_since_50_na + 1, y=confirmed, color = Province_State), size = 2)
+```
 
