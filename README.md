@@ -13,7 +13,7 @@ The Rmarkdown document (`country_ts_panel.Rmd`) knits a tabular and visual summa
 
 ## Future Enhancements
 
-* Extending the two models to predict future new cases by country and state
+* Extending forecasting to worldwide
 * Functionalize sparklines
 * Functionalize country / state tables, regressions, and visualizations
 
