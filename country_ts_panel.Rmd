@@ -22,6 +22,7 @@ rm(list = ls())
 library(tidyverse)
 library(zoo)
 library(scales)
+source("functions.R")
 
 daily_vector <- seq(from = as.Date("2020-01-22"), (lubridate::today()-1), "day")
 daily_vector <- format(daily_vector, "%m-%d-%Y")
@@ -462,7 +463,9 @@ ggplot(seven_day_elasticity_by_state_no_outliers, aes(x=days_since_50)) +
 Some states are doing better than worldwide averages when taking into account days since 50th case. Most are doing worse.
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
-knitr::kable(seven_day_elasticity_by_state_no_outliers %>% mutate(us_residual = lag_7_elasticity - prediction_us, ww_residual = lag_7_elasticity - prediction_ww) %>% arrange(days_since_50, us_residual), caption = "States by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases", digits  = 2)
+state_residuals <- seven_day_elasticity_by_state_no_outliers %>% mutate(us_residual = lag_7_elasticity - prediction_us, ww_residual = lag_7_elasticity - prediction_ww) %>% arrange(days_since_50, us_residual)
+
+knitr::kable(state_residuals, caption = "States by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases", digits  = 2)
 
 ```
 
@@ -473,7 +476,7 @@ We estimate new cases by date, to see when states will peak, based on the worldw
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
 non_na_states <- covid_ets_state %>% group_by(Province_State) %>% summarise(nonna_count = sum(!is.na(confirmed)))
-non_na_states <- non_na_states %>% filter(nonna_count >= 7)
+non_na_states <- non_na_states %>% filter(nonna_count >= 10)
 
 actuals <- covid_ets_state %>% 
   filter(Province_State %in% non_na_states$Province_State) %>%
@@ -487,56 +490,28 @@ prediction_us$us_coefficient <- cases_7_day_model_us$coefficients[[1]] + cases_7
 
 prediction_us$ww_coefficient <- cases_7_day_model_ww$coefficients[[1]] + cases_7_day_model_ww$coefficients[[2]] *                    log(prediction_us$days_since_50)
 
+state_residuals <- state_residuals %>% select(state, us_residual, ww_residual)
+
+prediction_us<-  left_join(prediction_us, state_residuals, by = c('state' = 'state')) 
+
 # Try new model
 
 covid_ets_state_p <- covid_ets_state %>% group_by(Province_State) %>% mutate(lag7_elasticity = (log(new_confirmed_na)/ log(new_confirmed_lag7_na))) %>% filter(is.finite(lag7_elasticity))
 
-cases_7_day_model_us_2 <- lm(lag7_elasticity ~ log(days_since_50),data = covid_ets_state_p)
+cases_7_day_model_us_2 <- lm(lag7_elasticity ~ log(days_since_50_na),data = covid_ets_state_p)
 
 prediction_us$new_us_coefficient <- cases_7_day_model_us_2$coefficients[[1]] + cases_7_day_model_us_2$coefficients[[2]] *                    log(prediction_us$days_since_50)
 
-prediction_us <- dplyr::left_join(prediction_us, actuals, by = c('state', 'days_since_50'))
+prediction_us <- prediction_us %>% mutate(us_coefficient_adj = us_coefficient + us_residual, ww_coefficient_adj = ww_coefficient + ww_residual)
 
-###forecast function
-forecast_forward <- function(x,b,l) {
-  # x is forecast vector
-  # b is beta vector
-  # l is lag period
-  for (i in 1:length(x)) {
-    if(!is.na(x[i])) { #if there is a value in forecast, add to forecast (this is really actual) and skip forward
-      if(i==1) {forecast <- x[i]}  else {forecast <- c(forecast, x[i])} 
-      next
-      } else {
-    al <- mean(forecast[(i-7):(i-1)])  #new cases lag l
-    a <- al ^ b[i] #growth in cases
-    forecast <- c(forecast, a) #write to vector
-      }
-  }
-  return(forecast)
-}
+prediction_us <- dplyr::left_join(prediction_us, actuals, by = c('state', 'days_since_50')) 
 
-###date projection function
-date_forward <- function(x) {
-  # x is days vector
-  # d is date vector
-  # l is lag period
-  for (i in 1:length(x)) {
-    if(!is.na(x[i])) { #if there is a value in date, add to date (this is really actual) and skip forward
-      if(i==1) {date <- x[i]}  else {date <- c(date, x[i])} 
-      next
-      } else {
-    next_date <- date[i-1] + 1 #next date
-    date <- c(date, next_date) #write to vector
-      }
-  }
-  return(date)
-}
 
 # loop through df
 
 for(i in 1:length(unique(prediction_us$state))) {
   predict <- prediction_us %>% filter(state == unique(prediction_us$state)[i])
-  predict$forecast_new <- round(forecast_forward(predict$new_confirmed, predict$ww_coefficient, 7), digits = 0)
+  predict$forecast_new <- round(forecast_forward(predict$new_confirmed, (predict$us_coefficient_adj)-.05, 7), digits = 0)
   if(i==1) {predict_df <- predict} else {predict_df <- rbind(predict_df, predict)}
 }
 
