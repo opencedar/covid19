@@ -1,18 +1,28 @@
 
 
 ###forecast function
-forecast_forward <- function(x,b,l) {
+forecast_forward <- function(x,b,l,p) {
   # x is forecast vector
   # b is beta vector
   # l is lag period
+  # p is population
   for (i in 1:length(x)) {
     if(!is.na(x[i])) { #if there is a value in forecast, add to forecast (this is really actual) and skip forward
-      if(i==1) {forecast <- x[i]}  else {forecast <- c(forecast, x[i])} 
+      if(i==1) {
+        forecast <- x[i]
+        total <- x[i]
+      }  else {
+          forecast <- c(forecast, x[i])
+          total <- total + x[i]
+          } 
       next
     } else {
-      al <- mean(forecast[(i-7):(i-1)])  #new cases lag l
-      a <- al ^ b[i] #growth in cases
+      p_i <- total / p[i]
+      al <- mean(forecast[(i-l):(i-1)])  #new cases lag l
+      b_this <- ifelse(b[i] - p_i > 0, b[i] - p_i, .01)
+      a <- al ^ b_this #growth in cases
       forecast <- c(forecast, a) #write to vector
+      total <- total + a
     }
   }
   return(forecast)
