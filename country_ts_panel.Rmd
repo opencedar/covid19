@@ -361,7 +361,7 @@ Sorted by total number of cases. Percent growth in total cases in the past seven
 
 
 #Only get state-days with >= 50 cases
-covid_ets_state <- covid_ets_state %>% filter(confirmed >= 50)
+covid_ets_state <- covid_ets_state %>% filter(confirmed >= 50, Province_State != "Grand Princess")
 covid_ets_state <- covid_ets_state %>% group_by(Province_State) %>% mutate(days_since_50 = dplyr::row_number())
 
 
@@ -478,13 +478,22 @@ We estimate new cases by date, to see when states will peak, based on the worldw
 non_na_states <- covid_ets_state %>% group_by(Province_State) %>% summarise(nonna_count = sum(!is.na(confirmed)))
 non_na_states <- non_na_states %>% filter(nonna_count >= 10)
 
+#Get state populations--only have through 2013 for now, need to update
+state_pop <- read.csv("https://raw.githubusercontent.com/jakevdp/data-USstates/master/state-population.csv", stringsAsFactors = FALSE)
+state_pop <- state_pop %>%  filter(ages == "total", year == 2013)
+state_pop <- dplyr::inner_join(state_pop, state_key_o, by = c("state.region" = "Abbreviation"))
+
+
+
 actuals <- covid_ets_state %>% 
   filter(Province_State %in% non_na_states$Province_State) %>%
   select(state = Province_State, date, days_since_50 = days_since_50, confirmed, new_confirmed, new_confirmed_ma7) 
 
-prediction_us <- expand.grid(state = unique(seven_day_elasticity_by_state$state), days_since_50 = 1:100) %>% 
+
+prediction_us <- expand.grid(state = unique(seven_day_elasticity_by_state$state), days_since_50 = 1:200) %>% 
   arrange(state, days_since_50) %>%
-  filter(state %in% non_na_states$Province_State) 
+  filter(state %in% non_na_states$Province_State) %>%
+  inner_join( state_pop, by = c("state" = "State")) 
 
 prediction_us$us_coefficient <- cases_7_day_model_us$coefficients[[1]] + cases_7_day_model_us$coefficients[[2]] *                    log(prediction_us$days_since_50)
 
@@ -511,7 +520,7 @@ prediction_us <- dplyr::left_join(prediction_us, actuals, by = c('state', 'days_
 
 for(i in 1:length(unique(prediction_us$state))) {
   predict <- prediction_us %>% filter(state == unique(prediction_us$state)[i])
-  predict$forecast_new <- round(forecast_forward(predict$new_confirmed, (predict$us_coefficient_adj)-.05, 7), digits = 0)
+  predict$forecast_new <- round(forecast_forward(predict$new_confirmed, (predict$us_coefficient_adj), 7, predict$population), digits = 0)
   if(i==1) {predict_df <- predict} else {predict_df <- rbind(predict_df, predict)}
 }
 
@@ -533,13 +542,9 @@ forecast_summary <- merge(forecast_summary, max_date, on = "state")
 
 forecast_summary <- forecast_summary %>% arrange(date)
 
-#Get state populations--only have through 2013 for now, need to update
-state_pop <- read.csv("https://raw.githubusercontent.com/jakevdp/data-USstates/master/state-population.csv", stringsAsFactors = FALSE)
-state_pop <- state_pop %>%  filter(ages == "total", year == 2013)
-state_pop <- dplyr::inner_join(state_pop, state_key_o, by = c("state.region" = "Abbreviation"))
 
-forecast_summary <- inner_join(forecast_summary, state_pop, by = c("state" = "State"))
-forecast_summary <- forecast_summary %>% select(-state.region, -ages, -year) %>% mutate(perc_pop_infected = total_cases / population)
+
+forecast_summary <- forecast_summary %>% inner_join(state_pop, by = c("state" = "State")) %>% select(-state.region, -ages, -year) %>% mutate(perc_pop_infected = total_cases / population)
 
 forecast_summary$perc_pop_infected <- scales::percent(forecast_summary$perc_pop_infected, accuracy = .1)
 forecast_summary$total_cases <- scales::comma(forecast_summary$total_cases)
@@ -547,6 +552,33 @@ forecast_summary$peak_new_cases <- scales::comma(forecast_summary$peak_new_cases
 forecast_summary$population <- scales::comma(forecast_summary$population)
 
 knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by State", align = c("l","r","r","r","r","r"))
+
+
+```
+
+## Forecast New Cases U.S. Total
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+
+forecast_us <- group_by(predict_df, date) %>%
+  summarise(forecast_new = sum(forecast_new)) %>%
+  mutate(total_cases =  cumsum(forecast_new))
+
+ggplot(forecast_us[1:150,], aes(x=date, y=total_cases)) +
+  geom_line() +
+  ggtitle(paste0("U.S. Confirmed COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  scale_y_continuous(label=comma)
+
+max_new <- forecast_us[which.max(forecast_us$forecast_new),]
+max_new$forecast_new <- comma(max_new$forecast_new)
+max_new$total_cases <- comma(max_new$total_cases)
+
+knitr::kable(max_new, caption = "Peak Daily New Cases in U.S. and Total on That Day")
+
+ggplot(forecast_us[1:150,], aes(x=date, y=forecast_new)) +
+  geom_line() +
+  ggtitle(paste0("U.S. New COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  scale_y_continuous(label=comma)
 
 
 ```
