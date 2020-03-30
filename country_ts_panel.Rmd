@@ -106,6 +106,9 @@ covid_country_ets$conf_growth_rate_ma[covid_country_ets$confirmed <100] <- NA
 covid_country_ets$death_growth_rate_ma[covid_country_ets$deaths <100] <- NA
 covid_country_ets$death_rate[covid_country_ets$deaths <100] <- NA
 
+#make rows with confimed cases and NA new_confirmed have 0 not NA new_confirmed
+covid_country_ets$new_confirmed[is.na(covid_country_ets$new_confirmed) & !is.na(covid_country_ets$confirmed)] <- 0
+
 
 #Only get countries with >1000 cases today
 current_cases <- covid_country_ets %>% group_by(Country_Region) %>% summarise(current_cases = max(confirmed, na.rm=TRUE))
@@ -227,6 +230,129 @@ prediction$prediction <- predict.lm(cases_7_day_model_ww, prediction)
 
 prediction <- merge(prediction, actuals, on.x = c("country", "days_since_50"), all.x = TRUE, all.y = FALSE)
 
+
+```
+
+### Comparisons with averages
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+country_residuals <- seven_day_elasticity_by_country_no_outliers %>% mutate(ww_residual = lag_7_elasticity - prediction)  %>% arrange(days_since_50, ww_residual)
+
+knitr::kable(country_residuals, caption = "Countries by Predicted vs. Actual Lag 7 New Case Elasticity on Today's Cases", digits  = 2)
+
+```
+
+
+## Forecast New Cases by Country
+
+We estimate new cases by date, to see when countries will peak, based on the worldwide curve fit.
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+
+non_na_countries <- covid_country_ets %>% group_by(country = Country_Region) %>% summarise(nonna_count = sum(!is.na(confirmed)))
+non_na_countries <- non_na_countries %>% filter(nonna_count >= 10)
+
+#Get country populations (2016 is latest data I can find easily)
+country_pop <- read.csv("https://raw.githubusercontent.com/datasets/population/master/data/population.csv", stringsAsFactors = FALSE)
+country_pop <- country_pop %>%  
+  filter(Year == 2016) %>%
+  select(country = Country.Name, population = Value)
+
+country_pop$country[country_pop$country == "United States"] <- "US"
+
+actuals <- covid_country_fc %>% 
+  filter(Country_Region %in% non_na_countries$country) %>%
+  select(country = Country_Region, date, days_since_50 = days_since_50, confirmed, new_confirmed, new_confirmed_ma7) 
+
+prediction_ww <- expand.grid(country = unique(seven_day_elasticity_by_country$country), days_since_50 = 1:250) %>% 
+  arrange(country, days_since_50) %>%
+  filter(country %in% non_na_countries$country) %>%
+  inner_join( country_pop, by = c("country" = "country")) 
+
+prediction_ww$ww_coefficient <- cases_7_day_model_ww$coefficients[[1]] + cases_7_day_model_ww$coefficients[[2]] *                    log(prediction_ww$days_since_50)
+
+country_residuals <- country_residuals %>% select(country, ww_residual)
+
+prediction_ww <-  left_join(prediction_ww, country_residuals, by = c('country' = 'country')) 
+
+# Try new model
+
+covid_country_fc_p <- covid_country_fc %>% 
+  group_by(Country_Region) %>% 
+  mutate(lag7_elasticity = (log(new_confirmed_na)/ log(new_confirmed_lag7_na))) %>%
+  filter(is.finite(lag7_elasticity))
+
+cases_7_day_model_ww_2 <- lm(lag7_elasticity ~ log(days_since_50_na),data = covid_country_fc_p)
+
+prediction_ww$new_ww_coefficient <- cases_7_day_model_ww_2$coefficients[[1]] + cases_7_day_model_ww_2$coefficients[[2]] *                    log(prediction_ww$days_since_50)
+
+prediction_ww <- prediction_ww %>% mutate(ww_coefficient_adj = ww_coefficient + ww_residual, new_ww_coefficient_adj = new_ww_coefficient + ww_residual)
+
+prediction_ww <- dplyr::left_join(prediction_ww, actuals, by = c('country', 'days_since_50')) 
+
+
+# loop through df
+
+for(i in 1:length(unique(prediction_ww$country))) {
+  predict <- prediction_ww %>% filter(country == unique(prediction_ww$country)[i])
+  predict$forecast_new <- round(forecast_forward(predict$new_confirmed, (predict$ww_coefficient_adj), 7, 
+                                                 predict$population), digits = 0)
+  if(i==1) {predict_df_ww <- predict} else {predict_df_ww <- rbind(predict_df_ww, predict)}
+}
+
+for(j in 1:length(unique(predict_df_ww$country))) {
+  df_j <- predict_df_ww %>% filter(country == unique(predict_df_ww$country)[j])
+  date_j <- date_forward(df_j$date)
+  if(j==1) {complete_date <- date_j} else {complete_date <- c(complete_date, date_j)}
+}
+
+predict_df_ww$date <- complete_date
+
+forecast_summary <- predict_df_ww %>% group_by(country) %>% 
+  summarise(total_cases = sum(forecast_new), peak_new_cases = max(forecast_new)) 
+
+max_date <- predict_df_ww %>% group_by(country) %>%
+    slice(which.max(forecast_new)) %>% select(date)
+
+forecast_summary <- merge(forecast_summary, max_date, on = "country")
+
+forecast_summary <- forecast_summary %>% arrange(date)
+
+forecast_summary <- forecast_summary %>% inner_join(country_pop, by = c("country" = "country"))  %>% mutate(perc_pop_infected = total_cases / population)
+
+forecast_summary$perc_pop_infected <- scales::percent(forecast_summary$perc_pop_infected, accuracy = .1)
+forecast_summary$total_cases <- scales::comma(forecast_summary$total_cases)
+forecast_summary$peak_new_cases <- scales::comma(forecast_summary$peak_new_cases)
+forecast_summary$population <- scales::comma(forecast_summary$population)
+
+knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by Country", align = c("l","r","r","r","r","r"))
+
+
+```
+
+## Forecast New Cases U.S. Total
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+
+forecast_us <- group_by(predict_df, date) %>%
+  summarise(forecast_new = sum(forecast_new)) %>%
+  mutate(total_cases =  cumsum(forecast_new))
+
+ggplot(forecast_us[1:150,], aes(x=date, y=total_cases)) +
+  geom_line() +
+  ggtitle(paste0("U.S. Confirmed COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  scale_y_continuous(label=comma)
+
+max_new <- forecast_us[which.max(forecast_us$forecast_new),]
+max_new$forecast_new <- comma(max_new$forecast_new)
+max_new$total_cases <- comma(max_new$total_cases)
+
+knitr::kable(max_new, caption = "Peak Daily New Cases in U.S. and Total on That Day")
+
+ggplot(forecast_us[1:150,], aes(x=date, y=forecast_new)) +
+  geom_line() +
+  ggtitle(paste0("U.S. New COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  scale_y_continuous(label=comma)
 
 
 ```
