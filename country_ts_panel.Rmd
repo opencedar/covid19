@@ -330,28 +330,28 @@ knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by Country", al
 
 ```
 
-## Forecast New Cases U.S. Total
+## Forecast New Cases WW Total
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
-forecast_us <- group_by(predict_df, date) %>%
+forecast_ww <- group_by(predict_df_ww, date) %>%
   summarise(forecast_new = sum(forecast_new)) %>%
   mutate(total_cases =  cumsum(forecast_new))
 
-ggplot(forecast_us[1:150,], aes(x=date, y=total_cases)) +
+ggplot(forecast_ww[1:150,], aes(x=date, y=total_cases)) +
   geom_line() +
-  ggtitle(paste0("U.S. Confirmed COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  ggtitle(paste0("WW Confirmed COVID19 Case Forecast as of ", format(Sys.time(), '%d %B %Y'))) + 
   scale_y_continuous(label=comma)
 
-max_new <- forecast_us[which.max(forecast_us$forecast_new),]
+max_new <- forecast_ww[which.max(forecast_ww$forecast_new),]
 max_new$forecast_new <- comma(max_new$forecast_new)
 max_new$total_cases <- comma(max_new$total_cases)
 
-knitr::kable(max_new, caption = "Peak Daily New Cases in U.S. and Total on That Day")
+knitr::kable(max_new, caption = "Peak Daily New Cases Worldwide and Total on That Day")
 
-ggplot(forecast_us[1:150,], aes(x=date, y=forecast_new)) +
+ggplot(forecast_ww[1:150,], aes(x=date, y=forecast_new)) +
   geom_line() +
-  ggtitle(paste0("U.S. New COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  ggtitle(paste0("Worldwide New COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
   scale_y_continuous(label=comma)
 
 
