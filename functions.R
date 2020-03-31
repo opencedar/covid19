@@ -7,19 +7,22 @@ forecast_forward <- function(x,b,l,p) {
   # l is lag period
   # p is population
   for (i in 1:length(x)) {
-    if(!is.na(x[i])) { #if there is a value in forecast, add to forecast (this is really actual) and skip forward
-      if(i==1) {
-        forecast <- x[i]
-        total <- x[i]
-      }  else {
+    if(i==1) {
+      forecast <- x[i]
+      total <- x[i]
+      next
+        } else if(!is.na(x[i])) { #if there is a value in forecast, add to forecast (this is really actual) and skip forward
           forecast <- c(forecast, x[i])
           total <- total + x[i]
-          } 
       next
-    } else {
+          } else 
+            {
       p_i <- total / p[i]
-      al <- mean(forecast[(i-l):(i-1)])  #new cases lag l
-      b_this <- ifelse(b[i] - p_i > 0, b[i] - p_i, .01)
+      al <- forecast[(i-l):(i-1)]  #new cases lag l
+      b_this <- ifelse(b[i] - p_i > 0, b[i] - p_i, .01) # get elasticity
+      adjuster <- seq(from = 1, to = (2^b_this)/2, length.out = l-1) # weight later cases down for smooth function
+      adjuster <- 1/((2 ^ adjuster)-1)
+      al <- mean(al * adjuster) #take mean of previous cases n cases adjusted down by predicted growth
       a <- al ^ b_this #growth in cases
       forecast <- c(forecast, a) #write to vector
       total <- total + a
