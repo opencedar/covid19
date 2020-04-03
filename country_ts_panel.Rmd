@@ -645,7 +645,7 @@ prediction_us <- dplyr::left_join(prediction_us, actuals, by = c('state', 'days_
 
 # loop through df
 
-social_distancing_effect <- .06
+social_distancing_effect <- .02
 
 for(i in 1:length(unique(prediction_us$state))) {
   predict <- prediction_us %>% filter(state == unique(prediction_us$state)[i])
@@ -661,15 +661,23 @@ for(j in 1:length(unique(predict_df$state))) {
 
 predict_df$date <- complete_date
 
+predict_df <- predict_df %>% 
+  group_by(state) %>%
+  mutate(new_cases_lag = dplyr::lag(forecast_new, 3,0)) %>%
+  mutate(deaths_new = new_cases_lag * .04)
+
 forecast_summary <- predict_df %>% group_by(state) %>% 
-  summarise(total_cases = sum(forecast_new), peak_new_cases = max(forecast_new)) 
+  summarise(total_cases = sum(forecast_new), total_deaths = sum(deaths_new), peak_new_cases = max(forecast_new), peak_new_deaths = round(max(deaths_new),0))
 
-max_date <- predict_df %>% group_by(state) %>%
-    slice(which.max(forecast_new)) %>% select(date)
+max_date_new <- predict_df %>% group_by(state) %>%
+    slice(which.max(forecast_new)) %>% select(max_new_date = date)
 
-forecast_summary <- merge(forecast_summary, max_date, on = "state")
+max_date_death <- predict_df %>% group_by(state) %>%
+    slice(which.max(deaths_new)) %>% select(max_death_date = date)
 
-forecast_summary <- forecast_summary %>% arrange(date)
+forecast_summary <- merge(forecast_summary, max_date_new, on = "state")
+forecast_summary <- merge(forecast_summary, max_date_death, on = "state")
+forecast_summary <- forecast_summary %>% arrange(max_new_date)
 
 
 
@@ -677,10 +685,12 @@ forecast_summary <- forecast_summary %>% inner_join(state_pop, by = c("state" = 
 
 forecast_summary$perc_pop_infected <- scales::percent(forecast_summary$perc_pop_infected, accuracy = .1)
 forecast_summary$total_cases <- scales::comma(forecast_summary$total_cases)
+forecast_summary$total_deaths <- scales::comma(forecast_summary$total_deaths)
 forecast_summary$peak_new_cases <- scales::comma(forecast_summary$peak_new_cases)
+forecast_summary$peak_new_deaths <- scales::comma(forecast_summary$peak_new_deaths)
 forecast_summary$population <- scales::comma(forecast_summary$population)
 
-knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by State", align = c("l","r","r","r","r","r"))
+knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by State", align = c("l","r","r","r","r","r","r","r","r"))
 
 
 ```
@@ -690,12 +700,12 @@ knitr::kable(forecast_summary, caption= "Forecast Peak New Cases by State", alig
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
 forecast_us <- group_by(predict_df, date) %>%
-  summarise(forecast_new = sum(forecast_new)) %>%
-  mutate(total_cases =  cumsum(forecast_new))
+  summarise(forecast_new = sum(forecast_new), deaths_new = sum(deaths_new)) %>%
+  mutate(total_cases =  cumsum(forecast_new), total_deaths =cumsum(deaths_new))
 
 ggplot(forecast_us[1:150,], aes(x=date, y=total_cases)) +
   geom_line() +
-  ggtitle(paste0("U.S. Confirmed COVID19 Case Foreast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  ggtitle(paste0("U.S. Confirmed COVID19 Case Forecast as of ", format(Sys.time(), '%d %B %Y'))) + 
   scale_y_continuous(label=comma)
 
 max_new <- forecast_us[which.max(forecast_us$forecast_new),]
@@ -707,6 +717,19 @@ knitr::kable(max_new, caption = "Peak Daily New Cases in U.S. and Total on That 
 ggplot(forecast_us[1:150,], aes(x=date, y=forecast_new)) +
   geom_line() +
   ggtitle(paste0("U.S. New COVID19 Case Forecast as of ", format(Sys.time(), '%d %B %Y'))) + 
+  scale_y_continuous(label=comma)
+
+
+max_new_deaths <- forecast_us[which.max(forecast_us$deaths_new),]
+max_new_deaths$deaths_new <- comma(max_new_deaths$deaths_new)
+max_new_deaths$total_cases <- comma(max_new_deaths$total_cases)
+
+knitr::kable(max_new_deaths, caption = "Peak Daily Deaths in U.S. and Total on That Day")
+
+
+ggplot(forecast_us[1:150,], aes(x=date, y=total_deaths)) +
+  geom_line() +
+  ggtitle(paste0("U.S. COVID19 Death Forecast as of ", format(Sys.time(), '%d %B %Y'))) + 
   scale_y_continuous(label=comma)
 
 
