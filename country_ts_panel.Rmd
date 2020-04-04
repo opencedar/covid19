@@ -830,3 +830,69 @@ ggplot(covid_ets_state, aes(x=days_since_100_na, y=confirmed, group = Province_S
   geom_text(data = covid_ets_state %>% group_by(Province_State) %>% filter(days_since_100_na == last(days_since_100_na)), aes(label=Province_State, x = days_since_100_na + 1, y=confirmed, color = Province_State), size = 2)
 ```
 
+
+# Testing Data
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv") 
+state_current_testing_df <- read.csv("https://covidtracking.com/api/v1/states/current.csv") 
+
+state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
+
+state_historical_testing_df <- state_historical_testing_df %>%  mutate(instant_positive_rate = positiveIncrease / totalTestResultsIncrease)
+
+us_testing_df <- state_historical_testing_df %>% 
+  group_by(date) %>% 
+  summarise(positiveIncrease = sum(positiveIncrease),
+            totalTestResultsIncrease = sum(totalTestResultsIncrease)) %>%
+  mutate(instant_positive_rate = positiveIncrease / totalTestResultsIncrease, state = "US-Total")
+
+testing_df <- bind_rows(state_historical_testing_df, us_testing_df)
+
+testing_df_dd <- testing_df %>% filter(state %in% c("NY", "WA", "LA", "MI", "US-Total"), instant_positive_rate <1)
+
+ggplot(testing_df_dd, aes(x = date, y= instant_positive_rate, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = percent, limits = c(0,1)) +
+  ggtitle(paste0("U.S. and Selected State Instant Positive Test Rate as of ", format(Sys.time(), '%d %B %Y'))) +
+  theme(legend.position = "none") +
+  geom_text(data = testing_df_dd %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= instant_positive_rate, color = state), size = 2)
+
+
+
+dmv_df <- state_historical_testing_df %>% 
+  filter(state %in% c("MD", "VA", "DC"), instant_positive_rate < 1)
+nyc_df <- state_historical_testing_df %>% 
+  filter(state %in% c("NY", "CT", "NJ"), instant_positive_rate < 1)
+
+ggplot(dmv_df, aes(x = date, y= instant_positive_rate, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = percent, limits = c(0,1)) +
+  ggtitle(paste0("Instant Positive Test Rate as of ", format(Sys.time(), '%d %B %Y'), ", DMV Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = dmv_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= instant_positive_rate, color = state), size = 2)
+
+ggplot(nyc_df, aes(x = date, y= instant_positive_rate, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = percent, limits = c(0,1)) +
+  ggtitle(paste0("Instant Positive Test Rate as of ", format(Sys.time(), '%d %B %Y'), ", NYC Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = nyc_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= instant_positive_rate, color = state), size = 2)
+
+ggplot(dmv_df, aes(x = date, y= totalTestResultsIncrease, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = comma, limits = c(0,5000)) +
+  ggtitle(paste0("New Tests as of ", format(Sys.time(), '%d %B %Y'), ", DMV Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = dmv_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= totalTestResultsIncrease, color = state), size = 2)
+
+ggplot(nyc_df, aes(x = date, y= totalTestResultsIncrease, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = comma, limits = c(0,50000)) +
+  ggtitle(paste0("New Tests as of ", format(Sys.time(), '%d %B %Y'), ", NYC Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = nyc_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= totalTestResultsIncrease, color = state), size = 2)
+
+
+
+```
