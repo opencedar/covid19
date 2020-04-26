@@ -646,12 +646,14 @@ prediction_us$new_us_coefficient <- cases_7_day_model_us_2$coefficients[[1]] + c
 
 prediction_us <- prediction_us %>% mutate(us_coefficient_adj = us_coefficient + us_residual, ww_coefficient_adj = ww_coefficient + ww_residual, new_us_coefficient_adj = new_us_coefficient + us_residual)
 
-prediction_us <- dplyr::left_join(prediction_us, actuals, by = c('state', 'days_since_100')) 
+prediction_us <- dplyr::left_join(prediction_us, actuals, by = c('state', 'days_since_100')) %>%
+  mutate(new_confirmed =ifelse(new_confirmed <0,0, new_confirmed))
+
 
 
 # loop through df
 
-social_distancing_effect <- .02
+social_distancing_effect <- .03
 
 for(i in 1:length(unique(prediction_us$state))) {
   predict <- prediction_us %>% filter(state == unique(prediction_us$state)[i])
@@ -842,7 +844,9 @@ ggplot(covid_ets_state, aes(x=days_since_100_na, y=confirmed, group = Province_S
 # Testing Data
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
+
 state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv") 
+
 state_current_testing_df <- read.csv("https://covidtracking.com/api/v1/states/current.csv") 
 
 state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
@@ -993,6 +997,124 @@ ggplot(ny_df, aes(x = date , y = hospitalizedCurrently)) +
   ggtitle(paste0("Hospitalized as of ", format(Sys.time(), '%d %B %Y'), ", NY")) +
   theme(legend.position = "none") +
   geom_text(data = ny_df %>% filter(date == max(date)), aes(label=hospitalizedCurrently, x = date + 1, y= hospitalizedCurrently), size = 2)
+
+
+```
+
+## Relationship between instant positive test rate and weather
+
+```{r}
+
+
+write.csv(state_historical_testing_df %>% 
+  group_by(state) %>%
+  filter(date == max(date)) %>%
+  mutate(instant_positive_rate = positiveIncrease / totalTestResultsIncrease,
+         positive_rate = positive/  totalTestResults, 
+         instant_positive_trend = (instant_positive_rate / positive_rate) -1) %>%
+  select(state, positive, totalTestResults, positive_rate, positiveIncrease, totalTestResultsIncrease, instant_positive_rate,
+         instant_positive_trend) %>%
+  filter(totalTestResultsIncrease > 100, instant_positive_rate < .75) %>%
+  arrange(desc(instant_positive_rate))
+, "state_testing.csv")
+
+```
+
+## R0 by State
+```{r}
+
+state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv") 
+
+state_historical_testing_df$positiveIncrease[is.na(state_historical_testing_df$positiveIncrease)] <- 0
+state_historical_testing_df$totalTestResultsIncrease[is.na(state_historical_testing_df$totalTestResultsIncrease)] <- 0
+state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
+
+
+state_historical_testing_df <- state_historical_testing_df %>% 
+  group_by(state) %>% 
+  arrange(date) %>%
+  mutate(
+  positiveIncrease_ma = rollapply(positiveIncrease,3,mean,align='right',fill=NA),
+  positiveIncrease_ma_L7 = dplyr::lag(positiveIncrease_ma, 7, order_by = date),
+  positiveIncrease_ma_L14 = dplyr::lag(positiveIncrease_ma, 14, order_by = date),
+  r0_7 = positiveIncrease_ma / positiveIncrease_ma_L7,
+  r0_14 = positiveIncrease_ma / positiveIncrease_ma_L14,
+  r0_7_trailing_7 = dplyr::lag(r0_7, 7, order_by = date),
+  r0_14_trailing_7 = dplyr::lag(r0_14, 14, order_by = date),
+  r0_7_growth = (r0_7 / r0_7_trailing_7)-1,
+  r0_14_growth = (r0_14 / r0_14_trailing_7)-1,
+  tests_ma = rollapply(totalTestResultsIncrease, 3, mean, align = 'right',fill=NA),
+  tests_ma_trailing_7 = dplyr::lag(tests_ma, 7, order_by=date),
+  tests_trend_7 = tests_ma / tests_ma_trailing_7,
+  adj_r0_7 = r0_7 / tests_trend_7,
+  tests_ma_trailing_14 = dplyr::lag(tests_ma, 14, order_by=date),
+  tests_trend_14 = tests_ma / tests_ma_trailing_14,
+  adj_r0_14 = r0_14 / tests_trend_14,
+  adj_r0_7_growth = (adj_r0_7 / r0_7_trailing_7)-1,
+  adj_r0_14_growth = (adj_r0_14 / r0_14_trailing_7)-1
+)
+
+state_r0_df <- state_historical_testing_df %>%
+  slice(which.max(date)) %>%
+  select(state, positiveIncrease, total, death, r0_7,  r0_7_trailing_7, r0_7_growth, r0_14, r0_14_trailing_7,  r0_14_growth) %>%
+  arrange(desc(r0_7)) %>%
+  filter(total >= 1500)
+
+state_r0_df$positiveIncrease <- scales::comma(state_r0_df$positiveIncrease)
+state_r0_df$total <- scales::comma(state_r0_df$total)
+state_r0_df$death <- scales::comma(state_r0_df$death)
+state_r0_df$r0_7 <- round(state_r0_df$r0_7, 2)
+state_r0_df$r0_14 <- round(state_r0_df$r0_14, 2)
+state_r0_df$r0_7_trailing_7 <- round(state_r0_df$r0_7_trailing_7, 2)
+state_r0_df$r0_14_trailing_7 <- round(state_r0_df$r0_14_trailing_7, 2)
+state_r0_df$r0_7_growth <- scales::percent(state_r0_df$r0_7_growth, 1)
+state_r0_df$r0_14_growth <- scales::percent(state_r0_df$r0_14_growth, 1)
+
+knitr::kable(state_r0_df, 
+             caption = "State-by-State R0 Estimates and Growth Sorted by R0_7", 
+             align = c("l", rep("r", times = ncol(state_r0_df) -1)), 
+             col.names = c("State", "New Cases",  "Total Cases", "Total Deaths", "R0_7", "R0_7 Lag 7", "R0_7 One Week Growth","R0_14", "R0_14 Lag 7",
+ "R0_14 One Week Growth"))
+
+state_r0_df_adj <- state_historical_testing_df %>%
+  slice(which.max(date)) %>%
+  select(state, positiveIncrease, total, death, tests_ma, tests_ma_trailing_7, adj_r0_7,  r0_7_trailing_7, adj_r0_7_growth, adj_r0_14, r0_14_trailing_7,  adj_r0_14_growth) %>%
+  arrange(desc(adj_r0_7)) %>%
+  filter(total >= 1500, adj_r0_7 >= 0)
+
+state_r0_df_adj$positiveIncrease <- scales::comma(state_r0_df_adj$positiveIncrease)
+state_r0_df_adj$total <- scales::comma(state_r0_df_adj$total)
+state_r0_df_adj$death <- scales::comma(state_r0_df_adj$death)
+state_r0_df_adj$tests_ma <- scales::comma(state_r0_df_adj$tests_ma)
+state_r0_df_adj$tests_ma_trailing_7 <- scales::comma(state_r0_df_adj$tests_ma_trailing_7)
+
+state_r0_df_adj$adj_r0_7 <- round(state_r0_df_adj$adj_r0_7, 2)
+state_r0_df_adj$adj_r0_14 <- round(state_r0_df_adj$adj_r0_14, 2)
+state_r0_df_adj$r0_7_trailing_7 <- round(state_r0_df_adj$r0_7_trailing_7, 2)
+state_r0_df_adj$r0_14_trailing_7 <- round(state_r0_df_adj$r0_14_trailing_7, 2)
+state_r0_df_adj$adj_r0_7_growth <- scales::percent(state_r0_df_adj$adj_r0_7_growth, 1)
+state_r0_df_adj$adj_r0_14_growth <- scales::percent(state_r0_df_adj$adj_r0_14_growth, 1)
+
+knitr::kable(state_r0_df_adj, 
+             caption = "State-by-State R0 Estimates Adjusted for Testing Volumes Sorted by R0_7", 
+             align = c("l", rep("r", times = ncol(state_r0_df_adj) -1)), 
+             col.names = c("State", "New Cases", "Total Cases", "Total Deaths", "New Tests", "New Tests L7", "R0_7", "R0_7 Lag 7", "R0_7 One Week Growth","R0_14", "R0_14 Lag 7",
+ "R0_14 One Week Growth"))
+
+
+
+plotStateR0 <- function(st) {
+  df <- state_historical_testing_df %>% 
+    filter(state == st) 
+  ggplot(df, aes(x = date, y = r0_7)) +
+     geom_line() +
+     ggtitle(paste0("R0 for ", st)) +
+     geom_text(data = df %>% filter(date == max(date)), aes(label=round(r0_7,2), x = date + 1, y= r0_7, size = 2)) +
+     ylim(0,5) +
+  theme(legend.position = "none") 
+}
+
+plotStateR0("NY")
 
 
 ```
