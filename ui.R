@@ -1,6 +1,7 @@
-covid_ets <- read.csv("covid_ets.csv", stringsAsFactors = FALSE)
-country_input <- as.character(unique(covid_ets$Country.Region))
-state_input <- as.character(unique(covid_ets$Province.State))
+input_df <- readRDS("state_historical_testing_df.Rds")
+input_df$date <- lubridate::ymd(input_df$date)
+min_date <- max(input_df$date)
+max_date <- min(input_df$date)
 
 
 fluidPage(
@@ -8,23 +9,35 @@ fluidPage(
   
   titlePanel("COVID-19 Analytics"),
   
-  tabsetPanel(               
-    tabPanel("Time Series", h2("Time Series by Country, Region"), 
+  tabsetPanel(   
+    
+    tabPanel("State-by-State R0 Estimates vs. Population", 
              sidebarLayout(
                sidebarPanel(
                  
-                 #selectInput("countries", "Countries", 
-                  #           choices = country_input, multiple = FALSE),
-                 selectInput("states", "States-Provinces",
-                             choices = state_input, multiple = FALSE, selected = "California"),
-                 actionButton("ts_action", "Submit", icon = NULL, width = NULL)
+                 sliderInput("lag", 
+                             "Lag Period to Calculate R0",
+                             min=2,
+                             max=21,
+                             value = 7),
+                 sliderInput("mavg", 
+                             "Moving Average Period", 
+                             min=1, 
+                             max=7, 
+                             value = 3),
+                 dateInput("calc_date", 
+                           "As-of Date", 
+                           value = max_date, 
+                           max = max_date, 
+                           min = min_date
+                 )
                ),
                mainPanel(
-                 "Explore country and regional COVID-19 time series for confirmed, deaths, and recovered cases",
-                 h6("Andy Hasselwander, 2020"),
-                 plotOutput("ts_plot")
+                 "Estimating State R0 and Future Course",
+                 plotOutput("active_r0")
                )
              )
-      )
     )
+    
   )
+)
