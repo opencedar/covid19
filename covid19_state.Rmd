@@ -1,0 +1,371 @@
+---
+title: "State-by-State COVID Testing, R0"
+author: "Andy Hasselwander"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: pdf_document
+---
+
+```{r setup, echo = FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+rm(list = ls())
+library(tidyverse)
+library(zoo)
+library(scales)
+source("functions.R")
+```
+
+
+# Testing Data
+
+```{r get_data, echo = FALSE, message=FALSE, warning=FALSE}
+
+state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv") 
+
+state_current_testing_df <- read.csv("https://covidtracking.com/api/v1/states/current.csv") 
+
+state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
+
+state_historical_testing_df <- state_historical_testing_df %>%  mutate(instant_positive_rate = positiveIncrease / totalTestResultsIncrease)
+state_current_testing_df <- state_current_testing_df %>% mutate(positive_rate = positive/  totalTestResults)
+
+us_testing_df <- state_historical_testing_df %>% 
+  group_by(date) %>% 
+  summarise(positiveIncrease = sum(positiveIncrease),
+            totalTestResultsIncrease = sum(totalTestResultsIncrease)) %>%
+  mutate(instant_positive_rate = positiveIncrease / totalTestResultsIncrease, state = "US-Total")
+
+testing_df <- bind_rows(state_historical_testing_df, us_testing_df)
+
+testing_df_dd <- testing_df %>% filter(state %in% c("NY", "WA", "LA", "MI", "US-Total"), instant_positive_rate <1)
+
+```
+
+## State-by-State Testing Summary
+
+States are sorted descending by total tested. Cum Pos Rate is the cumulative positive rate since the pandemic began; instant positive rate is the current daily testing rate. Instant positive trend is instant positive rate / cumulative positive rate.
+
+```{r testing_summary, echo = FALSE, message=FALSE, warning=FALSE}
+state_current_testing_summary <- state_historical_testing_df %>% 
+  group_by(state) %>%
+  filter(date == max(date)) %>%
+  mutate(instant_positive_rate = positiveIncrease / totalTestResultsIncrease,
+         positive_rate = positive/  totalTestResults, 
+         instant_positive_trend = (instant_positive_rate / positive_rate) -1) %>%
+  select(state, positive, totalTestResults, positive_rate, positiveIncrease, totalTestResultsIncrease, instant_positive_rate,
+         instant_positive_trend) %>%
+  arrange(desc(totalTestResults))
+
+state_current_testing_summary$instant_positive_rate <- scales::percent(state_current_testing_summary$instant_positive_rate, accuracy = 0.1)
+state_current_testing_summary$positive_rate <- scales::percent(state_current_testing_summary$positive_rate, accuracy = 0.1)
+state_current_testing_summary$instant_positive_trend <- scales::percent(state_current_testing_summary$instant_positive_trend, accuracy = .1)
+state_current_testing_summary$positive <- scales::comma(state_current_testing_summary$positive)
+state_current_testing_summary$totalTestResults <- scales::comma(state_current_testing_summary$totalTestResults)
+state_current_testing_summary$positiveIncrease <- scales::comma(state_current_testing_summary$positiveIncrease)
+state_current_testing_summary$totalTestResultsIncrease <- scales::comma(state_current_testing_summary$totalTestResultsIncrease)
+
+
+knitr::kable(state_current_testing_summary, caption = "State-by-State Testing Summary", align = c("l",rep("r", times = ncol(state_current_testing_summary) -1)), col.names=c("State", "Pos", "Cum Tested", "Cum Pos Rate", "Pos Increase", "Tested Increase", "Instant Pos Rate", "Instant Pos Trend"))
+
+ggplot(testing_df_dd, aes(x = date, y= instant_positive_rate, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = percent, limits = c(0,1)) +
+  ggtitle(paste0("U.S. and Selected State Instant Positive Test Rate as of ", format(Sys.time(), '%d %B %Y'))) +
+  theme(legend.position = "none") +
+  geom_text(data = testing_df_dd %>% group_by(state) %>% filter(date == max(date)), aes(label=paste0(state, " ", scales::percent(instant_positive_rate, accuracy = .01)), x = date + 1, y= instant_positive_rate, color = state), size = 2)
+
+```
+
+## Hospitalization Summary
+
+State-by-state hospitalization data are still VERY spotty as of April 5th. Most states are not reporting.
+
+```{r hospitalization_summary, echo = FALSE, message=FALSE, warning=FALSE}
+state_current_hospitalized_summary <- state_current_testing_df %>% 
+  select(state, positive, hospitalizedCurrently, inIcuCurrently, recovered, death) %>% 
+  mutate(perc_hospitalized = hospitalizedCurrently / positive, 
+         perc_icu = inIcuCurrently / hospitalizedCurrently, 
+         perc_recovered = recovered / positive,
+         perc_death= death / positive) %>%
+  arrange(desc(hospitalizedCurrently))
+  
+state_current_hospitalized_summary$perc_hospitalized <- scales::percent(state_current_hospitalized_summary$perc_hospitalized, accuracy = 0.1)
+state_current_hospitalized_summary$perc_icu <- scales::percent(state_current_hospitalized_summary$perc_icu, accuracy = 0.1)
+state_current_hospitalized_summary$perc_recovered <- scales::percent(state_current_hospitalized_summary$perc_recovered, accuracy = .1)
+state_current_hospitalized_summary$perc_death <- scales::percent(state_current_hospitalized_summary$perc_death, accuracy = .1)
+
+state_current_hospitalized_summary$positive <- scales::comma(state_current_hospitalized_summary$positive)
+state_current_hospitalized_summary$hospitalizedCurrently <- scales::comma(state_current_hospitalized_summary$hospitalizedCurrently)
+state_current_hospitalized_summary$inIcuCurrently <- scales::comma(state_current_hospitalized_summary$inIcuCurrently)
+state_current_hospitalized_summary$recovered <- scales::comma(state_current_hospitalized_summary$recovered)
+state_current_hospitalized_summary$death <- scales::comma(state_current_hospitalized_summary$death)
+  
+knitr::kable(state_current_hospitalized_summary, 
+             caption = "State-by-State Hospitalization and ICU Data", 
+             align = c("l", rep("r", times = ncol(state_current_hospitalized_summary) -1)), 
+             col.names = c("State", "Positive", "Hospitalized", "In ICU", "Recovered", "Dead", "% Hospitalized", "% ICU (of Hospitalized)", "% Recovered", "% Death"))
+
+```
+
+## Selected States Drill-Down
+
+New York State has been the U.S. epicenter so far. New York is also testing much more than most states, but at the same time, its positive rate is very high (around 50% as of early March), indicating that people being tested are high-likelihood cases; as such it should be assumed that there remain a very large population of untested positive patients.
+
+The DMV (D.C., Maryland, Virginia) might be a coming hotspot. Watching instant positive test rates will be a key leading indicator of hospitalizations and ICU beds in the coming week.
+
+```{r selected_states_drilldown, echo = FALSE, message=FALSE, warning=FALSE}
+
+ny_df <- state_historical_testing_df %>% 
+  filter(state %in% c("NY"))
+
+
+dmv_df <- state_historical_testing_df %>% 
+  filter(state %in% c("MD", "VA", "DC"), instant_positive_rate < 1)
+nyc_df <- state_historical_testing_df %>% 
+  filter(state %in% c("NY", "CT", "NJ"), instant_positive_rate < 1)
+
+ggplot(dmv_df, aes(x = date, y= totalTestResultsIncrease, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = comma, limits = c(0,5000)) +
+  ggtitle(paste0("New Tests as of ", format(Sys.time(), '%d %B %Y'), ", DMV Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = dmv_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= totalTestResultsIncrease, color = state), size = 2)
+
+ggplot(dmv_df, aes(x = date, y= instant_positive_rate, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = percent, limits = c(0,1)) +
+  ggtitle(paste0("Instant Positive Test Rate as of ", format(Sys.time(), '%d %B %Y'), ", DMV Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = dmv_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= instant_positive_rate, color = state), size = 2)
+
+ggplot(nyc_df, aes(x = date, y= totalTestResultsIncrease, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = comma, limits = c(0,50000)) +
+  ggtitle(paste0("New Tests as of ", format(Sys.time(), '%d %B %Y'), ", NYC Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = nyc_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= totalTestResultsIncrease, color = state), size = 2)
+
+ggplot(nyc_df, aes(x = date, y= instant_positive_rate, group = state, color = state)) +
+  geom_line() +
+  scale_y_continuous(labels = percent, limits = c(0,1)) +
+  ggtitle(paste0("Instant Positive Test Rate as of ", format(Sys.time(), '%d %B %Y'), ", NYC Area")) +
+  theme(legend.position = "none") +
+  geom_text(data = nyc_df %>% group_by(state) %>% filter(date == max(date)), aes(label=state, x = date + 1, y= instant_positive_rate, color = state), size = 2)
+
+ggplot(ny_df, aes(x = date , y = deathIncrease)) +
+  geom_line() +
+  scale_y_continuous(labels = comma) +
+  ggtitle(paste0("New Deaths as of ", format(Sys.time(), '%d %B %Y'), ", NY")) +
+  theme(legend.position = "none") +
+  geom_text(data = ny_df %>% filter(date == max(date)), aes(label=deathIncrease, x = date + 1, y= deathIncrease), size = 2)
+
+ggplot(ny_df, aes(x = date , y = inIcuCurrently)) +
+  geom_line() +
+  scale_y_continuous(labels = comma) +
+  ggtitle(paste0("In ICU as of ", format(Sys.time(), '%d %B %Y'), ", NY")) +
+  theme(legend.position = "none") +
+  geom_text(data = ny_df %>% filter(date == max(date)), aes(label=inIcuCurrently, x = date + 1, y= inIcuCurrently), size = 2)
+
+ggplot(ny_df, aes(x = date , y = hospitalizedCurrently)) +
+  geom_line() +
+  scale_y_continuous(labels = comma) +
+  ggtitle(paste0("Hospitalized as of ", format(Sys.time(), '%d %B %Y'), ", NY")) +
+  theme(legend.position = "none") +
+  geom_text(data = ny_df %>% filter(date == max(date)), aes(label=hospitalizedCurrently, x = date + 1, y= hospitalizedCurrently), size = 2)
+
+
+```
+
+
+## R0 by State
+```{r r0_by_state, echo = FALSE, message=FALSE, warning=FALSE}
+
+state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv") 
+
+state_historical_testing_df$positiveIncrease[is.na(state_historical_testing_df$positiveIncrease)] <- 0
+state_historical_testing_df$totalTestResultsIncrease[is.na(state_historical_testing_df$totalTestResultsIncrease)] <- 0
+state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
+
+
+state_historical_testing_df <- state_historical_testing_df %>% 
+  group_by(state) %>% 
+  arrange(date) %>%
+  mutate(
+  positiveIncrease_ma = rollapply(positiveIncrease,3,mean,align='right',fill=NA),
+  positiveIncrease_ma_L7 = dplyr::lag(positiveIncrease_ma, 7, order_by = date),
+  positiveIncrease_ma_L14 = dplyr::lag(positiveIncrease_ma, 14, order_by = date),
+  r0_7 = positiveIncrease_ma / positiveIncrease_ma_L7,
+  r0_14 = positiveIncrease_ma / positiveIncrease_ma_L14,
+  r0_7_trailing_7 = dplyr::lag(r0_7, 7, order_by = date),
+  r0_14_trailing_7 = dplyr::lag(r0_14, 14, order_by = date),
+  r0_7_growth = (r0_7 / r0_7_trailing_7)-1,
+  r0_14_growth = (r0_14 / r0_14_trailing_7)-1,
+  tests_ma = rollapply(totalTestResultsIncrease, 3, mean, align = 'right',fill=NA),
+  tests_ma_trailing_7 = dplyr::lag(tests_ma, 7, order_by=date),
+  tests_trend_7 = tests_ma / tests_ma_trailing_7,
+  adj_r0_7 = r0_7 / tests_trend_7,
+  tests_ma_trailing_14 = dplyr::lag(tests_ma, 14, order_by=date),
+  tests_trend_14 = tests_ma / tests_ma_trailing_14,
+  adj_r0_14 = r0_14 / tests_trend_14,
+  adj_r0_7_growth = (adj_r0_7 / r0_7_trailing_7)-1,
+  adj_r0_14_growth = (adj_r0_14 / r0_14_trailing_7)-1,
+  percent_positive_ma = positiveIncrease_ma / tests_ma
+)
+
+state_r0_df <- state_historical_testing_df %>%
+  slice(which.max(date)) %>%
+  select(state, positiveIncrease, total, death, r0_7,  r0_7_trailing_7, r0_7_growth, r0_14, r0_14_trailing_7,  r0_14_growth) %>%
+  arrange(desc(r0_7)) %>%
+  filter(total >= 1500)
+
+state_r0_df$positiveIncrease <- scales::comma(state_r0_df$positiveIncrease)
+state_r0_df$total <- scales::comma(state_r0_df$total)
+state_r0_df$death <- scales::comma(state_r0_df$death)
+state_r0_df$r0_7 <- round(state_r0_df$r0_7, 2)
+state_r0_df$r0_14 <- round(state_r0_df$r0_14, 2)
+state_r0_df$r0_7_trailing_7 <- round(state_r0_df$r0_7_trailing_7, 2)
+state_r0_df$r0_14_trailing_7 <- round(state_r0_df$r0_14_trailing_7, 2)
+state_r0_df$r0_7_growth <- scales::percent(state_r0_df$r0_7_growth, 1)
+state_r0_df$r0_14_growth <- scales::percent(state_r0_df$r0_14_growth, 1)
+
+knitr::kable(state_r0_df, 
+             caption = "State-by-State R0 Estimates and Growth Sorted by R0_7", 
+             align = c("l", rep("r", times = ncol(state_r0_df) -1)), 
+             col.names = c("State", "New Cases",  "Tot Cases", "Tot Deaths", "R0_7", "R0_7 Lag 7", "R0_7 1-Wk Grwth","R0_14", "R0_14 Lag 7",
+ "R0_14 1-Wk Grwth"))
+
+state_r0_df_adj <- state_historical_testing_df %>%
+  slice(which.max(date)) %>%
+  select(state, positiveIncrease, total, death, tests_ma, tests_ma_trailing_7, adj_r0_7,  r0_7_trailing_7, adj_r0_7_growth, adj_r0_14, r0_14_trailing_7,  adj_r0_14_growth) %>%
+  arrange(desc(adj_r0_7)) %>%
+  filter(total >= 1500, adj_r0_7 >= 0)
+
+state_r0_df_adj$positiveIncrease <- scales::comma(state_r0_df_adj$positiveIncrease)
+state_r0_df_adj$total <- scales::comma(state_r0_df_adj$total)
+state_r0_df_adj$death <- scales::comma(state_r0_df_adj$death)
+state_r0_df_adj$tests_ma <- scales::comma(state_r0_df_adj$tests_ma)
+state_r0_df_adj$tests_ma_trailing_7 <- scales::comma(state_r0_df_adj$tests_ma_trailing_7)
+
+state_r0_df_adj$adj_r0_7 <- round(state_r0_df_adj$adj_r0_7, 2)
+state_r0_df_adj$adj_r0_14 <- round(state_r0_df_adj$adj_r0_14, 2)
+state_r0_df_adj$r0_7_trailing_7 <- round(state_r0_df_adj$r0_7_trailing_7, 2)
+state_r0_df_adj$r0_14_trailing_7 <- round(state_r0_df_adj$r0_14_trailing_7, 2)
+state_r0_df_adj$adj_r0_7_growth <- scales::percent(state_r0_df_adj$adj_r0_7_growth, 1)
+state_r0_df_adj$adj_r0_14_growth <- scales::percent(state_r0_df_adj$adj_r0_14_growth, 1)
+
+knitr::kable(state_r0_df_adj, 
+             caption = "State-by-State R0 Estimates Adjusted for Testing Volumes Sorted by R0_7", 
+             align = c("l", rep("r", times = ncol(state_r0_df_adj) -1)), 
+             col.names = c("State", "New Cases", "Tot Cases", "T0t Death", "New Tests", "NT L7", "R0_7", "R0_7 Lag 7", "R0_7 1-Wk Grwth","R0_14", "R0_14 Lag 7",
+ "R0_14 1-Wk Grwth"))
+
+
+```
+
+# State-by-State RO Estimates
+
+```{r r0_state_plots, echo = FALSE, message=FALSE, warning=FALSE}
+
+plotStateR0 <- function(st) {
+  df <- state_historical_testing_df %>% 
+    filter(state == st) 
+  ggplot(df, aes(x = date, y = r0_7)) +
+     geom_line() +
+     ggtitle(paste0("R0_7 for ", st)) +
+     geom_text(data = df %>% filter(date == max(date)), aes(label=round(r0_7,2), x = date + 1, y= r0_7, size = 2)) +
+     ylim(0,5) +
+  theme(legend.position = "none") 
+}
+
+states <- sort(as.character(unique(state_historical_testing_df$state)))
+
+#Plot all state's historical trailing R0
+for(i in 1:length(states)) {
+  
+  print(plotStateR0(states[i]))
+}
+
+```
+
+# State-by-State % Test Positives
+
+```{r test_positive_plots, echo = FALSE, message=FALSE, warning=FALSE}
+
+plotStateTestPositives <- function(st) {
+  df <- state_historical_testing_df %>% 
+    filter(state == st) 
+  
+  ggplot(df, aes(x = date, y = percent_positive_ma)) +
+     geom_line() +
+     ggtitle(paste0("Positive Test Rate for ", st)) +
+     geom_text(data = df %>% filter(date == max(date)), aes(label=scales::percent(percent_positive_ma, accuracy = .1), x = date + 1, y= percent_positive_ma, size = 2)) +
+     scale_y_continuous(labels = scales::percent, limits=c(0,1)) +
+  theme(legend.position = "none") 
+}
+
+states <- sort(as.character(unique(state_historical_testing_df$state)))
+
+#Plot all state's historical trailing R0
+for(i in 1:length(states)) {
+  print(plotStateTestPositives(states[i]))
+}
+
+```
+
+
+
+# States Plotted by Percent Currently Infected vs. Est'd R0
+
+```{r}
+state_pop <- read.csv("https://raw.githubusercontent.com/jakevdp/data-USstates/master/state-population.csv", stringsAsFactors = FALSE)
+state_pop <- state_pop %>%  filter(ages == "total", year == 2013)
+colnames(state_pop)[1] <- "state"
+
+state_historical_testing_df_2 <- state_historical_testing_df %>% 
+  inner_join(state_pop, by = 'state') 
+
+state_historical_testing_df_2$death[is.na(state_historical_testing_df_2$death)] <- 0
+state_historical_testing_df_2$recovered[is.na(state_historical_testing_df_2$recovered)] <- 0
+
+state_historical_testing_df_2 <- state_historical_testing_df_2 %>%
+  mutate(active_cases = positive - recovered - death, 
+         active_cases = ifelse(active_cases <=0, 100, active_cases),
+         active_per_pop = active_cases / population, 
+         adj_r0_7 = ifelse(r0_7 <=0, 0.01, r0_7))
+
+current_state <- state_historical_testing_df_2 %>% 
+  group_by(state) %>%
+  filter(date == max(date))
+
+active_per_pop = seq(.0001,.02, by = .0001)
+r0_7 = .001 / active_per_pop
+
+point_one_percent = data.frame(active_per_pop, r0_7)
+
+active_per_pop = seq(.0001,.02, by = .0001)
+r0_7 = .01 / active_per_pop
+
+one_percent = data.frame(active_per_pop, r0_7)
+
+
+
+library(ggrepel)
+r0_plot <- ggplot(data = current_state, aes(x=active_per_pop)) +
+  ggtitle(label = "Adjusted R0 by State vs. Current Active Cases", subtitle = "Adjusted R0 Takes Testing Increase Into Account") +
+  geom_point(shape=1, show.legend = FALSE, (aes(y=adj_r0_7, color = state))) + 
+  scale_y_continuous(labels = scales::number_format(accuracy = 0.01,
+                                 decimal.mark = '.'), limits = c(0,3)) +
+  geom_line(data = point_one_percent, aes(y=r0_7, x = active_per_pop), color = "darkgreen") +
+  geom_line(data = one_percent, aes(y=r0_7, x = active_per_pop), color = "darkred") +
+  scale_x_continuous(labels = scales::percent_format(accuracy = .01), limits = c(0.00005,.0125), trans = 'log') +
+  geom_label_repel(data=  current_state, aes(x=active_per_pop, y=adj_r0_7, label = state), size = 2) + 
+  theme(legend.position = "none") +
+  labs(y = "R0 over 7 days handicapped for testing performance", x = "Active cases as a % of population (log)") +
+  geom_text(aes(x = .0002, y =2.5, label = "Green: Based on current trajectory\n expect additional \n 0.1% of population infected \nin one week"), size = 3, color = "darkgreen") +
+  geom_text(aes(x = .005, y =2.5, label = "Red: Based on current trajectory\n expect additional \n 1.0% of population infected \nin one week"), size = 3, color = "darkred")
+
+r0_plot
+ggsave( "r0_plot.png", r0_plot)
+
+
+
+```
