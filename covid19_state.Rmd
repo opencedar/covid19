@@ -23,9 +23,7 @@ state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states
 
 state_current_testing_df <- read.csv("https://covidtracking.com/api/v1/states/current.csv") 
 
-state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
-
-state_historical_testing_df <- state_historical_testing_df %>%  mutate(instant_positive_rate = positiveIncrease / totalTestResultsIncrease)
+c
 state_current_testing_df <- state_current_testing_df %>% mutate(positive_rate = positive/  totalTestResults)
 
 us_testing_df <- state_historical_testing_df %>% 

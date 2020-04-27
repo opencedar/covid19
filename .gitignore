@@ -1,3 +1,5 @@
+*.gif
+*.png
 *.Rhistory
 *.pdf
 hubei_death.csv
