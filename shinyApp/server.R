@@ -6,7 +6,7 @@ library(scales)
 
 
 #### LOAD DATA AND INITIAL (ONE-TIME) TRANSFORMS
-state_historical_testing_df <- readRDS("state_historical_testing_df.Rds")
+state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv", stringsAsFactors = FALSE) 
 
 state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
 
@@ -19,6 +19,10 @@ state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$d
 state_pop <- readRDS("state_pop.Rds")
 state_pop <- state_pop %>%  
   filter(ages == "total", year == 2013) 
+
+us_pop <- unlist(state_pop %>%
+                   filter(state == "USA") %>%
+                   select(population) )
 
 state_historical_testing_df <- state_historical_testing_df %>% 
   inner_join(state_pop, by = 'state') 
@@ -38,13 +42,7 @@ one_percent = data.frame(active_per_pop, r0)
 
 shinyServer(function(input, output) {
   
-  refresh <- observeEvent(
-    eventExpr = input$refresh,
-    handlerExpr =  {
-      state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv", stringsAsFactors = FALSE) 
-      saveRDS(state_historical_testing_df, "state_historical_testing_df.Rds")
-    }
-  )
+
   
   df_reactive <- reactive({ 
     df_reactive <- state_historical_testing_df %>%
@@ -172,7 +170,7 @@ shinyServer(function(input, output) {
       scale_y_continuous(labels = scales::percent_format(accuracy = 1,
                                                          decimal.mark = '.'), limits = c(0,.6)) +
       xlab("Tests per population") +
-      ylab(paste0( lag, " day moving avg positive test rate")) +
+      ylab(paste0( input$lag_t, " day moving avg positive test rate")) +
       scale_x_continuous(labels = scales::percent_format(accuracy = .1), limits = c(0,.0025)) +
       geom_hline(aes(yintercept = percent_positive_ma_t), color = "black", size = 1) +
       geom_vline(aes(xintercept = tests_per_pop_t), color = "black", size = 1) +

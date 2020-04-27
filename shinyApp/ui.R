@@ -1,7 +1,6 @@
 require(tidyverse)
 
-input_df <-
-  readRDS("state_historical_testing_df.Rds")
+input_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv", stringsAsFactors = FALSE) 
 
 date_input <-  input_df %>%
   mutate(date = lubridate::ymd(input_df$date)) %>%
@@ -42,12 +41,6 @@ fluidPage(
                     value = 3,
                     step = 1
                   ),
-                  "Only click refresh data if you need to re-save the cached data file from the Covid Tracking project.",
-                  "If the date above is not today's date, the data need to be refreshed.",
-                  "The data are refreshed daily.",
-                  tags$br(),
-                  actionButton("refresh", "Refresh Data"),
-                  tags$br(),
                   tags$hr(),
                   "Documentation at ",
                   tags$a(href="https://github.com/opencedar/covid19", "https://github.com/opencedar/covid19"),
@@ -56,7 +49,8 @@ fluidPage(
                   tags$a(href="https://www.covidtracking.com", "www.covidtracking.com")
                 ),
                 mainPanel(
-                  plotOutput("active_r0", height = '800px')
+                  plotOutput("active_r0", height = '800px'),
+                  "Black horizontal / vertical lines indicate national totals on this date."
                   )
               )
             ),
@@ -88,12 +82,7 @@ fluidPage(
                            value = 3,
                            step = 1
                          ),
-                         "Only click refresh data if you need to re-save the cached data file from the Covid Tracking project.",
-                         "If the date above is not today's date, the data need to be refreshed.",
-                         "The data are refreshed daily.",
-                         tags$br(),
-                         actionButton("refresh", "Refresh Data"),
-                         tags$br(),
+                         
                          tags$hr(),
                          "Documentation at ",
                          tags$a(href="https://github.com/opencedar/covid19", "https://github.com/opencedar/covid19"),
@@ -103,7 +92,8 @@ fluidPage(
                        ),
                        mainPanel(
                          
-                         plotOutput("testing", height = '800px')
+                         plotOutput("testing", height = '800px'),
+                         "Black horizontal / vertical lines indicate national totals on this date."
                        )
                      )
             )
