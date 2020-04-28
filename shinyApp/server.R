@@ -103,10 +103,13 @@ shinyServer(function(input, output) {
       geom_line(data = point_one_percent, aes(y=r0, x = active_per_pop), color = "darkgreen") +
       geom_line(data = one_percent, aes(y=r0, x = active_per_pop), color = "darkred") +
       scale_x_continuous(labels = scales::percent_format(accuracy = .01), limits = c(0.00005,.015), trans = 'log') +
-      geom_label(data = data, aes(x=active_per_pop, y=adj_r0, label = state), size = 5) + 
       geom_hline(aes(yintercept = adj_r0_t), color = "black", size = 1) +
       geom_vline(aes(xintercept = active_per_pop_t), color = "black", size = 1) +
-      theme(legend.position = "none") +
+      geom_label(data = data, aes(x=active_per_pop, y=adj_r0, label = state), size = 5, alpha = 0.8) + 
+      theme(legend.position = "none",
+            axis.text = element_text(size = 16),
+            axis.title = element_text(size = 16),
+            title = element_text(size = 18)) +
       labs(y = paste0("R0 over ", input$lag, " days handicapped for testing performance"), x = "Active cases as a % of population (log)") +
       geom_text(aes(x = .0002, y =2.5, label = paste0("Green: Based on current trajectory\n expect additional \n 0.1% of population infected \nin ", input$lag, " days")), size = 5, color = "darkgreen") +
       geom_text(aes(x = .005, y =2.5, label = paste0("Red: Based on current trajectory\n expect additional \n 1.0% of population infected \nin ", input$lag, " days")), size = 5, color = "darkred")
@@ -171,12 +174,15 @@ shinyServer(function(input, output) {
                                                          decimal.mark = '.'), limits = c(0,.6)) +
       xlab("Tests per population") +
       ylab(paste0( input$lag_t, " day moving avg positive test rate")) +
-      scale_x_continuous(labels = scales::percent_format(accuracy = .1), limits = c(0,.0025)) +
+      scale_x_continuous(labels = scales::percent_format(accuracy = .01), limits = c(0,.0025)) +
       geom_hline(aes(yintercept = percent_positive_ma_t), color = "black", size = 1) +
       geom_vline(aes(xintercept = tests_per_pop_t), color = "black", size = 1) +
-      geom_label(data = data, aes(x=tests_per_pop, y=percent_positive_ma, label = state), size = 5) + 
-      theme(legend.position = "none") +
-      ggtitle(label = "Percent Positive Tests vs. Testing Volume", subtitle = paste0("Percent Positive Tests and Testing Volume on a ", input$mavg_t, " moving average period as of ", input$calc_date_t)) 
+      geom_label(data = data, aes(x=tests_per_pop, y=percent_positive_ma, label = state), size = 5, alpha = .8) + 
+      theme(legend.position = "none",
+            axis.text = element_text(size = 16),
+            axis.title = element_text(size = 16),
+            title = element_text(size = 18)) +
+      ggtitle(label = "Percent Positive Tests vs. Testing Volume", subtitle = paste0("Percent Positive Tests and Testing Volume on a ", input$mavg_t, "-day moving average period as of ", input$calc_date_t)) 
     
   })
   

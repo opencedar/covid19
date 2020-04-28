@@ -68,7 +68,7 @@ fluidPage(
                          ),
                          sliderInput(
                            "lag_t",
-                           "Lag Period to Calculate R0",
+                           "Lag Period",
                            min = 2,
                            max = 21,
                            value = 7,
