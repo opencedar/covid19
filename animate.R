@@ -1,4 +1,4 @@
-source("refresh_state_data.R")
+
 
 mavg = 7
 lag = 7
@@ -16,7 +16,7 @@ library(gapminder)
 
 
 #### LOAD DATA AND INITIAL (ONE-TIME) TRANSFORMS
-state_historical_testing_df <- readRDS("state_historical_testing_df.Rds")
+state_historical_testing_df <- read.csv("https://covidtracking.com/api/v1/states/daily.csv", stringsAsFactors = FALSE) 
 
 state_historical_testing_df$date <- lubridate::ymd(state_historical_testing_df$date)
 
