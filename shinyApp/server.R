@@ -2,6 +2,7 @@
 library(tidyverse)
 library(zoo)
 library(scales)
+library(DT)
 
 
 
@@ -39,6 +40,7 @@ active_per_pop = seq(.0001,.02, by = .0001)
 r0 = .01 / active_per_pop
 
 one_percent = data.frame(active_per_pop, r0)
+
 
 shinyServer(function(input, output) {
   
@@ -105,14 +107,16 @@ shinyServer(function(input, output) {
       scale_x_continuous(labels = scales::percent_format(accuracy = .01), limits = c(0.00005,.015), trans = 'log') +
       geom_hline(aes(yintercept = adj_r0_t), color = "black", size = 1) +
       geom_vline(aes(xintercept = active_per_pop_t), color = "black", size = 1) +
-      geom_label(data = data, aes(x=active_per_pop, y=adj_r0, label = state), size = 5, alpha = 0.8) + 
+      geom_label(data = data, aes(x=active_per_pop, y=adj_r0, label = state), size = 5, alpha = 0.7) + 
       theme(legend.position = "none",
             axis.text = element_text(size = 16),
             axis.title = element_text(size = 16),
             title = element_text(size = 18)) +
       labs(y = paste0("R0 over ", input$lag, " days handicapped for testing performance"), x = "Active cases as a % of population (log)") +
       geom_text(aes(x = .0002, y =2.5, label = paste0("Green: Based on current trajectory\n expect additional \n 0.1% of population infected \nin ", input$lag, " days")), size = 5, color = "darkgreen") +
-      geom_text(aes(x = .005, y =2.5, label = paste0("Red: Based on current trajectory\n expect additional \n 1.0% of population infected \nin ", input$lag, " days")), size = 5, color = "darkred")
+      geom_text(aes(x = .005, y =2.5, label = paste0("Red: Based on current trajectory\n expect additional \n 1.0% of population infected \nin ", input$lag, " days")), size = 5, color = "darkred") +
+      geom_label(aes(x = 0.0001, y = adj_r0_t, label = paste0("National R: ", round(adj_r0_t,2)), size = 5, alpha = 0.7)) + 
+      geom_label(aes(x = active_per_pop_t, y = 3, label = paste0("National Active Per Pop: ", percent(active_per_pop_t,.001)), size = 5, alpha = 0.7))  
     
   })
   
@@ -177,14 +181,98 @@ shinyServer(function(input, output) {
       scale_x_continuous(labels = scales::percent_format(accuracy = .01), limits = c(0,.0025)) +
       geom_hline(aes(yintercept = percent_positive_ma_t), color = "black", size = 1) +
       geom_vline(aes(xintercept = tests_per_pop_t), color = "black", size = 1) +
-      geom_label(data = data, aes(x=tests_per_pop, y=percent_positive_ma, label = state), size = 5, alpha = .8) + 
+      geom_label(data = data, aes(x=tests_per_pop, y=percent_positive_ma, label = state), size = 5, alpha = .7) + 
       theme(legend.position = "none",
             axis.text = element_text(size = 16),
             axis.title = element_text(size = 16),
             title = element_text(size = 18)) +
-      ggtitle(label = "Percent Positive Tests vs. Testing Volume", subtitle = paste0("Percent Positive Tests and Testing Volume on a ", input$mavg_t, "-day moving average period as of ", input$calc_date_t)) 
+      geom_label(aes(x = 0.0001, 
+                     y = percent_positive_ma_t, 
+                     label = paste0("National % Positive: ", 
+                                    percent(percent_positive_ma_t,
+                                    .1)),
+                      size = 5, 
+                      alpha = 0.7)) + 
+      geom_label(aes(x = tests_per_pop_t,
+                     y = .55,
+                     label = paste0("National Tests Per Pop: ",
+                                    percent(tests_per_pop_t,
+                                    .001)),
+                     size = 5, 
+                     alpha = 0.7))  +
+      ggtitle(label = "Percent Positive Tests vs. Testing Volume", 
+              subtitle = paste0("Percent Positive Tests and Testing Volume on a ", 
+                                input$mavg_t, 
+                                "-day moving average period as of ", 
+                                input$calc_date_t)
+              ) 
     
   })
+  
+  # df_reactive_d <- reactive({ 
+  #   df_reactive <- state_historical_testing_df %>%
+  #     group_by(state) %>% 
+  #     arrange(date) %>%
+  #     mutate(
+  #       positiveIncrease_ma = rollapply(positiveIncrease,input$mavg_d ,mean,align='right',fill=NA),
+  #       positiveIncrease_ma_l = dplyr::lag(positiveIncrease_ma, input$lag_d, order_by = date),
+  #       r0 = positiveIncrease_ma / positiveIncrease_ma_l,
+  #       r0_trailing = dplyr::lag(r0, input$lag_d, order_by = date),
+  #       r0_growth = (r0 / r0_trailing)-1,
+  #       tests_ma = rollapply(totalTestResultsIncrease, input$mavg_d, mean, align = 'right',fill=NA),
+  #       tests_ma_trailing = dplyr::lag(tests_ma, input$lag_d, order_by=date),
+  #       tests_trend = tests_ma / tests_ma_trailing,
+  #       adj_r0 = r0 / tests_trend,
+  #       adj_r0_growth = (adj_r0 / r0_trailing)-1,
+  #       percent_positive_ma = positiveIncrease_ma / tests_ma,
+  #       active_cases = positive - recovered - death,
+  #       active_cases = ifelse(active_cases <=0 , 100, active_cases),
+  #       active_per_pop = active_cases / population,
+  #       tests_per_pop = tests_ma / population,
+  #       adj_r0 = ifelse(adj_r0 <=0, 0.01, adj_r0)) %>% 
+  #     filter(date == input$calc_date_d)
+  #   
+  #   
+  #   return(data)
+  # })
+  
+  output$table <- DT::renderDT(
+      as.data.frame(
+        state_historical_testing_df %>%
+      group_by(state) %>% 
+      arrange(date) %>%
+      mutate(
+        positiveIncrease_ma = rollapply(positiveIncrease,input$mavg_d ,mean,align='right',fill=NA),
+        positiveIncrease_ma_l = dplyr::lag(positiveIncrease_ma, input$lag_d, order_by = date),
+        r0 = positiveIncrease_ma / positiveIncrease_ma_l,
+        r0_trailing = dplyr::lag(r0, input$lag_d, order_by = date),
+        r0_growth = (r0 / r0_trailing)-1,
+        tests_ma = rollapply(totalTestResultsIncrease, input$mavg_d, mean, align = 'right',fill=NA),
+        tests_ma_trailing = dplyr::lag(tests_ma, input$lag_d, order_by=date),
+        tests_trend = tests_ma / tests_ma_trailing,
+        adj_r0 = r0 / tests_trend,
+        adj_r0_growth = (adj_r0 / r0_trailing)-1,
+        percent_positive = positiveIncrease_ma / tests_ma,
+        active_cases = positive - recovered - death,
+        active_cases = ifelse(active_cases <=0 , 100, active_cases),
+        active_per_pop = active_cases / population,
+        tests_per_pop = tests_ma / population,
+        adj_r0 = ifelse(adj_r0 <=0, 0.01, adj_r0),
+        reopen_score_r = round(adj_r0 * active_per_pop * 1000, 4),
+        reopen_score_test = round(percent_positive / tests_per_pop, 1),
+        active_per_pop = round(active_per_pop, 6),
+        tests_per_pop = round(tests_per_pop, 6),
+        adj_r = round(adj_r0, 2),
+        percent_tests_positive  = round(percent_positive, 4)
+        ) %>% 
+    filter(date == input$calc_date_d) %>%
+      select(state, adj_r, active_per_pop, tests_per_pop, percent_tests_positive, reopen_score_r, reopen_score_test) %>%
+      ungroup(), 
+    options = list(
+      pageLength = 20)
+      )
+  )
+  
   
 })
 
