@@ -179,8 +179,8 @@ fluidPage(
                          tags$hr(),
                          "The raw data to the right can be used to see where the states stack up on the four measures on the previous two tabs. ",
                          "The score metrics are simple multiplication / division of the two source metrics. ",
-                         "reopen_score_r0 is adj_r0 * active_per_pop * 1000. reopen_score_test is percent_positive / tests_per_pop. ",
-                         tags$h4("High scores are bad, low scores are good.")
+                         "reopen_score_r0 is adj_r0 * active_per_pop * 1000. reopen_score_test is percent_positive / tests_per_pop. Raw scores aren't shown as they aren't interpretable; relative ranks between states are shown.",
+                         tags$h4("Low scores are good. States arranged most to least ready to open based on a composite of the two scores.")
                        ),
                        mainPanel(
                          
